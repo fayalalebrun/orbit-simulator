@@ -14,6 +14,10 @@ public class Boot extends Game {
 
 	@Override
 	public void create () {
+		Gdx.graphics.setResizable(false);
+		Gdx.graphics.setWindowedMode(800,600);
+		Gdx.graphics.setTitle("Orbit Simulator");
+
 		manager = new AssetManager();
 
 		setScreen(new GameScreen(this));
