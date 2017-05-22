@@ -1,12 +1,19 @@
 package com.orbit.data;
 
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.viewport.FitViewport;
+
 /**
  * Created by Fran on 5/22/2017.
  */
 public class GameScreen extends BaseScreen {
 
+    Stage stage;
+
     public GameScreen(Boot boot) {
         super(boot);
+
+        stage = new Stage(new FitViewport(800,600));
     }
 
     @Override
@@ -16,7 +23,7 @@ public class GameScreen extends BaseScreen {
 
     @Override
     public void render(float delta) {
-
+        stage.draw();
     }
 
     @Override
