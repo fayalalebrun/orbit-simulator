@@ -52,6 +52,6 @@ public class GameScreen extends BaseScreen {
 
     @Override
     public void dispose() {
-
+        stage.dispose();
     }
 }
