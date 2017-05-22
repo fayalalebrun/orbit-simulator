@@ -16,6 +16,7 @@ public class Boot extends Game {
 	public void create () {
 		manager = new AssetManager();
 
+		setScreen(new GameScreen(this));
 	}
 
 	public AssetManager getManager(){
