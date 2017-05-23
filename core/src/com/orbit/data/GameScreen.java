@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
@@ -24,12 +25,15 @@ public class GameScreen extends BaseScreen {
 
     OptionsWindow options;
 
+    Group ui;
+
     public GameScreen(Boot boot) {
         super(boot);
 
         VisUI.load();
         planet = new Planet(50f, 1f, 1f, 1f, Color.BLUE, new Vector2(250f,250f));
         stage = new Stage(new FitViewport(800,600));
+        ui = new Group();
 
         Gdx.input.setInputProcessor(stage);
 
@@ -38,9 +42,11 @@ public class GameScreen extends BaseScreen {
 
     @Override
     public void show() {
+        stage.addActor(ui);
+
+        ui.addActor(options);
 
         stage.addActor(planet);
-        stage.addActor(options);
     }
 
     @Override
