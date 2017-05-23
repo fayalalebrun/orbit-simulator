@@ -7,6 +7,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
+import com.kotcrab.vis.ui.widget.VisTable;
 import com.orbit.data.entities.Planet;
 
 /**
@@ -18,17 +19,22 @@ public class GameScreen extends BaseScreen {
 
     Planet planet;
 
+    VisTable table;
+
     public GameScreen(Boot boot) {
         super(boot);
         VisUI.load();
         planet = new Planet(50f, 1f, 1f, 1f, Color.BLUE, new Vector2(250f,250f));
         stage = new Stage(new FitViewport(800,600));
+        table = new VisTable(true);
+        table.setFillParent(true);
     }
 
     @Override
     public void show() {
 
         stage.addActor(planet);
+        stage.addActor(table);
     }
 
     @Override
