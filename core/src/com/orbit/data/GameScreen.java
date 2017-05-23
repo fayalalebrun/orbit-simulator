@@ -8,6 +8,8 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.VisTable;
+import com.kotcrab.vis.ui.widget.VisTextButton;
+import com.orbit.data.UI.OptionsWindow;
 import com.orbit.data.entities.Planet;
 
 /**
@@ -21,6 +23,8 @@ public class GameScreen extends BaseScreen {
 
     VisTable table;
 
+    OptionsWindow options;
+
     public GameScreen(Boot boot) {
         super(boot);
         VisUI.load();
@@ -28,6 +32,7 @@ public class GameScreen extends BaseScreen {
         stage = new Stage(new FitViewport(800,600));
         table = new VisTable(true);
         table.setFillParent(true);
+        options = new OptionsWindow();
     }
 
     @Override
@@ -35,6 +40,7 @@ public class GameScreen extends BaseScreen {
 
         stage.addActor(planet);
         stage.addActor(table);
+        table.addActor(options);
     }
 
     @Override
