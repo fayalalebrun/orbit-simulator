@@ -30,9 +30,8 @@ public class GameScreen extends BaseScreen {
 
     @Override
     public void render(float delta) {
-        stage.act();
-
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1/30f));
 
         stage.draw();
     }
