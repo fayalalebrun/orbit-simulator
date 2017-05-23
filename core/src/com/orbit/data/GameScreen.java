@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
@@ -21,18 +22,17 @@ public class GameScreen extends BaseScreen {
 
     Planet planet;
 
-    VisTable table;
-
     OptionsWindow options;
 
     public GameScreen(Boot boot) {
         super(boot);
-        Gdx.input.setInputProcessor(stage);
+
         VisUI.load();
         planet = new Planet(50f, 1f, 1f, 1f, Color.BLUE, new Vector2(250f,250f));
         stage = new Stage(new FitViewport(800,600));
-        table = new VisTable(true);
-        table.setFillParent(true);
+
+        Gdx.input.setInputProcessor(stage);
+
         options = new OptionsWindow();
     }
 
@@ -40,14 +40,14 @@ public class GameScreen extends BaseScreen {
     public void show() {
 
         stage.addActor(planet);
-        stage.addActor(table);
-        table.addActor(options);
+        stage.addActor(options);
     }
 
     @Override
     public void render(float delta) {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1/30f));
+
 
         stage.draw();
     }
