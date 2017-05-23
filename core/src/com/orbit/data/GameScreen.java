@@ -27,6 +27,8 @@ public class GameScreen extends BaseScreen {
 
     Group ui;
 
+    PlacementListener placementListener;
+
     public GameScreen(Boot boot) {
         super(boot);
 
@@ -34,14 +36,17 @@ public class GameScreen extends BaseScreen {
         planet = new Planet(50f, 1f, 1f, 1f, Color.BLUE, new Vector2(250f,250f));
         stage = new Stage(new FitViewport(800,600));
         ui = new Group();
+        placementListener = new PlacementListener(stage);
 
         Gdx.input.setInputProcessor(stage);
 
-        options = new OptionsWindow();
+        options = new OptionsWindow(placementListener);
     }
 
     @Override
     public void show() {
+        stage.addListener(placementListener);
+
         stage.addActor(ui);
 
         ui.addActor(options);

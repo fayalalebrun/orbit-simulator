@@ -13,6 +13,7 @@ import com.kotcrab.vis.ui.util.form.SimpleFormValidator;
 import com.kotcrab.vis.ui.widget.*;
 import com.kotcrab.vis.ui.widget.color.ColorPicker;
 import com.kotcrab.vis.ui.widget.color.ColorPickerAdapter;
+import com.orbit.data.PlacementListener;
 
 /**
  * Created by fraayala19 on 5/23/17.
@@ -23,8 +24,14 @@ public class OptionsWindow extends VisWindow{
 
     private ColorPicker picker;
 
-    public OptionsWindow() {
+    PlacementListener placementListener;
+
+    public OptionsWindow(PlacementListener placementListener) {
         super("Planetary options");
+
+        this.placementListener = placementListener;
+        this.placementListener.setOptionsWindow(this);
+
         TableUtils.setSpacingDefaults(this);
         columnDefaults(0).left();
         addWidgets();
@@ -67,7 +74,8 @@ public class OptionsWindow extends VisWindow{
         VisValidatableTextField speedField = new VisValidatableTextField();
         VisValidatableTextField angleField = new VisValidatableTextField();
 
-
+        VisLabel errorLabel = new VisLabel();
+        errorLabel.setColor(Color.RED);
 
         add(new VisLabel("Radius(m):"));
         add(radiusField);
@@ -90,5 +98,29 @@ public class OptionsWindow extends VisWindow{
         row();
 
         add(pickerTable);
+
+        row();
+
+        add(errorLabel);
+
+        SimpleFormValidator validator = new SimpleFormValidator(placementListener,errorLabel,"smooth");
+        validator.setSuccessMessage("All parameters correct");
+        validator.notEmpty(radiusField, "Radius may not be empty");
+        validator.notEmpty(massField, "Mass may not be empty");
+        validator.notEmpty(speedField, "Speed may not be empty");
+        validator.notEmpty(angleField, "Angle may not be empty");
+
+        validator.floatNumber(radiusField, "Radius must be valid number");
+        validator.floatNumber(massField, "Mass must be valid number");
+        validator.floatNumber(speedField, "Speed must be valid number");
+        validator.floatNumber(angleField, "Angle must be valid number");
+
+        validator.valueGreaterThan(radiusField, "Radius may not be negative", 0, true);
+        validator.valueGreaterThan(massField, "Mass may not be negative", 0, true);
+        validator.valueGreaterThan(speedField, "Speed may not be negative", 0, true);
+        validator.valueGreaterThan(angleField,"Angle may not be negative", 0, true);
+
+        validator.valueLesserThan(angleField, "Angle must be less than 360", 360);
+
     }
 }
