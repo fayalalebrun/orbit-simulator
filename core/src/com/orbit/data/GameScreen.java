@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.kotcrab.vis.ui.VisUI;
 import com.orbit.data.entities.Planet;
 
 /**
@@ -19,12 +20,14 @@ public class GameScreen extends BaseScreen {
 
     public GameScreen(Boot boot) {
         super(boot);
+        VisUI.load();
         planet = new Planet(50f, 1f, 1f, 1f, Color.BLUE, new Vector2(250f,250f));
         stage = new Stage(new FitViewport(800,600));
     }
 
     @Override
     public void show() {
+
         stage.addActor(planet);
     }
 
@@ -62,5 +65,6 @@ public class GameScreen extends BaseScreen {
     @Override
     public void dispose() {
         stage.dispose();
+        VisUI.dispose();
     }
 }
