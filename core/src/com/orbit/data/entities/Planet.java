@@ -14,13 +14,13 @@ import java.util.Vector;
  * Created by Fran on 5/22/2017.
  */
 public class Planet extends Actor {
-    float radius, mass, velocity, angle;
+    float radius, mass, speed, angle;
     Texture texture;
 
-    public Planet(float radius, float mass, float velocity, float velocityAngle, Color color, Vector2 position) {
+    public Planet(float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position) {
         this.radius = radius;
         this.mass = mass;
-        this.velocity = velocity;
+        this.speed = speed;
         this.angle = angle;
         this.setX(position.x);
         this.setY(position.y);
