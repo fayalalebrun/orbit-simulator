@@ -31,6 +31,7 @@ public class GameListener extends InputListener implements Disableable{
         if(actor==null&&!disabled&&optionsWindow!=null){
             stage.addActor(new Planet(getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
                     new Vector2(x-getRadius(),y-getRadius())));
+            return true;
         }
         return false;
     }
