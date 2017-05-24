@@ -1,6 +1,8 @@
 package com.orbit.data;
 
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -16,19 +18,22 @@ import com.orbit.data.entities.Planet;
 public class GameListener extends InputListener implements Disableable{
     Stage stage;
 
-    boolean disabled;
+    OrthographicCamera camera;
+
+    boolean placementDisable;
 
     OptionsWindow optionsWindow;
 
     public GameListener(Stage stage) {
         this.stage = stage;
-        disabled = false;
+        placementDisable = false;
+        camera = (OrthographicCamera) stage.getCamera();
     }
 
     @Override
     public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         Actor actor = stage.hit(x,y,true);
-        if(actor==null&&!disabled&&optionsWindow!=null){
+        if(actor==null&&!placementDisable &&optionsWindow!=null){
             stage.addActor(new Planet(getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
                     new Vector2(x-getRadius(),y-getRadius())));
             return true;
@@ -37,13 +42,28 @@ public class GameListener extends InputListener implements Disableable{
     }
 
     @Override
+    public boolean keyDown(InputEvent event, int keycode) {
+        switch(keycode){
+            case Input.Keys.A:
+                camera.zoom+=0.25f;
+                System.out.println(camera.zoom);
+                return true;
+            case Input.Keys.Q:
+                camera.zoom-=0.25f;
+                break;
+        }
+
+        return false;
+    }
+
+    @Override
     public void setDisabled(boolean isDisabled) {
-        disabled = isDisabled;
+        placementDisable = isDisabled;
     }
 
     @Override
     public boolean isDisabled() {
-        return disabled;
+        return placementDisable;
     }
 
     public void setOptionsWindow(OptionsWindow optionsWindow){
