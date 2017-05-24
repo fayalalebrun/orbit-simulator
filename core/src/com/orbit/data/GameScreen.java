@@ -7,10 +7,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.VisTable;
-import com.kotcrab.vis.ui.widget.VisTextButton;
 import com.orbit.data.UI.OptionsWindow;
 import com.orbit.data.entities.Planet;
 
@@ -27,7 +24,7 @@ public class GameScreen extends BaseScreen {
 
     Group ui;
 
-    PlacementListener placementListener;
+    GameListener gameListener;
 
     public GameScreen(Boot boot) {
         super(boot);
@@ -36,16 +33,16 @@ public class GameScreen extends BaseScreen {
         planet = new Planet(50f, 1f, 1f, 1f, Color.BLUE, new Vector2(250f,250f));
         stage = new Stage(new FitViewport(800,600));
         ui = new Group();
-        placementListener = new PlacementListener(stage);
+        gameListener = new GameListener(stage);
 
         Gdx.input.setInputProcessor(stage);
 
-        options = new OptionsWindow(placementListener);
+        options = new OptionsWindow(gameListener);
     }
 
     @Override
     public void show() {
-        stage.addListener(placementListener);
+        stage.addListener(gameListener);
 
         stage.addActor(ui);
 

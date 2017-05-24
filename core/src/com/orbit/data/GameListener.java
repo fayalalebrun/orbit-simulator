@@ -13,14 +13,14 @@ import com.orbit.data.entities.Planet;
 /**
  * Created by fraayala19 on 5/23/17.
  */
-public class PlacementListener extends InputListener implements Disableable{
+public class GameListener extends InputListener implements Disableable{
     Stage stage;
 
     boolean disabled;
 
     OptionsWindow optionsWindow;
 
-    public PlacementListener(Stage stage) {
+    public GameListener(Stage stage) {
         this.stage = stage;
         disabled = false;
     }

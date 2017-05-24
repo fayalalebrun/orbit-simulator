@@ -2,9 +2,7 @@ package com.orbit.data.UI;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.kotcrab.vis.ui.VisUI;
@@ -13,7 +11,7 @@ import com.kotcrab.vis.ui.util.form.SimpleFormValidator;
 import com.kotcrab.vis.ui.widget.*;
 import com.kotcrab.vis.ui.widget.color.ColorPicker;
 import com.kotcrab.vis.ui.widget.color.ColorPickerAdapter;
-import com.orbit.data.PlacementListener;
+import com.orbit.data.GameListener;
 
 /**
  * Created by fraayala19 on 5/23/17.
@@ -25,18 +23,18 @@ public class OptionsWindow extends VisWindow{
     private ColorPicker picker;
     private Image pickerImage;
 
-    private PlacementListener placementListener;
+    private GameListener gameListener;
 
     private VisValidatableTextField radiusField;
     private VisValidatableTextField massField;
     private VisValidatableTextField speedField;
     private VisValidatableTextField angleField;
 
-    public OptionsWindow(PlacementListener placementListener) {
+    public OptionsWindow(GameListener gameListener) {
         super("Planetary options");
 
-        this.placementListener = placementListener;
-        this.placementListener.setOptionsWindow(this);
+        this.gameListener = gameListener;
+        this.gameListener.setOptionsWindow(this);
 
         TableUtils.setSpacingDefaults(this);
         columnDefaults(0).left();
@@ -109,7 +107,7 @@ public class OptionsWindow extends VisWindow{
 
         add(errorLabel);
 
-        SimpleFormValidator validator = new SimpleFormValidator(placementListener,errorLabel,"smooth");
+        SimpleFormValidator validator = new SimpleFormValidator(gameListener,errorLabel,"smooth");
         validator.setSuccessMessage("All parameters correct");
         validator.notEmpty(radiusField, "Radius may not be empty");
         validator.notEmpty(massField, "Mass may not be empty");
