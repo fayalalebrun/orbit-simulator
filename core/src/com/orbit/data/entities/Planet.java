@@ -21,7 +21,7 @@ public class Planet extends Actor {
         this.radius = radius;
         this.mass = mass;
         this.speed = speed;
-        this.angle = angle;
+        this.angle = velocityAngle;
         this.setX(position.x);
         this.setY(position.y);
         this.setWidth(radius*2);

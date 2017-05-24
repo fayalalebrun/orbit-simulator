@@ -26,6 +26,11 @@ public class OptionsWindow extends VisWindow{
 
     PlacementListener placementListener;
 
+    VisValidatableTextField radiusField;
+    VisValidatableTextField massField;
+    VisValidatableTextField speedField;
+    VisValidatableTextField angleField;
+
     public OptionsWindow(PlacementListener placementListener) {
         super("Planetary options");
 
@@ -69,10 +74,10 @@ public class OptionsWindow extends VisWindow{
         pickerTable.add(image).size(32).pad(3);
         pickerTable.pack();
 
-        VisValidatableTextField radiusField = new VisValidatableTextField();
-        VisValidatableTextField massField = new VisValidatableTextField();
-        VisValidatableTextField speedField = new VisValidatableTextField();
-        VisValidatableTextField angleField = new VisValidatableTextField();
+        radiusField = new VisValidatableTextField();
+        massField = new VisValidatableTextField();
+        speedField = new VisValidatableTextField();
+        angleField = new VisValidatableTextField();
 
         VisLabel errorLabel = new VisLabel();
         errorLabel.setColor(Color.RED);
@@ -122,5 +127,25 @@ public class OptionsWindow extends VisWindow{
 
         validator.valueLesserThan(angleField, "Angle must be less than 360", 360);
 
+    }
+
+    public VisValidatableTextField getRadiusField() {
+        return radiusField;
+    }
+
+    public VisValidatableTextField getMassField() {
+        return massField;
+    }
+
+    public VisValidatableTextField getSpeedField() {
+        return speedField;
+    }
+
+    public VisValidatableTextField getAngleField() {
+        return angleField;
+    }
+
+    public ColorPicker getPicker() {
+        return picker;
     }
 }
