@@ -23,13 +23,14 @@ public class OptionsWindow extends VisWindow{
     private static final Drawable white = VisUI.getSkin().getDrawable("white");
 
     private ColorPicker picker;
+    private Image pickerImage;
 
-    PlacementListener placementListener;
+    private PlacementListener placementListener;
 
-    VisValidatableTextField radiusField;
-    VisValidatableTextField massField;
-    VisValidatableTextField speedField;
-    VisValidatableTextField angleField;
+    private VisValidatableTextField radiusField;
+    private VisValidatableTextField massField;
+    private VisValidatableTextField speedField;
+    private VisValidatableTextField angleField;
 
     public OptionsWindow(PlacementListener placementListener) {
         super("Planetary options");
@@ -46,12 +47,12 @@ public class OptionsWindow extends VisWindow{
     }
 
     private void addWidgets(){
-        final Image image = new Image(white);
+        pickerImage = new Image(white);
 
         picker = new ColorPicker("Choose color", new ColorPickerAdapter(){
             @Override
             public void finished (Color newColor) {
-                image.setColor(newColor);
+                pickerImage.setColor(newColor);
             }
         });
 
@@ -66,12 +67,12 @@ public class OptionsWindow extends VisWindow{
 
         Color c = new Color(27 / 255.0f, 161 / 255.0f, 226 / 255.0f, 1);
         picker.setColor(c);
-        image.setColor(c);
+        pickerImage.setColor(c);
 
         VisTable pickerTable = new VisTable(true);
         TableUtils.setSpacingDefaults(pickerTable);
         pickerTable.add(showPickerButton);
-        pickerTable.add(image).size(32).pad(3);
+        pickerTable.add(pickerImage).size(32).pad(3);
         pickerTable.pack();
 
         radiusField = new VisValidatableTextField();
@@ -145,7 +146,7 @@ public class OptionsWindow extends VisWindow{
         return angleField;
     }
 
-    public ColorPicker getPicker() {
-        return picker;
+    public Image getPickerImage() {
+        return pickerImage;
     }
 }

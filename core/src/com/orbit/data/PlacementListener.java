@@ -66,6 +66,6 @@ public class PlacementListener extends InputListener implements Disableable{
     }
 
     private Color getColor(){
-        return optionsWindow.getPicker().getColor();
+        return optionsWindow.getPickerImage().getColor().cpy();
     }
 }
