@@ -62,8 +62,10 @@ public class GameListener extends InputListener implements Disableable{
 
     @Override
     public boolean scrolled(InputEvent event, float x, float y, int amount) {
-        if(camera.zoom+amount>0.001)
-        camera.zoom+=amount;
+        if(camera.zoom+amount*(camera.zoom/100)>0.001) {
+            camera.zoom += amount * (camera.zoom / 100);
+            return true;
+        }
 
         return false;
     }

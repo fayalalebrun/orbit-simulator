@@ -32,7 +32,7 @@ public class OptionsWindow extends VisWindow{
 
     public OptionsWindow(GameListener gameListener) {
         super("Planetary options");
-
+        
         this.gameListener = gameListener;
         this.gameListener.setOptionsWindow(this);
 
