@@ -22,6 +22,9 @@ public class GameListener extends InputListener implements Disableable{
 
     boolean placementDisable;
 
+    boolean moveInProgress = false;
+    float moveLastX, moveLastY;
+
     OptionsWindow optionsWindow;
 
     public GameListener(Stage stage) {
@@ -40,19 +43,41 @@ public class GameListener extends InputListener implements Disableable{
                             new Vector2(x-getRadius(),y-getRadius())));
                     return true;
                 }
-            case MOVE:
-
                 break;
+            case MOVE:
+                moveInProgress = true;
+                moveLastX = x;
+                moveLastY = y;
+                return true;
             case ZOOM_IN:
                 zoom(-10);
-                break;
+                return true;
             case ZOOM_OUT:
                 zoom(10);
-                break;
+                return true;
         }
 
 
         return false;
+    }
+
+    @Override
+    public void touchDragged(InputEvent event, float x, float y, int pointer) {
+        if(moveInProgress){
+            float changeInX = x-moveLastX;
+            float changeInY = y-moveLastY;
+            changeInX*=-1;
+            changeInY*=-1;
+            moveLastX=x;
+            moveLastY=y;
+            camera.translate(changeInX,changeInY);
+        }
+
+    }
+
+    @Override
+    public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
+        moveInProgress = false;
     }
 
     @Override
