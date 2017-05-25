@@ -33,9 +33,9 @@ public class Planet extends Actor {
         this.angle = velocityAngle; //degrees
         this.color = color.cpy();
 
-        xPos = position.x - mToAU(this.radius);
-        yPos = position.y - mToAU(this.radius);
-        setPosition((float)xPos, (float)yPos);
+        xPos = position.x;
+        yPos = position.y;
+        setPosition((float)(xPos - mToAU(this.radius)), (float)(yPos - mToAU(this.radius)));
 
         double diameter = mToAU(this.radius) * 2;
 
@@ -52,10 +52,17 @@ public class Planet extends Actor {
     @Override
     public void draw(Batch batch, float parentAlpha) {
         batch.setColor(color.cpy());
-        batch.draw(texture, (float)xPos, (float)yPos, getWidth(),getHeight());
+
+
+        
+
+
+        batch.draw(texture, (float)(xPos-mToAU(this.radius)), (float)(yPos - mToAU(this.radius)), getWidth(),getHeight());
     }
 
     public double mToAU(double meters){
         return meters/149597870691.0;
     }
+
+
 }
