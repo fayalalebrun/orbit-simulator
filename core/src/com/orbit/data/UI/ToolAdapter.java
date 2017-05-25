@@ -39,11 +39,11 @@ public class ToolAdapter extends ArrayListAdapter<Tool, VisTable> {
                 table.setName("MOVE");
                 break;
             case ZOOM_IN:
-                texture = manager.get("zoom-in", Texture.class);
+                texture = manager.get("zoom-in.png", Texture.class);
                 table.setName("ZOOM_IN");
                 break;
             case ZOOM_OUT:
-                texture = manager.get("zoom-out", Texture.class);
+                texture = manager.get("zoom-out.png", Texture.class);
                 table.setName("ZOOM_OUT");
                 break;
         }
@@ -51,10 +51,8 @@ public class ToolAdapter extends ArrayListAdapter<Tool, VisTable> {
 
 
         Image image = new Image(texture);
-        image.setSize(32f,32f);
 
         table.add(image);
-
         return table;
     }
 }
