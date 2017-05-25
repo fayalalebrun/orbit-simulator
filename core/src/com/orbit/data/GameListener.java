@@ -37,12 +37,10 @@ public class GameListener extends InputListener implements Disableable{
     public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         switch (GameScreen.currentTool){
             case POINTER:
-                Actor actor = stage.hit(x,y,true);
-                if(actor==null&&!placementDisable &&optionsWindow!=null){
-                    stage.addActor(new Planet(getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
-                            new Vector2(x-getRadius(),y-getRadius())));
+                if(placePlanet(x,y)){
                     return true;
                 }
+
                 break;
             case MOVE:
                 moveInProgress = true;
@@ -103,6 +101,16 @@ public class GameListener extends InputListener implements Disableable{
             return true;
         }
 
+        return false;
+    }
+    
+    public boolean placePlanet(float x, float y){
+        Actor actor = stage.hit(x,y,true);
+        if(actor==null&&!placementDisable &&optionsWindow!=null){
+            stage.addActor(new Planet(getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
+                    new Vector2(x-getRadius(),y-getRadius())));
+            return true;
+        }
         return false;
     }
 
