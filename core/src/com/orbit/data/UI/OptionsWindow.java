@@ -41,7 +41,6 @@ public class OptionsWindow extends VisWindow{
         addWidgets();
         pack();
 
-        setPosition(100,100);
     }
 
     private void addWidgets(){
