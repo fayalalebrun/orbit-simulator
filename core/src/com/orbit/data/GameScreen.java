@@ -11,6 +11,8 @@ import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.orbit.data.UI.OptionsWindow;
+import com.orbit.data.UI.Tool;
+import com.orbit.data.UI.Toolbar;
 import com.orbit.data.entities.Planet;
 
 /**
@@ -25,11 +27,14 @@ public class GameScreen extends BaseScreen {
     Planet planet;
 
     OptionsWindow options;
+    Toolbar toolbar;
 
     Group ui;
 
     GameListener gameListener;
     UIListener uiListener;
+
+    Tool currentTool;
 
     public GameScreen(Boot boot) {
         super(boot);
@@ -49,6 +54,7 @@ public class GameScreen extends BaseScreen {
         Gdx.input.setInputProcessor(multiplexer);
 
         options = new OptionsWindow(gameListener);
+        toolbar = new Toolbar(this.boot.getManager(), currentTool);
     }
 
     @Override
@@ -59,6 +65,7 @@ public class GameScreen extends BaseScreen {
         uiStage.addActor(ui);
 
         ui.addActor(options);
+        ui.addActor(toolbar);
 
         stage.addActor(planet);
     }
