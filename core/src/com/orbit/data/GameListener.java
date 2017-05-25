@@ -32,12 +32,26 @@ public class GameListener extends InputListener implements Disableable{
 
     @Override
     public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-        Actor actor = stage.hit(x,y,true);
-        if(actor==null&&!placementDisable &&optionsWindow!=null){
-            stage.addActor(new Planet(getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
-                    new Vector2(x-getRadius(),y-getRadius())));
-            return true;
+        switch (GameScreen.currentTool){
+            case POINTER:
+                Actor actor = stage.hit(x,y,true);
+                if(actor==null&&!placementDisable &&optionsWindow!=null){
+                    stage.addActor(new Planet(getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
+                            new Vector2(x-getRadius(),y-getRadius())));
+                    return true;
+                }
+            case MOVE:
+
+                break;
+            case ZOOM_IN:
+
+                break;
+            case ZOOM_OUT:
+
+                break;
         }
+
+
         return false;
     }
 
