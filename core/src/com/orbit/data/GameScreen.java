@@ -25,8 +25,6 @@ public class GameScreen extends BaseScreen {
 
     private Stage uiStage;
 
-    private Planet planet;
-
     private OptionsWindow options;
     private Toolbar toolbar;
     private PlacementWindow placement;
@@ -42,7 +40,6 @@ public class GameScreen extends BaseScreen {
         super(boot);
 
         VisUI.load();
-        planet = new Planet(50f, 1f, 1f, 1f, Color.BLUE, new Vector2(250f,250f));
         stage = new Stage(new FitViewport(0.04f,0.03f));
         uiStage = new Stage(new ExtendViewport(800,600));
         ui = new Group();
@@ -73,7 +70,6 @@ public class GameScreen extends BaseScreen {
         ui.addActor(toolbar);
         ui.addActor(placement);
 
-        //stage.addActor(planet);
     }
 
     @Override
