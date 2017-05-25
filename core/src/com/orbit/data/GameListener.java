@@ -44,10 +44,10 @@ public class GameListener extends InputListener implements Disableable{
 
                 break;
             case ZOOM_IN:
-
+                zoom(-10);
                 break;
             case ZOOM_OUT:
-
+                zoom(10);
                 break;
         }
 
@@ -60,15 +60,8 @@ public class GameListener extends InputListener implements Disableable{
 
         switch(keycode){
             case Input.Keys.A:
-                camera.zoom+=0.25f;
                 System.out.println(camera.zoom);
-                return true;
-            case Input.Keys.Q:
-                if(camera.zoom<0.5f){
-                    return false;
-                }
-                camera.zoom-=0.25f;
-                return true;
+                return  true;
         }
 
         return false;
@@ -76,6 +69,10 @@ public class GameListener extends InputListener implements Disableable{
 
     @Override
     public boolean scrolled(InputEvent event, float x, float y, int amount) {
+        return zoom(amount);
+    }
+
+    private boolean zoom(int amount){
         if(camera.zoom+amount*(camera.zoom/100)>0.001) {
             camera.zoom += amount * (camera.zoom / 100);
             return true;
