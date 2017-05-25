@@ -108,7 +108,7 @@ public class GameListener extends InputListener implements Disableable{
         Actor actor = stage.hit(x,y,true);
         if(actor==null&&!placementDisable &&optionsWindow!=null){
             stage.addActor(new Planet(getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
-                    new Vector2(x,y)));
+                    new Vector2(x,y),0.0));
             return true;
         }
         return false;

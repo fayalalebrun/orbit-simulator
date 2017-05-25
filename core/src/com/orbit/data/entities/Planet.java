@@ -17,12 +17,19 @@ import static com.badlogic.gdx.scenes.scene2d.ui.Table.Debug.actor;
  */
 public class Planet extends Actor {
     double radius, mass, speed, angle, xPos, yPos;
+    double AURadius;
     Texture texture;
     Color color;
+    Double sizeMultiplication;
 
-    public Planet(float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position) {
+    boolean magnify = true;
+
+    public Planet(float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position, Double sizeMultiplication) {
+        this.sizeMultiplication = sizeMultiplication;
+
         this.radius = radius; //km
         this.radius*=1000;//Convert to m
+        this.AURadius = mToAU(this.radius);
 
         this.mass = mass; //Earth masses
         this.mass*=5.9723 * Math.pow(10,24); //Convert to kg
@@ -35,9 +42,9 @@ public class Planet extends Actor {
 
         xPos = position.x;
         yPos = position.y;
-        setPosition((float)(xPos - mToAU(this.radius)), (float)(yPos - mToAU(this.radius)));
+        setPosition((float)(xPos - AURadius), (float)(yPos - AURadius));
 
-        double diameter = mToAU(this.radius) * 2;
+        double diameter = AURadius * 2;
 
         this.setWidth((float)diameter);
         this.setHeight((float)diameter);
@@ -54,15 +61,22 @@ public class Planet extends Actor {
         batch.setColor(color.cpy());
 
 
-        
+        if(magnify){
+            batch.draw(texture, (float)(xPos-AURadius-getMultiplier()*0.5), (float)(yPos - AURadius - getMultiplier()*0.5),
+                    getWidth() +(float)getMultiplier() ,getHeight()+(float)getMultiplier());
+            return;
+        }
 
 
-        batch.draw(texture, (float)(xPos-mToAU(this.radius)), (float)(yPos - mToAU(this.radius)), getWidth(),getHeight());
+        batch.draw(texture, (float)(xPos-AURadius), (float)(yPos - AURadius), getWidth(),getHeight());
     }
 
     public double mToAU(double meters){
         return meters/149597870691.0;
     }
 
+    private double getMultiplier(){
+        return AURadius*sizeMultiplication;
+    }
 
 }
