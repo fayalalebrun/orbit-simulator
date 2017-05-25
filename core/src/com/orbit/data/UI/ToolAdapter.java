@@ -18,6 +18,7 @@ public class ToolAdapter extends ArrayListAdapter<Tool, VisTable> {
 
     public ToolAdapter(ArrayList<Tool> array, AssetManager manager, Tool currentTool) {
         super(array);
+        setSelectionMode(SelectionMode.SINGLE);
         this.manager = manager;
         this.currentTool = currentTool;
     }
@@ -27,22 +28,27 @@ public class ToolAdapter extends ArrayListAdapter<Tool, VisTable> {
 
         Texture texture = null;
 
+        VisTable table = new VisTable();
         switch (item){
             case POINTER:
                 texture = manager.get("pointer.png", Texture.class);
+                table.setName("POINTER");
                 break;
             case MOVE:
                 texture = manager.get("move.png", Texture.class);
+                table.setName("MOVE");
                 break;
             case ZOOM_IN:
                 texture = manager.get("zoom-in", Texture.class);
+                table.setName("ZOOM_IN");
                 break;
             case ZOOM_OUT:
                 texture = manager.get("zoom-out", Texture.class);
+                table.setName("ZOOM_OUT");
                 break;
         }
 
-        VisTable table = new VisTable();
+
 
         Image image = new Image(texture);
         image.setSize(32f,32f);
