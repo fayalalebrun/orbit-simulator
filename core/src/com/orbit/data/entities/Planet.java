@@ -56,6 +56,6 @@ public class Planet extends Actor {
     }
 
     public double mToAU(double meters){
-        return meters * 0.0000000000067;
+        return meters/149597870700.0;
     }
 }
