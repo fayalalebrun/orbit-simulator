@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.orbit.data.GameScreen;
 
 import java.util.Vector;
 
@@ -20,13 +21,10 @@ public class Planet extends Actor {
     double AURadius;
     Texture texture;
     Color color;
-    Double sizeMultiplication;
 
     boolean magnify = true;
 
-    public Planet(float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position, Double sizeMultiplication) {
-        this.sizeMultiplication = sizeMultiplication;
-
+    public Planet(float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position) {
         this.radius = radius; //km
         this.radius*=1000;//Convert to m
         this.AURadius = mToAU(this.radius);
@@ -76,7 +74,7 @@ public class Planet extends Actor {
     }
 
     private double getMultiplier(){
-        return AURadius*sizeMultiplication;
+        return AURadius* GameScreen.sizeMultVar;
     }
 
 }

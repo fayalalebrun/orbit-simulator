@@ -33,6 +33,8 @@ public class GameScreen extends BaseScreen {
     private UIListener uiListener;
 
     public static Tool currentTool;
+    public static double sizeMultVar = 0.0;
+
 
     public GameScreen(Boot boot) {
         super(boot);
