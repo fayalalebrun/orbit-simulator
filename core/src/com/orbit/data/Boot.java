@@ -20,6 +20,13 @@ public class Boot extends Game {
 
 		manager = new AssetManager();
 
+		manager.load("cursor.png", Texture.class);
+		manager.load("move.png", Texture.class);
+		manager.load("zoom-in.png", Texture.class);
+		manager.load("zoom-out.png", Texture.class);
+
+		manager.finishLoading();
+
 		setScreen(new GameScreen(this));
 	}
 
