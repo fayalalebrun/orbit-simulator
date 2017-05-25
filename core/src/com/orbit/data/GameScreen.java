@@ -22,19 +22,19 @@ public class GameScreen extends BaseScreen {
 
     Stage stage;
 
-    Stage uiStage;
+    private Stage uiStage;
 
-    Planet planet;
+    private Planet planet;
 
-    OptionsWindow options;
-    Toolbar toolbar;
+    private OptionsWindow options;
+    private Toolbar toolbar;
 
-    Group ui;
+    private Group ui;
 
-    GameListener gameListener;
-    UIListener uiListener;
+    private GameListener gameListener;
+    private UIListener uiListener;
 
-    Tool currentTool;
+    public static Tool currentTool;
 
     public GameScreen(Boot boot) {
         super(boot);
@@ -46,6 +46,7 @@ public class GameScreen extends BaseScreen {
         ui = new Group();
         gameListener = new GameListener(stage);
         uiListener = new UIListener(uiStage);
+        currentTool = Tool.MOVE;
 
         InputMultiplexer multiplexer = new InputMultiplexer();
         multiplexer.addProcessor(uiStage);
@@ -54,7 +55,8 @@ public class GameScreen extends BaseScreen {
         Gdx.input.setInputProcessor(multiplexer);
 
         options = new OptionsWindow(gameListener);
-        toolbar = new Toolbar(this.boot.getManager(), currentTool);
+        toolbar = new Toolbar(this.boot.getManager());
+        toolbar.moveBy(800,400);
     }
 
     @Override
@@ -75,7 +77,6 @@ public class GameScreen extends BaseScreen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1/30f));
         uiStage.act(Math.min(Gdx.graphics.getDeltaTime(), 1/30f));
-
 
         stage.draw();
         uiStage.draw();

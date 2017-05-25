@@ -3,8 +3,11 @@ package com.orbit.data.UI;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
+import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.adapter.ArrayListAdapter;
 import com.kotcrab.vis.ui.widget.VisTable;
+import com.orbit.data.GameScreen;
 
 import java.util.ArrayList;
 
@@ -14,13 +17,13 @@ import java.util.ArrayList;
 public class ToolAdapter extends ArrayListAdapter<Tool, VisTable> {
     AssetManager manager;
 
-    Tool currentTool;
+    private final Drawable bg = VisUI.getSkin().getDrawable("window-bg");
+    private final Drawable selection = VisUI.getSkin().getDrawable("list-selection");
 
-    public ToolAdapter(ArrayList<Tool> array, AssetManager manager, Tool currentTool) {
+    public ToolAdapter(ArrayList<Tool> array, AssetManager manager) {
         super(array);
         setSelectionMode(SelectionMode.SINGLE);
         this.manager = manager;
-        this.currentTool = currentTool;
     }
 
     @Override
@@ -54,5 +57,25 @@ public class ToolAdapter extends ArrayListAdapter<Tool, VisTable> {
 
         table.add(image);
         return table;
+    }
+
+    @Override
+    protected void selectView(VisTable view) {
+        view.setBackground(selection);
+        String name = view.getName();
+        if(name.equals("POINTER")){
+            GameScreen.currentTool = Tool.POINTER;
+        } else if (name.equals("MOVE")){
+            GameScreen.currentTool  = Tool.MOVE;
+        } else if(name.equals("ZOOM_IN")){
+            GameScreen.currentTool  = Tool.ZOOM_IN;
+        } else if(name.equals("ZOOM_OUT")){
+            GameScreen.currentTool  = Tool.ZOOM_OUT;
+        }
+    }
+
+    @Override
+    protected void deselectView(VisTable view) {
+        view.setBackground(bg);
     }
 }

@@ -14,9 +14,8 @@ import java.util.List;
 public class Toolbar extends VisWindow{
     AssetManager manager;
 
-    Tool currentTool;
 
-    public Toolbar(AssetManager manager, Tool currentTool){
+    public Toolbar(AssetManager manager){
         super("Tools");
         this.manager = manager;
 
@@ -26,7 +25,7 @@ public class Toolbar extends VisWindow{
     }
 
     private void addButtons(){
-        ToolAdapter adapter = new ToolAdapter(new ArrayList<Tool>(), manager, currentTool);
+        ToolAdapter adapter = new ToolAdapter(new ArrayList<Tool>(), manager);
         ListView<Tool> view = new ListView<Tool>(adapter);
         this.add(view.getMainTable()).grow();
         adapter.add(Tool.MOVE);
