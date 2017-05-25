@@ -10,10 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
-import com.orbit.data.UI.OptionsWindow;
-import com.orbit.data.UI.PlacementWindow;
-import com.orbit.data.UI.Tool;
-import com.orbit.data.UI.Toolbar;
+import com.orbit.data.UI.*;
 import com.orbit.data.entities.Planet;
 
 /**
@@ -28,6 +25,7 @@ public class GameScreen extends BaseScreen {
     private OptionsWindow options;
     private Toolbar toolbar;
     private PlacementWindow placement;
+    private SizeMultWindow sizeMult;
 
     private Group ui;
 
@@ -56,6 +54,7 @@ public class GameScreen extends BaseScreen {
         placement = new PlacementWindow(gameListener);
         options = new OptionsWindow(gameListener);
         toolbar = new Toolbar(this.boot.getManager());
+        sizeMult = new SizeMultWindow();
         toolbar.moveBy(800,400);
     }
 
@@ -69,6 +68,7 @@ public class GameScreen extends BaseScreen {
         ui.addActor(options);
         ui.addActor(toolbar);
         ui.addActor(placement);
+        ui.addActor(sizeMult);
 
     }
 
