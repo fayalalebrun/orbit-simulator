@@ -33,11 +33,11 @@ public class Planet extends Actor {
         this.angle = velocityAngle; //degrees
         this.color = color.cpy();
 
-        xPos = position.x - mToAU(radius);
-        yPos = position.y - mToAU(radius);
+        xPos = position.x - mToAU(this.radius);
+        yPos = position.y - mToAU(this.radius);
         setPosition((float)xPos, (float)yPos);
 
-        double diameter = mToAU(radius) * 2;
+        double diameter = mToAU(this.radius) * 2;
 
         this.setWidth((float)diameter);
         this.setHeight((float)diameter);
@@ -56,6 +56,6 @@ public class Planet extends Actor {
     }
 
     public double mToAU(double meters){
-        return meters/149597870700.0;
+        return meters/149597870691.0;
     }
 }
