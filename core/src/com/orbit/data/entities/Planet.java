@@ -26,7 +26,7 @@ public class Planet extends Actor {
 
         this.mass = mass; //Earth masses
         this.mass*=5.9723 * Math.pow(10,24); //Convert to kg
-
+        
         this.speed = speed; //km/s
         this.speed *= 1000;//convert to m/s
 
@@ -34,11 +34,9 @@ public class Planet extends Actor {
         this.color = color.cpy();
         xPos = position.x - mToAU(radius);
         yPos = position.y - mToAU(radius);
-        System.out.println("x:"+xPos);
-        System.out.println("y:"+yPos);
 
         double diameter = mToAU(radius) * 2;
-        System.out.println("Diamter"+diameter);
+
         this.setWidth((float)diameter);
         this.setHeight((float)diameter);
 
