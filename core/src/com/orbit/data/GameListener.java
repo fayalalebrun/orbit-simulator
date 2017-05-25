@@ -96,7 +96,7 @@ public class GameListener extends InputListener implements Disableable{
     }
 
     private boolean zoom(int amount){
-        if(camera.zoom+amount*(camera.zoom/100)>0.001) {
+        if(camera.zoom+amount*(camera.zoom/100)>0.00000000001) {
             camera.zoom += amount * (camera.zoom / 100);
             return true;
         }
@@ -108,7 +108,7 @@ public class GameListener extends InputListener implements Disableable{
         Actor actor = stage.hit(x,y,true);
         if(actor==null&&!placementDisable &&optionsWindow!=null){
             stage.addActor(new Planet(getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
-                    new Vector2(x-getRadius(),y-getRadius())));
+                    new Vector2(x,y)));
             return true;
         }
         return false;
