@@ -26,7 +26,6 @@ public class PlacementWindow extends VisWindow{
         addWidgets();
         pack();
 
-        setPosition(1000,0);
     }
 
     private void addWidgets(){

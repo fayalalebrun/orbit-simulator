@@ -57,7 +57,9 @@ public class GameScreen extends BaseScreen {
         options = new OptionsWindow(gameListener);
         toolbar = new Toolbar(this.boot.getManager());
         sizeMult = new SizeMultWindow();
-        toolbar.moveBy(800,400);
+        toolbar.moveBy(800,0);
+        placement.moveBy(350,0);
+        sizeMult.moveBy(350,56);
     }
 
     @Override

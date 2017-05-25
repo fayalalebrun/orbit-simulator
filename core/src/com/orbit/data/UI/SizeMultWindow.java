@@ -14,7 +14,7 @@ import com.orbit.data.GameScreen;
 public class SizeMultWindow extends VisWindow{
 
     public SizeMultWindow() {
-        super("Size Multiplication");
+        super("Viewable Multiplication");
 
         TableUtils.setSpacingDefaults(this);
         addWidgets();
