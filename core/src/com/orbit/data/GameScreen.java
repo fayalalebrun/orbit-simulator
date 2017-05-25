@@ -56,7 +56,7 @@ public class GameScreen extends BaseScreen {
 
         Gdx.input.setInputProcessor(multiplexer);
 
-        placement = new PlacementWindow();
+        placement = new PlacementWindow(gameListener);
         options = new OptionsWindow(gameListener);
         toolbar = new Toolbar(this.boot.getManager());
         toolbar.moveBy(800,400);
