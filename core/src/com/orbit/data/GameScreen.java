@@ -43,7 +43,7 @@ public class GameScreen extends BaseScreen {
 
         VisUI.load();
         planet = new Planet(50f, 1f, 1f, 1f, Color.BLUE, new Vector2(250f,250f));
-        stage = new Stage(new FitViewport(40,30));
+        stage = new Stage(new FitViewport(0.00002f,0.000015f));
         uiStage = new Stage(new ExtendViewport(800,600));
         ui = new Group();
         gameListener = new GameListener(stage);
@@ -73,7 +73,7 @@ public class GameScreen extends BaseScreen {
         ui.addActor(toolbar);
         ui.addActor(placement);
 
-        stage.addActor(planet);
+        //stage.addActor(planet);
     }
 
     @Override
