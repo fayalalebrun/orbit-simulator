@@ -81,17 +81,17 @@ public class OptionsWindow extends VisWindow{
         VisLabel errorLabel = new VisLabel();
         errorLabel.setColor(Color.RED);
 
-        add(new VisLabel("Radius(m):"));
+        add(new VisLabel("Radius(km):"));
         add(radiusField);
 
         row();
 
-        add(new VisLabel("Mass(kg):"));
+        add(new VisLabel("Mass(Earth masses):"));
         add(massField).expand().fill();
 
         row();
 
-        add(new VisLabel("Speed(m/s):"));
+        add(new VisLabel("Speed(km/s):"));
         add(speedField).expand().fill();
 
         row();
