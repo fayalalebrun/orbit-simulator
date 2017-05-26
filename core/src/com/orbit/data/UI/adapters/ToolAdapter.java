@@ -1,4 +1,4 @@
-package com.orbit.data.UI;
+package com.orbit.data.UI.adapters;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,6 +8,7 @@ import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.adapter.ArrayListAdapter;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.orbit.data.GameScreen;
+import com.orbit.data.UI.Tool;
 
 import java.util.ArrayList;
 

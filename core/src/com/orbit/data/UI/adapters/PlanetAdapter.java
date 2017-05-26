@@ -1,4 +1,4 @@
-package com.orbit.data.UI;
+package com.orbit.data.UI.adapters;
 
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
@@ -8,6 +8,7 @@ import com.kotcrab.vis.ui.util.adapter.ArrayListAdapter;
 import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisSlider;
 import com.kotcrab.vis.ui.widget.VisTable;
+import com.orbit.data.UI.PlanetMagSliderListener;
 import com.orbit.data.entities.Planet;
 
 import java.util.ArrayList;

@@ -4,6 +4,7 @@ import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.ListView;
 import com.kotcrab.vis.ui.widget.VisScrollPane;
 import com.kotcrab.vis.ui.widget.VisWindow;
+import com.orbit.data.UI.adapters.PlanetAdapter;
 import com.orbit.data.entities.Planet;
 
 import java.util.ArrayList;

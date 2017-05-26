@@ -5,9 +5,9 @@ import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.ListView;
 import com.kotcrab.vis.ui.widget.VisWindow;
 import com.orbit.data.GameScreen;
+import com.orbit.data.UI.adapters.ToolAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Fran on 5/24/2017.
