@@ -21,10 +21,13 @@ public class Planet extends Actor {
     double AURadius;
     Texture texture;
     Color color;
+    String name;
 
     boolean magnify = true;
 
-    public Planet(float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position) {
+    public Planet(String name, float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position) {
+        this.name = name;
+
         this.radius = radius; //km
         this.radius*=1000;//Convert to m
         this.AURadius = mToAU(this.radius);
@@ -76,5 +79,6 @@ public class Planet extends Actor {
     private double getMultiplier(){
         return AURadius* GameScreen.sizeMultVar;
     }
+
 
 }
