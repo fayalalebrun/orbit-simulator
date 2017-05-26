@@ -24,6 +24,7 @@ public class Planet extends Actor {
     String name;
 
     boolean magnify = true;
+    float magnificationAmount;
 
     public Planet(String name, float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position) {
         this.name = name;
@@ -77,8 +78,15 @@ public class Planet extends Actor {
     }
 
     private double getMultiplier(){
-        return AURadius* GameScreen.sizeMultVar;
+        return 0.001*GameScreen.sizeMultVar * magnificationAmount;
     }
 
+    @Override
+    public String getName() {
+        return name;
+    }
 
+    public void setMagnificationAmount(float magnificationAmount) {
+        this.magnificationAmount = magnificationAmount;
+    }
 }

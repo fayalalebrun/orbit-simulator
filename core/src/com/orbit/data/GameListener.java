@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.Disableable;
 import com.orbit.data.UI.OptionsWindow;
+import com.orbit.data.UI.PlanetListWindow;
 import com.orbit.data.entities.Planet;
 
 /**
@@ -27,8 +28,11 @@ public class GameListener extends InputListener implements Disableable{
 
     OptionsWindow optionsWindow;
 
-    public GameListener(Stage stage) {
+    PlanetListWindow planetListWindow;
+
+    public GameListener(Stage stage, PlanetListWindow planetListWindow) {
         this.stage = stage;
+        this.planetListWindow = planetListWindow;
         placementDisable = false;
         camera = (OrthographicCamera) stage.getCamera();
     }
@@ -107,8 +111,10 @@ public class GameListener extends InputListener implements Disableable{
     public boolean placePlanet(float x, float y){
         Actor actor = stage.hit(x,y,true);
         if(actor==null&&!placementDisable &&optionsWindow!=null){
-            stage.addActor(new Planet(getName(),getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
-                    new Vector2(x,y)));
+            Planet p = new Planet(getName(),getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
+                    new Vector2(x,y));
+            stage.addActor(p);
+            planetListWindow.addPlanet(p);
             return true;
         }
         return false;

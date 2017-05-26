@@ -26,6 +26,7 @@ public class GameScreen extends BaseScreen {
     private Toolbar toolbar;
     private PlacementWindow placement;
     private SizeMultWindow sizeMult;
+    private PlanetListWindow planetWindow;
 
     private Group ui;
 
@@ -43,7 +44,9 @@ public class GameScreen extends BaseScreen {
         stage = new Stage(new FitViewport(0.04f,0.03f));
         uiStage = new Stage(new ExtendViewport(800,600));
         ui = new Group();
-        gameListener = new GameListener(stage);
+
+        planetWindow = new PlanetListWindow();
+        gameListener = new GameListener(stage, planetWindow);
         uiListener = new UIListener(uiStage);
         currentTool = Tool.MOVE;
 
@@ -57,6 +60,8 @@ public class GameScreen extends BaseScreen {
         options = new OptionsWindow(gameListener);
         toolbar = new Toolbar(this.boot.getManager());
         sizeMult = new SizeMultWindow();
+
+
         toolbar.moveBy(800,0);
         placement.moveBy(350,0);
         sizeMult.moveBy(350,56);
@@ -73,6 +78,7 @@ public class GameScreen extends BaseScreen {
         ui.addActor(toolbar);
         ui.addActor(placement);
         ui.addActor(sizeMult);
+        ui.addActor(planetWindow);
 
     }
 
