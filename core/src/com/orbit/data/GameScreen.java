@@ -65,6 +65,7 @@ public class GameScreen extends BaseScreen {
         toolbar.moveBy(800,0);
         placement.moveBy(350,0);
         sizeMult.moveBy(350,56);
+        planetWindow.moveBy(0,270);
     }
 
     @Override

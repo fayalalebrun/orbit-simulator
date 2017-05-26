@@ -22,7 +22,7 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
     public PlanetAdapter(ArrayList<Planet> array) {
         super(array);
-        setSelectionMode(SelectionMode.SINGLE);
+        setSelectionMode(SelectionMode.DISABLED);
     }
 
     @Override
