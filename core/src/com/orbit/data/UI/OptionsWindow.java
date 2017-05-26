@@ -25,6 +25,7 @@ public class OptionsWindow extends VisWindow{
 
     private GameListener gameListener;
 
+    private VisValidatableTextField nameField;
     private VisValidatableTextField radiusField;
     private VisValidatableTextField massField;
     private VisValidatableTextField speedField;
@@ -72,6 +73,7 @@ public class OptionsWindow extends VisWindow{
         pickerTable.add(pickerImage).size(32).pad(3);
         pickerTable.pack();
 
+        nameField = new VisValidatableTextField();
         radiusField = new VisValidatableTextField();
         massField = new VisValidatableTextField();
         speedField = new VisValidatableTextField();
@@ -79,6 +81,11 @@ public class OptionsWindow extends VisWindow{
 
         VisLabel errorLabel = new VisLabel();
         errorLabel.setColor(Color.RED);
+
+        add(new VisLabel("Name:"));
+        add(nameField);
+
+        row();
 
         add(new VisLabel("Radius(km):"));
         add(radiusField);
@@ -108,6 +115,7 @@ public class OptionsWindow extends VisWindow{
 
         SimpleFormValidator validator = new SimpleFormValidator(gameListener,errorLabel,"smooth");
         validator.setSuccessMessage("All parameters correct");
+        validator.notEmpty(nameField, "Name may not be empty");
         validator.notEmpty(radiusField, "Radius may not be empty");
         validator.notEmpty(massField, "Mass may not be empty");
         validator.notEmpty(speedField, "Speed may not be empty");
@@ -141,6 +149,10 @@ public class OptionsWindow extends VisWindow{
 
     public VisValidatableTextField getAngleField() {
         return angleField;
+    }
+
+    public VisValidatableTextField getNameField(){
+        return  nameField;
     }
 
     public Image getPickerImage() {

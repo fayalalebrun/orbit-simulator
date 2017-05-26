@@ -107,7 +107,7 @@ public class GameListener extends InputListener implements Disableable{
     public boolean placePlanet(float x, float y){
         Actor actor = stage.hit(x,y,true);
         if(actor==null&&!placementDisable &&optionsWindow!=null){
-            stage.addActor(new Planet("default",getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
+            stage.addActor(new Planet(getName(),getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
                     new Vector2(x,y)));
             return true;
         }
@@ -128,6 +128,10 @@ public class GameListener extends InputListener implements Disableable{
         this.optionsWindow = optionsWindow;
     }
 
+    private String getName(){
+        return optionsWindow.getNameField().getText();
+    }
+
     private float getRadius(){
         return Float.parseFloat(optionsWindow.getRadiusField().getText());
     }
@@ -141,7 +145,7 @@ public class GameListener extends InputListener implements Disableable{
     }
 
     private float getAngle(){
-        return Float.parseFloat(optionsWindow.getSpeedField().getText());
+        return Float.parseFloat(optionsWindow.getAngleField().getText());
     }
 
     private Color getColor(){
