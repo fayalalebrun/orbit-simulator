@@ -4,6 +4,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.ListView;
 import com.kotcrab.vis.ui.widget.VisWindow;
+import com.orbit.data.GameScreen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,13 @@ public class Toolbar extends VisWindow{
         adapter.add(Tool.POINTER);
         adapter.add(Tool.ZOOM_IN);
         adapter.add(Tool.ZOOM_OUT);
+
+        adapter.setItemClickListener(new ListView.ItemClickListener<Tool>() {
+            @Override
+            public void clicked(Tool item) {
+                GameScreen.currentTool = item;
+            }
+        });
     }
 
 }

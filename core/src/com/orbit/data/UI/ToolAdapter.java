@@ -35,19 +35,15 @@ public class ToolAdapter extends ArrayListAdapter<Tool, VisTable> {
         switch (item){
             case POINTER:
                 texture = manager.get("pointer.png", Texture.class);
-                table.setName("POINTER");
                 break;
             case MOVE:
                 texture = manager.get("move.png", Texture.class);
-                table.setName("MOVE");
                 break;
             case ZOOM_IN:
                 texture = manager.get("zoom-in.png", Texture.class);
-                table.setName("ZOOM_IN");
                 break;
             case ZOOM_OUT:
                 texture = manager.get("zoom-out.png", Texture.class);
-                table.setName("ZOOM_OUT");
                 break;
         }
 
@@ -62,16 +58,6 @@ public class ToolAdapter extends ArrayListAdapter<Tool, VisTable> {
     @Override
     protected void selectView(VisTable view) {
         view.setBackground(selection);
-        String name = view.getName();
-        if(name.equals("POINTER")){
-            GameScreen.currentTool = Tool.POINTER;
-        } else if (name.equals("MOVE")){
-            GameScreen.currentTool  = Tool.MOVE;
-        } else if(name.equals("ZOOM_IN")){
-            GameScreen.currentTool  = Tool.ZOOM_IN;
-        } else if(name.equals("ZOOM_OUT")){
-            GameScreen.currentTool  = Tool.ZOOM_OUT;
-        }
     }
 
     @Override
