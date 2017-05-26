@@ -19,7 +19,6 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
     private final Drawable bg = VisUI.getSkin().getDrawable("window-bg");
     private final Drawable selection = VisUI.getSkin().getDrawable("list-selection");
 
-    Planet currentItem = null;
 
     public PlanetAdapter(ArrayList<Planet> array) {
         super(array);
@@ -28,7 +27,6 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
     @Override
     protected VisTable createView(Planet item) {
-        currentItem = item;
 
         VisTable table = new VisTable();
 
@@ -38,14 +36,7 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
         table.add(slider).width(70f);
 
-        slider.addListener(new ChangeListener() {
-            Planet planet;
-
-            @Override
-            public void changed(ChangeEvent event, Actor actor) {
-                getCurrentItem().setMagnificationAmount(slider.getValue());
-            }
-        });
+        slider.addListener(new PlanetMagSliderListener(item, slider));
 
         return table;
     }
@@ -60,7 +51,4 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
         view.setBackground(bg);
     }
 
-    public Planet getCurrentItem() {
-        return currentItem;
-    }
 }
