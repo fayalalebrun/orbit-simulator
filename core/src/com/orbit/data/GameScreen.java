@@ -27,6 +27,8 @@ public class GameScreen extends BaseScreen {
     private PlacementWindow placement;
     private SizeMultWindow sizeMult;
     private PlanetListWindow planetWindow;
+    private AngleAdjustmentWindow angleAdjustment;
+
 
     private Group ui;
 
@@ -60,7 +62,7 @@ public class GameScreen extends BaseScreen {
         options = new OptionsWindow(gameListener);
         toolbar = new Toolbar(this.boot.getManager());
         sizeMult = new SizeMultWindow();
-
+        angleAdjustment = new AngleAdjustmentWindow(options);
 
         toolbar.moveBy(800,0);
         placement.moveBy(350,0);
@@ -80,6 +82,7 @@ public class GameScreen extends BaseScreen {
         ui.addActor(placement);
         ui.addActor(sizeMult);
         ui.addActor(planetWindow);
+        ui.addActor(angleAdjustment);
 
     }
 
