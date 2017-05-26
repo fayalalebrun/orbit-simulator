@@ -78,7 +78,7 @@ public class Planet extends Actor {
     }
 
     private double getMultiplier(){
-        return 0.001*GameScreen.sizeMultVar * magnificationAmount;
+        return 0.01*GameScreen.sizeMultVar * magnificationAmount;
     }
 
     @Override

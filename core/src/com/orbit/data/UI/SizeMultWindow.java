@@ -23,7 +23,7 @@ public class SizeMultWindow extends VisWindow{
 
     private void addWidgets(){
         final VisSlider slider = new VisSlider(0f, 1f, 0.01f, false);
-        add(slider);
+        add(slider).width(300);
 
         slider.addListener(new ChangeListener() {
             @Override
