@@ -47,7 +47,7 @@ public class AngleAdjustment extends Actor{
             public void clicked (InputEvent event, float x, float y) {
                 lineX = x+getX();
                 lineY = y+getY();
-                optionsWindow.getAngleField().setText(getAngle(x,y)+"");
+                optionsWindow.getAngleField().setText(getAngle(lineX,lineY)+"");
                 optionsWindow.getSpeedField().setText((float)(Math.hypot(centerCoordX-lineX,centerCoordY-lineY)/
                         (getWidth()/2))*55+"");
             }
@@ -105,9 +105,31 @@ public class AngleAdjustment extends Actor{
     }
 
     private float getAngle(float x, float y){
+        x-=centerCoordX;
+        y-=centerCoordY;
+
+        float angle;
+        if(y==0&&x==0||y==0&&x>0){
+            return 0;
+        } else if(x==0&&y>0){
+            return 90;
+        } else if(y==0&&x<0){
+            return 180;
+        } else if(x==0&&y<0){
+            return 270;
+        }
+
+        if(y>0&&x>0){
+            return (float)Math.toDegrees(Math.atan2(y,x));
+        } else if(y>0&&x<0){
+            return (float)Math.toDegrees(Math.atan2(Math.abs(x),y))+90;
+        } else if (y<0&&x<0){
+            return (float)Math.toDegrees(Math.atan2(Math.abs(y),Math.abs(x)))+180;
+        } else if(y<0&&x>0){
+            return (float)Math.toDegrees(Math.atan2(Math.abs(x), Math.abs(y)))+270;
+        }
 
 
-
-        return 30;
+        return 1337;
     }
 }
