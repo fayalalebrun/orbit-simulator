@@ -5,6 +5,7 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
@@ -12,6 +13,8 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.Planet;
+
+import java.util.ArrayList;
 
 /**
  * Created by Fran on 5/22/2017.
@@ -28,6 +31,7 @@ public class GameScreen extends BaseScreen {
     private SizeMultWindow sizeMult;
     private PlanetListWindow planetWindow;
     private AngleAdjustmentWindow angleAdjustment;
+    private ArrayList<Planet> planetArrayList;
 
 
     private Group ui;
@@ -42,13 +46,15 @@ public class GameScreen extends BaseScreen {
     public GameScreen(Boot boot) {
         super(boot);
 
+        planetArrayList = new ArrayList<Planet>();
+
         VisUI.load();
         stage = new Stage(new FitViewport(0.04f,0.03f));
         uiStage = new Stage(new ExtendViewport(800,600));
         ui = new Group();
 
         planetWindow = new PlanetListWindow();
-        gameListener = new GameListener(stage, planetWindow);
+        gameListener = new GameListener(stage, planetWindow, this);
         uiListener = new UIListener(uiStage);
         currentTool = Tool.MOVE;
 
@@ -124,5 +130,42 @@ public class GameScreen extends BaseScreen {
     public void dispose() {
         stage.dispose();
         VisUI.dispose();
+    }
+
+    public boolean placePlanet(float x, float y){
+        Actor actor = stage.hit(x,y,true);
+        if(actor==null&&!gameListener.isDisabled()){
+            Planet p = new Planet(getName(),getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
+                    new Vector2(x,y));
+            stage.addActor(p);
+            planetWindow.addPlanet(p);
+            planetArrayList.add(p);
+            return true;
+        }
+        return false;
+    }
+
+    private String getName(){
+        return options.getNameField().getText();
+    }
+
+    private float getRadius(){
+        return Float.parseFloat(options.getRadiusField().getText());
+    }
+
+    private float getMass(){
+        return Float.parseFloat(options.getMassField().getText());
+    }
+
+    private float getSpeed(){
+        return Float.parseFloat(options.getSpeedField().getText());
+    }
+
+    private float getAngle(){
+        return Float.parseFloat(options.getAngleField().getText());
+    }
+
+    private Color getColor(){
+        return options.getPickerImage().getColor().cpy();
     }
 }

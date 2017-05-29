@@ -19,6 +19,8 @@ import com.orbit.data.entities.Planet;
 public class GameListener extends InputListener implements Disableable{
     Stage stage;
 
+    GameScreen gameScreen;
+
     OrthographicCamera camera;
 
     boolean placementDisable;
@@ -30,18 +32,19 @@ public class GameListener extends InputListener implements Disableable{
 
     PlanetListWindow planetListWindow;
 
-    public GameListener(Stage stage, PlanetListWindow planetListWindow) {
+    public GameListener(Stage stage, PlanetListWindow planetListWindow, GameScreen gameScreen) {
         this.stage = stage;
         this.planetListWindow = planetListWindow;
         placementDisable = false;
         camera = (OrthographicCamera) stage.getCamera();
+        this.gameScreen = gameScreen;
     }
 
     @Override
     public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         switch (GameScreen.currentTool){
             case POINTER:
-                if(placePlanet(x,y)){
+                if(gameScreen.placePlanet(x,y)){
                     return true;
                 }
 
