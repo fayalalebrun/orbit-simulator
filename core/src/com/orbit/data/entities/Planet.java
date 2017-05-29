@@ -17,7 +17,7 @@ import static com.badlogic.gdx.scenes.scene2d.ui.Table.Debug.actor;
  * Created by Fran on 5/22/2017.
  */
 public class Planet extends Actor {
-    double radius, mass, speed, angle, xPos, yPos;
+    double radius, mass, speed, angle, xPos, yPos, vX, vY;
     double AURadius;
     Texture texture;
     Color color;
@@ -41,6 +41,10 @@ public class Planet extends Actor {
 
         this.angle = velocityAngle; //degrees
         this.color = color.cpy();
+
+        this.vX = this.speed*Math.cos(this.angle);
+        this.vY = this.speed*Math.sin(this.angle);
+        // calculate x and y speeds
 
         xPos = position.x;
         yPos = position.y;
