@@ -1,5 +1,6 @@
 package com.orbit.data.entities;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
@@ -31,7 +32,7 @@ public class Planet extends Actor {
     public Planet(String name, float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position,
                   ArrayList<Planet> planetArrayList) {
         this.planetArrayList = planetArrayList;
-        
+
         this.name = name;
 
         this.radius = radius; //km
@@ -68,6 +69,47 @@ public class Planet extends Actor {
     }
 
     @Override
+    public void act(float delta) {
+        double x = AUToM(getxPos());
+        double y = AUToM(getyPos());
+
+        double fX = 0;
+        double fY = 0;
+        for(Planet p: planetArrayList){
+            if(!p.equals(this)){
+                double thatX = AUToM(p.getxPos());
+                double thatY = AUToM(p.getyPos());
+
+                double distX = thatX-x;
+                double fXn = GameScreen.GRAV*((this.mass*p.getMass())/Math.pow(distX,2));
+                if(distX<0){
+                    fXn*=-1;
+                }
+                fX+=fXn;
+
+                double distY = thatY-y;
+                double fYn = GameScreen.GRAV*((this.mass*p.getMass())/Math.pow(distY, 2));
+                if(distY<0){
+                    fYn*=-1;
+                }
+                fY+=fYn;
+            }
+        }
+
+        x = 0.5*(fX/this.mass)*Math.pow(delta,2)+vX*delta+x;
+
+        y = 0.5*(fY/this.mass)*Math.pow(delta,2)+vY*delta+y;
+
+        xPos = mToAU(x);
+        yPos = mToAU(y);
+
+        setPosition((float)(xPos - AURadius), (float)(yPos - AURadius));
+
+        vX = (fX * delta + this.mass * vX)/this.mass;
+        vY = (fY * delta + this.mass * vY)/this.mass;
+    }
+
+    @Override
     public void draw(Batch batch, float parentAlpha) {
         batch.setColor(color.cpy());
 
@@ -86,6 +128,10 @@ public class Planet extends Actor {
         return meters/149597870691.0;
     }
 
+    public double AUToM(double au){
+        return au*149597870691.0;
+    }
+
     private double getMultiplier(){
         return 0.01*GameScreen.sizeMultVar * magnificationAmount;
     }
@@ -97,5 +143,17 @@ public class Planet extends Actor {
 
     public void setMagnificationAmount(float magnificationAmount) {
         this.magnificationAmount = magnificationAmount;
+    }
+
+    public double getMass() {
+        return mass;
+    }
+
+    public double getxPos() {
+        return xPos;
+    }
+
+    public double getyPos() {
+        return yPos;
     }
 }
