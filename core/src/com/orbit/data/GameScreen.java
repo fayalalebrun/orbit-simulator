@@ -136,7 +136,7 @@ public class GameScreen extends BaseScreen {
         Actor actor = stage.hit(x,y,true);
         if(actor==null&&!gameListener.isDisabled()){
             Planet p = new Planet(getName(),getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
-                    new Vector2(x,y));
+                    new Vector2(x,y), planetArrayList);
             stage.addActor(p);
             planetWindow.addPlanet(p);
             planetArrayList.add(p);

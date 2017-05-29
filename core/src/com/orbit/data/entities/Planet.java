@@ -8,6 +8,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.orbit.data.GameScreen;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 import static com.badlogic.gdx.scenes.scene2d.ui.Table.Debug.actor;
@@ -22,11 +23,13 @@ public class Planet extends Actor {
     Texture texture;
     Color color;
     String name;
+    ArrayList<Planet> planetArrayList;
 
     boolean magnify = true;
     float magnificationAmount;
 
-    public Planet(String name, float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position) {
+    public Planet(String name, float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position,
+                  ArrayList<Planet> planetArrayList) {
         this.name = name;
 
         this.radius = radius; //km
