@@ -3,9 +3,8 @@ package com.orbit.data.UI;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.kotcrab.vis.ui.util.TableUtils;
-import com.kotcrab.vis.ui.widget.VisScrollPane;
-import com.kotcrab.vis.ui.widget.VisSlider;
-import com.kotcrab.vis.ui.widget.VisWindow;
+import com.kotcrab.vis.ui.util.form.SimpleFormValidator;
+import com.kotcrab.vis.ui.widget.*;
 import com.orbit.data.GameScreen;
 
 /**
@@ -20,13 +19,23 @@ public class SpeedWindow extends VisWindow{
     }
 
     private void addWidgets(){
-        final VisSlider slider = new VisSlider(0,100000, 10f,false);
-        add(slider).width(150f);
-        slider.addListener(new ChangeListener() {
+        final VisValidatableTextField speedField = new VisValidatableTextField();
+        speedField.setText("1.0");
+        VisTextButton setButton = new VisTextButton("Set");
+
+        SimpleFormValidator validator = new SimpleFormValidator(setButton);
+
+        validator.notEmpty(speedField, "");
+        validator.floatNumber(speedField, "");
+
+        setButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                GameScreen.simSpeed = slider.getValue();
+                GameScreen.simSpeed = Float.parseFloat(speedField.getText());
             }
         });
+
+        this.add(speedField).padRight(3.0f).width(96f);
+        this.add(setButton);
     }
 }
