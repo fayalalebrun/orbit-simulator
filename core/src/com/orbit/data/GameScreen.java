@@ -31,6 +31,7 @@ public class GameScreen extends BaseScreen {
     private SizeMultWindow sizeMult;
     private PlanetListWindow planetWindow;
     private AngleAdjustmentWindow angleAdjustment;
+    private SpeedWindow speedWindow;
     private ArrayList<Planet> planetArrayList;
 
 
@@ -41,6 +42,7 @@ public class GameScreen extends BaseScreen {
 
     public static Tool currentTool;
     public static double sizeMultVar = 0.0;
+    public static double simSpeed = 1.0f;
     public static final double GRAV = 6.67408 * Math.pow(10,-11);
 
 
@@ -70,6 +72,7 @@ public class GameScreen extends BaseScreen {
         toolbar = new Toolbar(this.boot.getManager());
         sizeMult = new SizeMultWindow();
         angleAdjustment = new AngleAdjustmentWindow(options);
+        speedWindow = new SpeedWindow();
 
         toolbar.moveBy(800,0);
         placement.moveBy(350,0);
@@ -91,6 +94,7 @@ public class GameScreen extends BaseScreen {
         ui.addActor(sizeMult);
         ui.addActor(planetWindow);
         ui.addActor(angleAdjustment);
+        ui.addActor(speedWindow);
 
     }
 
