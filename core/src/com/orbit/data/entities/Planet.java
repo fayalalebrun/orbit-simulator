@@ -70,6 +70,8 @@ public class Planet extends Actor {
 
     @Override
     public void act(float delta) {
+        delta *= GameScreen.simSpeed;
+
         double x = AUToM(getxPos());
         double y = AUToM(getyPos());
 
