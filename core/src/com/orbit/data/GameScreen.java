@@ -79,6 +79,7 @@ public class GameScreen extends BaseScreen {
         sizeMult.moveBy(350,56);
         planetWindow.moveBy(0,270);
         angleAdjustment.moveBy(350,110);
+        speedWindow.moveBy(490, 110);
     }
 
     @Override
