@@ -48,8 +48,8 @@ public class Planet extends Actor {
         this.angle = velocityAngle; //degrees
         this.color = color.cpy();
 
-        this.vX = this.speed*Math.cos(this.angle);
-        this.vY = this.speed*Math.sin(this.angle);
+        this.vX = this.speed*Math.cos(Math.toRadians(this.angle));
+        this.vY = this.speed*Math.sin(Math.toRadians(this.angle));
         // calculate x and y speeds
 
         xPos = position.x;
@@ -78,19 +78,26 @@ public class Planet extends Actor {
         double fX = 0;
         double fY = 0;
         for(Planet p: planetArrayList){
-            if(!p.equals(this)){
+            if(!p.equalsP(this)){
                 double thatX = AUToM(p.getxPos());
                 double thatY = AUToM(p.getyPos());
 
                 double distX = thatX-x;
-                double fXn = GameScreen.GRAV*((this.mass*p.getMass())/Math.pow(distX,2));
+                double fXn = 0;
+                if(Math.pow(distX,2)!=0) {
+                    fXn = GameScreen.GRAV * ((this.mass * p.getMass()) / Math.pow(distX, 2));
+                }
+
                 if(distX<0){
                     fXn*=-1;
                 }
                 fX+=fXn;
 
                 double distY = thatY-y;
-                double fYn = GameScreen.GRAV*((this.mass*p.getMass())/Math.pow(distY, 2));
+                double fYn = 0;
+                if(Math.pow(distY, 2)!=0) {
+                    fYn = GameScreen.GRAV * ((this.mass * p.getMass()) / Math.pow(distY, 2));
+                }
                 if(distY<0){
                     fYn*=-1;
                 }
@@ -109,6 +116,8 @@ public class Planet extends Actor {
 
         vX = (fX * delta + this.mass * vX)/this.mass;
         vY = (fY * delta + this.mass * vY)/this.mass;
+
+        System.out.println(xPos + " " + yPos);
     }
 
     @Override
@@ -157,5 +166,12 @@ public class Planet extends Actor {
 
     public double getyPos() {
         return yPos;
+    }
+
+    public boolean equalsP(Planet p){
+        if(xPos==p.getxPos()&&yPos==p.getyPos()){
+            return true;
+        }
+        return  false;
     }
 }
