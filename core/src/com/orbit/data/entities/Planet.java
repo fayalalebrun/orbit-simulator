@@ -30,6 +30,8 @@ public class Planet extends Actor {
 
     public Planet(String name, float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position,
                   ArrayList<Planet> planetArrayList) {
+        this.planetArrayList = planetArrayList;
+        
         this.name = name;
 
         this.radius = radius; //km
