@@ -82,26 +82,13 @@ public class Planet extends Actor {
                 double thatX = AUToM(p.getxPos());
                 double thatY = AUToM(p.getyPos());
 
-                double distX = thatX-x;
-                double fXn = 0;
-                if(Math.pow(distX,2)!=0) {
-                    fXn = GameScreen.GRAV * ((this.mass * p.getMass()) / Math.pow(distX, 2));
-                }
+                double dist = Math.sqrt(Math.pow(thatX-x, 2)+Math.pow(thatY-y,2));
+                double ang = Math.atan2(thatY-y, thatX-x);
 
-                if(distX<0){
-                    fXn*=-1;
-                }
-                fX+=fXn;
+                double f = GameScreen.GRAV*((this.getMass()*p.getMass())/Math.pow(dist,2));
 
-                double distY = thatY-y;
-                double fYn = 0;
-                if(Math.pow(distY, 2)!=0) {
-                    fYn = GameScreen.GRAV * ((this.mass * p.getMass()) / Math.pow(distY, 2));
-                }
-                if(distY<0){
-                    fYn*=-1;
-                }
-                fY+=fYn;
+                fX+=f*Math.cos(ang);
+                fY+=f*Math.sin(ang);
             }
         }
 
