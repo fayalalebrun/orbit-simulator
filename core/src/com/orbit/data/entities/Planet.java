@@ -103,8 +103,6 @@ public class Planet extends Actor {
 
         vX = (fX * delta + this.mass * vX)/this.mass;
         vY = (fY * delta + this.mass * vY)/this.mass;
-
-        System.out.println(xPos + " " + yPos);
     }
 
     @Override
