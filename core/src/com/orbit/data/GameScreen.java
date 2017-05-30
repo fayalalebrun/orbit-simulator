@@ -8,12 +8,15 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
+import com.kotcrab.vis.ui.widget.VisTable;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.Planet;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -25,6 +28,8 @@ public class GameScreen extends BaseScreen {
 
     private Stage uiStage;
 
+    private MenuBar menuBar;
+
     private OptionsWindow options;
     private Toolbar toolbar;
     private PlacementWindow placement;
@@ -35,7 +40,7 @@ public class GameScreen extends BaseScreen {
     private ArrayList<Planet> planetArrayList;
 
 
-    private Group ui;
+    private VisTable ui;
 
     private GameListener gameListener;
     private UIListener uiListener;
@@ -54,7 +59,8 @@ public class GameScreen extends BaseScreen {
         VisUI.load();
         stage = new Stage(new FitViewport(0.04f,0.03f));
         uiStage = new Stage(new ExtendViewport(800,600));
-        ui = new Group();
+        ui = new VisTable();
+        ui.setFillParent(true);
 
         planetWindow = new PlanetListWindow();
         gameListener = new GameListener(stage, planetWindow, this);
@@ -73,6 +79,8 @@ public class GameScreen extends BaseScreen {
         sizeMult = new SizeMultWindow();
         angleAdjustment = new AngleAdjustmentWindow(options);
         speedWindow = new SpeedWindow();
+
+        menuBar = new MenuBar();
 
         toolbar.moveBy(800,0);
         placement.moveBy(350,0);
@@ -96,6 +104,10 @@ public class GameScreen extends BaseScreen {
         ui.addActor(planetWindow);
         ui.addActor(angleAdjustment);
         ui.addActor(speedWindow);
+
+    }
+
+    private void createMenus(){
 
     }
 
