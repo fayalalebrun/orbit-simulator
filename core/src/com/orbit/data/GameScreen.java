@@ -12,11 +12,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
+import com.kotcrab.vis.ui.util.TableUtils;
+import com.kotcrab.vis.ui.widget.Menu;
+import com.kotcrab.vis.ui.widget.MenuBar;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.Planet;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -61,6 +63,7 @@ public class GameScreen extends BaseScreen {
         uiStage = new Stage(new ExtendViewport(800,600));
         ui = new VisTable();
         ui.setFillParent(true);
+        TableUtils.setSpacingDefaults(ui);
 
         planetWindow = new PlanetListWindow();
         gameListener = new GameListener(stage, planetWindow, this);
@@ -96,6 +99,9 @@ public class GameScreen extends BaseScreen {
         ui.addListener(uiListener);
 
         uiStage.addActor(ui);
+
+        ui.add(menuBar.getTable()).expandX().fillX().row();
+        ui.add().expand().fill();
 
         ui.addActor(options);
         ui.addActor(toolbar);
