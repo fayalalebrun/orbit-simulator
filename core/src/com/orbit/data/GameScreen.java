@@ -9,13 +9,12 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.TableUtils;
-import com.kotcrab.vis.ui.widget.Menu;
-import com.kotcrab.vis.ui.widget.MenuBar;
-import com.kotcrab.vis.ui.widget.VisTable;
+import com.kotcrab.vis.ui.widget.*;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.Planet;
 
@@ -111,10 +110,30 @@ public class GameScreen extends BaseScreen {
         ui.addActor(angleAdjustment);
         ui.addActor(speedWindow);
 
+        createMenus();
     }
 
     private void createMenus(){
+        Menu windowMenu = new Menu("Window");
 
+        windowMenu.addItem(createWindowToggle("Planets", planetWindow));
+        windowMenu.addItem(createWindowToggle("Placement", planetWindow));
+
+        menuBar.addMenu(windowMenu);
+    }
+
+    private MenuItem createWindowToggle(String name, final VisWindow window){
+        final MenuItem item = new MenuItem(name);
+        
+        item.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+
+                window.setVisible(!window.isVisible());
+            }
+        });
+
+        return  item;
     }
 
     @Override
