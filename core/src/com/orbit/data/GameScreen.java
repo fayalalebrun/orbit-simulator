@@ -2,6 +2,7 @@ package com.orbit.data;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
@@ -17,6 +18,8 @@ import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.*;
 import com.kotcrab.vis.ui.widget.file.FileChooser;
+import com.kotcrab.vis.ui.widget.file.FileTypeFilter;
+import com.kotcrab.vis.ui.widget.file.SingleFileChooserListener;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.Planet;
 
@@ -42,6 +45,7 @@ public class GameScreen extends BaseScreen {
     private SpeedWindow speedWindow;
     private ArrayList<Planet> planetArrayList;
 
+    FileChooser fileChooser;
 
     private VisTable ui;
 
@@ -86,6 +90,9 @@ public class GameScreen extends BaseScreen {
 
         menuBar = new MenuBar();
 
+        fileChooser = new FileChooser(FileChooser.Mode.OPEN);
+        setupFileChooser();
+
         toolbar.moveBy(750,0);
         placement.moveBy(350,0);
         sizeMult.moveBy(350,56);
@@ -113,6 +120,23 @@ public class GameScreen extends BaseScreen {
         uiStage.addActor(speedWindow);
 
         createMenus();
+    }
+
+    private void setupFileChooser(){
+        FileChooser.setDefaultPrefsName("orbit-simulator");
+
+        fileChooser.setSelectionMode(FileChooser.SelectionMode.FILES);
+        final FileTypeFilter fileTypeFilter = new FileTypeFilter(true);
+        fileTypeFilter.addRule("Text files (*.txt)","txt");
+
+        fileChooser.setFileTypeFilter(fileTypeFilter);
+
+        fileChooser.setListener(new SingleFileChooserListener() {
+            @Override
+            protected void selected(FileHandle file) {
+                
+            }
+        });
     }
 
     private void createMenus(){
@@ -164,7 +188,8 @@ public class GameScreen extends BaseScreen {
         load.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-
+                fileChooser.setMode(FileChooser.Mode.OPEN);
+                uiStage.addActor(fileChooser.fadeIn());
             }
         });
 
@@ -173,7 +198,8 @@ public class GameScreen extends BaseScreen {
         save.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-
+                fileChooser.setMode(FileChooser.Mode.SAVE);
+                uiStage.addActor(fileChooser.fadeIn());
             }
         });
 
