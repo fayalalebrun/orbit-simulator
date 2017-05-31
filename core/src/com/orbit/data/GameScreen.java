@@ -16,6 +16,7 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.*;
+import com.kotcrab.vis.ui.widget.file.FileChooser;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.Planet;
 
@@ -125,6 +126,11 @@ public class GameScreen extends BaseScreen {
         windowMenu.addItem(createWindowToggle("Simulation Speed", speedWindow));
         windowMenu.addItem(createWindowToggle("Tools", toolbar));
 
+        Menu fileMenu = new Menu("File");
+
+        createFileMenuItems(fileMenu);
+
+        menuBar.addMenu(fileMenu);
         menuBar.addMenu(windowMenu);
     }
 
@@ -150,6 +156,29 @@ public class GameScreen extends BaseScreen {
         });
 
         return  item;
+    }
+
+    private void createFileMenuItems(Menu fileMenu){
+        MenuItem load = new MenuItem("Load");
+
+        load.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+
+            }
+        });
+
+        MenuItem save = new MenuItem("Save");
+
+        save.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+
+            }
+        });
+
+        fileMenu.addItem(load);
+        fileMenu.addItem(save);
     }
 
     @Override
