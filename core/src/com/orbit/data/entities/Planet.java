@@ -167,4 +167,16 @@ public class Planet extends Actor {
     public double getSpeed(){
         return Math.sqrt(Math.pow(vX, 2)+Math.pow(vY, 2));
     }
+
+    public double getOrigRadius(){
+        return this.radius/1000;
+    }
+
+    public double getOrigMass(){
+        return this.mass/=5.9723 * Math.pow(10,24);
+    }
+
+    public double getOrigSpeed(){
+        return speed/1000;
+    }
 }
