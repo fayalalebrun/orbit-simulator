@@ -37,4 +37,8 @@ public class PlanetListWindow extends VisWindow{
 
     }
 
+    public void removePlanet(Planet planet){
+        adapter.remove(planet);
+    }
+
 }
