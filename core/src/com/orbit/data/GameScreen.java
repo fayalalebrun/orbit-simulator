@@ -134,7 +134,11 @@ public class GameScreen extends BaseScreen {
         fileChooser.setListener(new SingleFileChooserListener() {
             @Override
             protected void selected(FileHandle file) {
-                
+                if(fileChooser.getMode()== FileChooser.Mode.OPEN){
+                    SaveFileManager.loadGame(returnSelf(), file);
+                } else if(fileChooser.getMode()== FileChooser.Mode.SAVE){
+                    SaveFileManager.saveGame(returnSelf(), file);
+                }
             }
         });
     }
@@ -250,7 +254,7 @@ public class GameScreen extends BaseScreen {
         Actor actor = stage.hit(x,y,true);
         if(actor==null&&!gameListener.isDisabled()){
             Planet p = new Planet(getName(),getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
-                    new Vector2(x,y), planetArrayList);
+                    x, y, planetArrayList);
             stage.addActor(p);
             planetWindow.addPlanet(p);
             planetArrayList.add(p);
@@ -294,5 +298,9 @@ public class GameScreen extends BaseScreen {
 
     public ArrayList<Planet> getPlanetArrayList() {
         return planetArrayList;
+    }
+
+    public GameScreen returnSelf(){
+        return this;
     }
 }

@@ -179,7 +179,7 @@ public class Planet extends Actor {
     }
 
     public double getOrigMass(){
-        return this.mass/=5.9723 * Math.pow(10,24);
+        return this.mass/= (5.9723 * Math.pow(10,24));
     }
 
     public Color getCurrColor(){
