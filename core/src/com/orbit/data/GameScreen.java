@@ -227,4 +227,13 @@ public class GameScreen extends BaseScreen {
     private Color getColor(){
         return options.getPickerImage().getColor().cpy();
     }
+
+    public void removePlanets(ArrayList<Planet> planets){
+        this.planetArrayList.remove(planets);
+
+        for(Planet p: planets){
+            p.remove();
+            planetWindow.removePlanet(p);
+        }
+    }
 }
