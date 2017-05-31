@@ -263,6 +263,12 @@ public class GameScreen extends BaseScreen {
         return false;
     }
 
+    public void addPlanet(Planet p){
+        stage.addActor(p);
+        planetWindow.addPlanet(p);
+        planetArrayList.add(p);
+    }
+
     private String getName(){
         return options.getNameField().getText();
     }
