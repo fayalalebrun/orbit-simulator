@@ -46,6 +46,7 @@ public class SaveFileManager {
                 angle = Double.parseDouble(part[i].substring(7));
                 i++;
                 c = new Color(Integer.parseInt(part[i].substring(7)));
+                c = Color.YELLOW.cpy();
                 i++;
                 x = Double.parseDouble(part[i].substring(3));
                 i++;
