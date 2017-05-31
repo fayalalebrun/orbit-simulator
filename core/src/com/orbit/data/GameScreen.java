@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.utils.StringBuilder;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
@@ -124,11 +125,21 @@ public class GameScreen extends BaseScreen {
 
     private MenuItem createWindowToggle(String name, final VisWindow window){
         final MenuItem item = new MenuItem(name);
-        
+        item.setText(item.getText()+" [X]");
+
         item.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
+                StringBuilder text = (StringBuilder)item.getText();
+                text.deleteCharAt(text.length-2);
 
+                if(window.isVisible()){
+                    text.insert(text.length-1, ".");
+                } else {
+                    text.insert(text.length-1, "X");
+                }
+
+                item.setText(text);
                 window.setVisible(!window.isVisible());
             }
         });
