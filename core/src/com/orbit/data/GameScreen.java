@@ -118,7 +118,12 @@ public class GameScreen extends BaseScreen {
         Menu windowMenu = new Menu("Window");
 
         windowMenu.addItem(createWindowToggle("Planets", planetWindow));
-        windowMenu.addItem(createWindowToggle("Placement", planetWindow));
+        windowMenu.addItem(createWindowToggle("Specific Placement", placement));
+        windowMenu.addItem(createWindowToggle("Planetary Options", options));
+        windowMenu.addItem(createWindowToggle("Global Magnification", sizeMult));
+        windowMenu.addItem(createWindowToggle("Angle Adjustment", angleAdjustment));
+        windowMenu.addItem(createWindowToggle("Simulation Speed", speedWindow));
+        windowMenu.addItem(createWindowToggle("Tools", toolbar));
 
         menuBar.addMenu(windowMenu);
     }
