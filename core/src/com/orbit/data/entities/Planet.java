@@ -29,7 +29,7 @@ public class Planet extends Actor {
     boolean magnify = true;
     float magnificationAmount;
 
-    public Planet(String name, float radius, float mass, float speed, float velocityAngle, Color color, Vector2 position,
+    public Planet(String name, double radius, double mass, double speed, double velocityAngle, Color color, double x, double y,
                   ArrayList<Planet> planetArrayList) {
         this.planetArrayList = planetArrayList;
 
@@ -52,8 +52,8 @@ public class Planet extends Actor {
         this.vY = this.speed*Math.sin(Math.toRadians(this.angle));
         // calculate x and y speeds
 
-        xPos = position.x;
-        yPos = position.y;
+        xPos = x;
+        yPos = y;
         setPosition((float)(xPos - AURadius), (float)(yPos - AURadius));
 
         double diameter = AURadius * 2;
@@ -161,11 +161,17 @@ public class Planet extends Actor {
     }
 
     public double getAngle(){
-        return Math.atan2(vY, vX);
+        double angle = Math.toDegrees(Math.atan2(vY, vX));
+
+        if(angle<0){
+            angle+=360;
+        }
+
+        return angle;
     }
 
     public double getSpeed(){
-        return Math.sqrt(Math.pow(vX, 2)+Math.pow(vY, 2));
+        return (Math.sqrt(Math.pow(vX, 2)+Math.pow(vY, 2)))/1000;
     }
 
     public double getOrigRadius(){
@@ -176,7 +182,8 @@ public class Planet extends Actor {
         return this.mass/=5.9723 * Math.pow(10,24);
     }
 
-    public double getOrigSpeed(){
-        return speed/1000;
+    public Color getCurrColor(){
+        return this.color;
     }
+
 }
