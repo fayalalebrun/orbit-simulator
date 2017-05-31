@@ -85,7 +85,7 @@ public class GameScreen extends BaseScreen {
 
         menuBar = new MenuBar();
 
-        toolbar.moveBy(800,0);
+        toolbar.moveBy(750,0);
         placement.moveBy(350,0);
         sizeMult.moveBy(350,56);
         planetWindow.moveBy(0,270);
@@ -103,13 +103,13 @@ public class GameScreen extends BaseScreen {
         ui.add(menuBar.getTable()).expandX().fillX().row();
         ui.add().expand().fill();
 
-        ui.addActor(options);
-        ui.addActor(toolbar);
-        ui.addActor(placement);
-        ui.addActor(sizeMult);
-        ui.addActor(planetWindow);
-        ui.addActor(angleAdjustment);
-        ui.addActor(speedWindow);
+        uiStage.addActor(options);
+        uiStage.addActor(toolbar);
+        uiStage.addActor(placement);
+        uiStage.addActor(sizeMult);
+        uiStage.addActor(planetWindow);
+        uiStage.addActor(angleAdjustment);
+        uiStage.addActor(speedWindow);
 
         createMenus();
     }
