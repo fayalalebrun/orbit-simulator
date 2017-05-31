@@ -159,4 +159,12 @@ public class Planet extends Actor {
         }
         return  false;
     }
+
+    public double getAngle(){
+        return Math.atan2(vY, vX);
+    }
+
+    public double getSpeed(){
+        return Math.sqrt(Math.pow(vX, 2)+Math.pow(vY, 2));
+    }
 }
