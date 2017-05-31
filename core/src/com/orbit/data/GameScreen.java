@@ -291,4 +291,8 @@ public class GameScreen extends BaseScreen {
             planetWindow.removePlanet(p);
         }
     }
+
+    public ArrayList<Planet> getPlanetArrayList() {
+        return planetArrayList;
+    }
 }
