@@ -25,16 +25,17 @@ public class SaveFileManager {
         Color c;
         double x;
         double y;
+        float r,g,b,a;
 
         gameScreen.removePlanets(gameScreen.getPlanetArrayList());
 
         String str = file.readString();
         String part[] = str.replaceAll("\\r", "").split("\\n");
         int i=0;
-        System.out.println(part.length);
+        System.out.println(part[10]);
         while(i<part.length-2){
-            System.out.println(part[i].substring(0,4));
-            if(part[i].substring(0,4).equals("name")){
+
+            if(part[i].contains("name")){
                 name = part[i].substring(6);
                 i++;
                 radius = Double.parseDouble(part[i].substring(8));
@@ -45,9 +46,17 @@ public class SaveFileManager {
                 i++;
                 angle = Double.parseDouble(part[i].substring(7));
                 i++;
-                c = new Color(Integer.parseInt(part[i].substring(7)));
-                c = Color.YELLOW.cpy();
+                r = Float.parseFloat(part[i].substring(10));
                 i++;
+                g = Float.parseFloat(part[i].substring(10));
+                i++;
+                b = Float.parseFloat(part[i].substring(10));
+                i++;
+                a = Float.parseFloat(part[i].substring(10));
+                i++;
+
+                c = new Color(r,g,b,a);
+
                 x = Double.parseDouble(part[i].substring(3));
                 i++;
                 y = Double.parseDouble(part[i].substring(3));
@@ -75,7 +84,10 @@ public class SaveFileManager {
                         "\nmass: "+p.getOrigMass()+
                         "\nspeed: "+p.getSpeed()+
                         "\nangle: "+p.getAngle()+
-                        "\ncolor: "+p.getCurrColor().toIntBits()+
+                        "\ncolor: r: "+p.getCurrColor().r+
+                        "\ncolor: g: "+p.getCurrColor().g+
+                        "\ncolor: b: "+p.getCurrColor().b+
+                        "\ncolor: a: "+p.getCurrColor().a+
                         "\nx: "+p.getxPos()+
                         "\ny: "+p.getyPos()+"\n\n");
             } catch (IOException e) {
