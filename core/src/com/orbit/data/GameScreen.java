@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -58,6 +59,7 @@ public class GameScreen extends BaseScreen {
     public static double simSpeed = 1.0f;
     public static final double GRAV = 6.67408 * Math.pow(10,-11);
 
+    FPSLogger logger =new FPSLogger();
 
     public GameScreen(Boot boot) {
         super(boot);
@@ -220,6 +222,7 @@ public class GameScreen extends BaseScreen {
         stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1/30f));
         uiStage.act(Math.min(Gdx.graphics.getDeltaTime(), 1/30f));
 
+        logger.log();
         stage.draw();
         uiStage.draw();
     }
