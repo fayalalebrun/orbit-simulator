@@ -44,7 +44,7 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
         table.add(button).width(20f);
 
-        table.addListener(new ChangeListener() {
+        button.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
                 item.zoomCamera();
