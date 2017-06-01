@@ -4,6 +4,7 @@ import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.ListView;
 import com.kotcrab.vis.ui.widget.VisScrollPane;
 import com.kotcrab.vis.ui.widget.VisWindow;
+import com.orbit.data.GameScreen;
 import com.orbit.data.UI.adapters.PlanetAdapter;
 import com.orbit.data.entities.Planet;
 
@@ -15,21 +16,23 @@ import java.util.ArrayList;
 public class PlanetListWindow extends VisWindow{
 
     PlanetAdapter adapter;
+    GameScreen gameScreen;
 
-    public PlanetListWindow() {
+    public PlanetListWindow(GameScreen gameScreen) {
         super("Planets");
+        this.gameScreen = gameScreen;
         TableUtils.setSpacingDefaults(this);
         addWidgets();
-        setSize(180,250);
+        setSize(180,270);
     }
 
     public void addWidgets(){
-        adapter = new PlanetAdapter(new ArrayList<Planet>());
+        adapter = new PlanetAdapter(new ArrayList<Planet>(),gameScreen);
         ListView<Planet> view = new ListView<Planet>(adapter);
         VisScrollPane scrollPane = new VisScrollPane(view.getMainTable());
         scrollPane.setFlickScroll(false);
         scrollPane.setFadeScrollBars(false);
-        add(scrollPane).spaceTop(30).growX().width(150f).height(200f);
+        add(scrollPane).spaceTop(30).growX().width(200f).height(200f);
     }
 
     public void addPlanet(Planet planet){

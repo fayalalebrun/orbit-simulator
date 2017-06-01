@@ -9,6 +9,7 @@ import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisSlider;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
+import com.orbit.data.GameScreen;
 import com.orbit.data.UI.PlanetMagSliderListener;
 import com.orbit.data.entities.Planet;
 
@@ -21,9 +22,11 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
     private final Drawable bg = VisUI.getSkin().getDrawable("window-bg");
     private final Drawable selection = VisUI.getSkin().getDrawable("list-selection");
 
+    private GameScreen gameScreen;
 
-    public PlanetAdapter(ArrayList<Planet> array) {
+    public PlanetAdapter(ArrayList<Planet> array, GameScreen gameScreen) {
         super(array);
+        this.gameScreen = gameScreen;
         setSelectionMode(SelectionMode.DISABLED);
     }
 
@@ -40,15 +43,28 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
         slider.addListener(new PlanetMagSliderListener(item, slider));
 
-        final VisTextButton button = new VisTextButton("Go");
+        final VisTextButton goButton = new VisTextButton("Go");
 
-        table.add(button).width(20f);
+        table.add(goButton).width(20f);
 
-        button.addListener(new ChangeListener() {
+        goButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
                 item.zoomCamera();
                 item.centerCamera();
+            }
+        });
+
+        final VisTextButton eraseButton = new VisTextButton("Del");
+
+        table.add(eraseButton).width(20f);
+
+        eraseButton.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                ArrayList<Planet> pList = new ArrayList<Planet>();
+                pList.add(item);
+                gameScreen.removePlanets(pList);
             }
         });
 

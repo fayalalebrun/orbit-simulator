@@ -74,7 +74,7 @@ public class GameScreen extends BaseScreen {
         TableUtils.setSpacingDefaults(ui);
         uiGroup = new Group();
 
-        planetWindow = new PlanetListWindow();
+        planetWindow = new PlanetListWindow(this);
         gameListener = new GameListener(stage, planetWindow, this);
         uiListener = new UIListener(uiStage);
         currentTool = Tool.MOVE;
@@ -221,6 +221,7 @@ public class GameScreen extends BaseScreen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1/30f));
         uiStage.act(Math.min(Gdx.graphics.getDeltaTime(), 1/30f));
+
 
         logger.log();
         stage.draw();
