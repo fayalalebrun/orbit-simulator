@@ -2,6 +2,7 @@ package com.orbit.data.entities;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -184,6 +185,11 @@ public class Planet extends Actor {
 
     public Color getCurrColor(){
         return this.color;
+    }
+
+    public void centerCamera(OrthographicCamera camera){
+        camera.translate(-1*camera.position.x,-1*camera.position.y);
+        camera.translate((float)xPos, (float)yPos);
     }
 
 }
