@@ -8,6 +8,7 @@ import com.kotcrab.vis.ui.util.adapter.ArrayListAdapter;
 import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisSlider;
 import com.kotcrab.vis.ui.widget.VisTable;
+import com.kotcrab.vis.ui.widget.VisTextButton;
 import com.orbit.data.UI.PlanetMagSliderListener;
 import com.orbit.data.entities.Planet;
 
@@ -27,7 +28,7 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
     }
 
     @Override
-    protected VisTable createView(Planet item) {
+    protected VisTable createView(final Planet item) {
 
         VisTable table = new VisTable();
 
@@ -35,9 +36,21 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
         final VisSlider slider = new VisSlider(0f, 100f,1f,false);
 
-        table.add(slider).width(70f);
+        table.add(slider).width(64f).padRight(3f);
 
         slider.addListener(new PlanetMagSliderListener(item, slider));
+
+        final VisTextButton button = new VisTextButton("Go");
+
+        table.add(button).width(20f);
+        
+        table.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                item.zoomCamera();
+                item.centerCamera();
+            }
+        });
 
         return table;
     }
