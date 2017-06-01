@@ -101,6 +101,9 @@ public class GameListener extends InputListener implements Disableable{
             case Input.Keys.DOWN:
                 camera.translate(0f, -0.002f);
                 return true;
+            case Input.Keys.H:
+                gameScreen.hideUI();
+                return true;
         }
 
         return false;
