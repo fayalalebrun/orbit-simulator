@@ -89,9 +89,18 @@ public class GameListener extends InputListener implements Disableable{
     public boolean keyDown(InputEvent event, int keycode) {
 
         switch(keycode){
-            case Input.Keys.A:
-                System.out.println(camera.zoom);
+            case Input.Keys.LEFT:
+                camera.translate(-0.002f,0f);
                 return  true;
+            case Input.Keys.RIGHT:
+                camera.translate(0.002f,0f);
+                return true;
+            case Input.Keys.UP:
+                camera.translate(0f, 0.002f);
+                return true;
+            case Input.Keys.DOWN:
+                camera.translate(0f, -0.002f);
+                return true;
         }
 
         return false;
