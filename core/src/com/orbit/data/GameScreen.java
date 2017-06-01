@@ -48,6 +48,7 @@ public class GameScreen extends BaseScreen {
     FileChooser fileChooser;
 
     private VisTable ui;
+    private Group uiGroup;
 
     private GameListener gameListener;
     private UIListener uiListener;
@@ -69,6 +70,7 @@ public class GameScreen extends BaseScreen {
         ui = new VisTable();
         ui.setFillParent(true);
         TableUtils.setSpacingDefaults(ui);
+        uiGroup = new Group();
 
         planetWindow = new PlanetListWindow();
         gameListener = new GameListener(stage, planetWindow, this);
@@ -107,17 +109,18 @@ public class GameScreen extends BaseScreen {
         ui.addListener(uiListener);
 
         uiStage.addActor(ui);
+        uiStage.addActor(uiGroup);
 
         ui.add(menuBar.getTable()).expandX().fillX().row();
         ui.add().expand().fill();
 
-        uiStage.addActor(options);
-        uiStage.addActor(toolbar);
-        uiStage.addActor(placement);
-        uiStage.addActor(sizeMult);
-        uiStage.addActor(planetWindow);
-        uiStage.addActor(angleAdjustment);
-        uiStage.addActor(speedWindow);
+        uiGroup.addActor(options);
+        uiGroup.addActor(toolbar);
+        uiGroup.addActor(placement);
+        uiGroup.addActor(sizeMult);
+        uiGroup.addActor(planetWindow);
+        uiGroup.addActor(angleAdjustment);
+        uiGroup.addActor(speedWindow);
 
         createMenus();
     }
