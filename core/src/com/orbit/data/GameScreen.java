@@ -297,12 +297,12 @@ public class GameScreen extends BaseScreen {
     }
 
     public void removePlanets(ArrayList<Planet> planets){
-        this.planetArrayList.remove(planets);
-
         for(Planet p: planets){
             p.remove();
             planetWindow.removePlanet(p);
         }
+
+        this.planetArrayList.removeAll(planets);
     }
 
     public ArrayList<Planet> getPlanetArrayList() {

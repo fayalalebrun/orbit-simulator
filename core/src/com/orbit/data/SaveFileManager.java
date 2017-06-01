@@ -32,7 +32,7 @@ public class SaveFileManager {
         String str = file.readString();
         String part[] = str.replaceAll("\\r", "").split("\\n");
         int i=0;
-        System.out.println(part[10]);
+
         while(i<part.length-2){
 
             if(part[i].contains("name")){
@@ -76,7 +76,7 @@ public class SaveFileManager {
 
         Writer writer = file.writer(false);
         ArrayList<Planet> planetList = gameScreen.getPlanetArrayList();
-
+        
         for(Planet p: planetList){
             try {
                 writer.write("name: "+p.getName()+
