@@ -187,11 +187,13 @@ public class Planet extends Actor {
         return this.color;
     }
 
-    public void zoomCamera(OrthographicCamera camera){
+    public void zoomCamera(){
+        OrthographicCamera camera = (OrthographicCamera) this.getStage().getCamera();
         camera.zoom = (float)(AURadius*2/camera.viewportHeight);
     }
 
-    public void centerCamera(OrthographicCamera camera){
+    public void centerCamera(){
+        OrthographicCamera camera = (OrthographicCamera) this.getStage().getCamera();
         camera.translate(-1*camera.position.x,-1*camera.position.y);
         camera.translate((float)xPos, (float)yPos);
     }
