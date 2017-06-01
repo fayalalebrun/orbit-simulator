@@ -312,4 +312,8 @@ public class GameScreen extends BaseScreen {
     public GameScreen returnSelf(){
         return this;
     }
+
+    public void hideUI(){
+        uiGroup.setVisible(!uiGroup.isVisible());
+    }
 }
