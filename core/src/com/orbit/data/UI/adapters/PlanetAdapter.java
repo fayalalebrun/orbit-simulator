@@ -43,15 +43,18 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
         slider.addListener(new PlanetMagSliderListener(item, slider));
 
-        final VisTextButton goButton = new VisTextButton("Go");
+        final VisTextButton goButton = new VisTextButton("Go", "toggle");
 
         table.add(goButton).width(20f);
 
         goButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                item.zoomCamera();
-                item.centerCamera();
+                if(!item.getLockCamera()) {
+                    item.zoomCamera();
+                    item.centerCamera();
+                }
+                item.setLockCamera(!item.getLockCamera());
             }
         });
 

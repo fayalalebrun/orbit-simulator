@@ -28,6 +28,7 @@ public class Planet extends Actor {
     ArrayList<Planet> planetArrayList;
 
     boolean magnify = true;
+    boolean lockCamera;
     float magnificationAmount;
 
     public Planet(String name, double radius, double mass, double speed, double velocityAngle, Color color, double x, double y,
@@ -104,6 +105,10 @@ public class Planet extends Actor {
 
         vX = (fX * delta + this.mass * vX)/this.mass;
         vY = (fY * delta + this.mass * vY)/this.mass;
+
+        if(lockCamera){
+            centerCamera();
+        }
     }
 
     @Override
@@ -196,6 +201,14 @@ public class Planet extends Actor {
         OrthographicCamera camera = (OrthographicCamera) this.getStage().getCamera();
         camera.translate(-1*camera.position.x,-1*camera.position.y);
         camera.translate((float)xPos, (float)yPos);
+    }
+
+    public boolean getLockCamera(){
+        return lockCamera;
+    }
+
+    public void setLockCamera(boolean lockCamera){
+        this.lockCamera = lockCamera;
     }
 
 }
