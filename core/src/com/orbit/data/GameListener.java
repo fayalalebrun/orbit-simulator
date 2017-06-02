@@ -1,5 +1,6 @@
 package com.orbit.data;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -69,13 +70,9 @@ public class GameListener extends InputListener implements Disableable{
     @Override
     public void touchDragged(InputEvent event, float x, float y, int pointer) {
         if(moveInProgress){
-            float changeInX = x-moveLastX;
-            float changeInY = y-moveLastY;
-            changeInX*=-1;
-            changeInY*=-1;
-            moveLastX=x;
-            moveLastY=y;
-            camera.translate(changeInX,changeInY);
+            x = Gdx.input.getDeltaX();
+            y = Gdx.input.getDeltaY();
+            camera.translate(-x*0.00005f*camera.zoom,y*0.00005f*camera.zoom);
         }
 
     }
