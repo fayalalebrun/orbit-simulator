@@ -27,7 +27,6 @@ public class GameListener extends InputListener implements Disableable{
     boolean placementDisable;
 
     boolean moveInProgress = false;
-    float moveLastX, moveLastY;
 
     OptionsWindow optionsWindow;
 
@@ -52,8 +51,6 @@ public class GameListener extends InputListener implements Disableable{
                 break;
             case MOVE:
                 moveInProgress = true;
-                moveLastX = x;
-                moveLastY = y;
                 return true;
             case ZOOM_IN:
                 zoom(-10);
