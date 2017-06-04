@@ -22,7 +22,9 @@ import com.kotcrab.vis.ui.widget.file.FileChooser;
 import com.kotcrab.vis.ui.widget.file.FileTypeFilter;
 import com.kotcrab.vis.ui.widget.file.SingleFileChooserListener;
 import com.orbit.data.UI.*;
+import com.orbit.data.entities.OrbitManager;
 import com.orbit.data.entities.Planet;
+import org.omg.CORBA.ORB;
 
 import java.util.ArrayList;
 
@@ -45,6 +47,8 @@ public class GameScreen extends BaseScreen {
     private AngleAdjustmentWindow angleAdjustment;
     private SpeedWindow speedWindow;
     private ArrayList<Planet> planetArrayList;
+
+    public OrbitManager orbitManager;
 
     FileChooser fileChooser;
 
@@ -73,6 +77,8 @@ public class GameScreen extends BaseScreen {
         ui.setFillParent(true);
         TableUtils.setSpacingDefaults(ui);
         uiGroup = new Group();
+
+        orbitManager = new OrbitManager();
 
         planetWindow = new PlanetListWindow(this);
         gameListener = new GameListener(stage, planetWindow, this);
@@ -109,6 +115,8 @@ public class GameScreen extends BaseScreen {
     public void show() {
         stage.addListener(gameListener);
         ui.addListener(uiListener);
+
+        stage.addActor(orbitManager);
 
         uiStage.addActor(ui);
         uiStage.addActor(uiGroup);
@@ -262,9 +270,7 @@ public class GameScreen extends BaseScreen {
         if(actor==null&&!gameListener.isDisabled()){
             Planet p = new Planet(getName(),getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
                     x, y, planetArrayList);
-            stage.addActor(p);
-            planetWindow.addPlanet(p);
-            planetArrayList.add(p);
+            addPlanet(p);
             return true;
         }
         return false;
@@ -274,6 +280,7 @@ public class GameScreen extends BaseScreen {
         stage.addActor(p);
         planetWindow.addPlanet(p);
         planetArrayList.add(p);
+        orbitManager.addOrbit(p);
     }
 
     private String getName(){
