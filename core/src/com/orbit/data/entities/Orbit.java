@@ -20,6 +20,13 @@ public class Orbit{
 
     public void act() {
         points.add(new Vector2((float)planet.xPos, (float)planet.yPos));
+        if(points.size()>300){
+            ArrayList<Vector2> toBeRemoved = new ArrayList<Vector2>();
+            for(int i = 0; i<points.size();i+=2){
+                toBeRemoved.add(points.get(2));
+            }
+            points.removeAll(toBeRemoved);
+        }
     }
 
     public boolean isActive(){
