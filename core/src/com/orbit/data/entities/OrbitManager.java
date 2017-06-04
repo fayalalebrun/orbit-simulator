@@ -78,4 +78,8 @@ public class OrbitManager extends Actor{
                 x2+ydif, y2-xdif, floatBits, lineTexture.getU(), lineTexture.getV2()};
         batch.draw(lineTexture.getTexture(), verts, 0, 20);
     }
+
+    public void addOrbit(Planet p){
+        orbits.add(new Orbit(p));
+    }
 }
