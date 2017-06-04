@@ -31,15 +31,16 @@ public class OrbitManager extends Actor{
 
     @Override
     public void act(float delta) {
+        /*
         removeInactive();
         for(Orbit o : this.orbits){
             o.act();
-        }
+        }*/
     }
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        TextureAtlas.AtlasRegion lineAtlas = new TextureAtlas.AtlasRegion(lineTexture, 0, 0, 1, 1);
+        /*TextureAtlas.AtlasRegion lineAtlas = new TextureAtlas.AtlasRegion(lineTexture, 0, 0, 1, 1);
         for(Orbit o : this.orbits){
             if(o.getPoints().size()>=2){
                 for(int i = 0; i < o.getPoints().size()-1; i++){
@@ -47,7 +48,7 @@ public class OrbitManager extends Actor{
                             o.getPoints().get(i+1).x, o.getPoints().get(i+1).y,0.00001f*getCamera().zoom, lineAtlas);
                 }
             }
-        }
+        }*/
     }
 
     private void removeInactive(){
