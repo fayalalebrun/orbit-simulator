@@ -10,8 +10,8 @@ import java.util.ArrayList;
  * Created by Fran on 6/3/2017.
  */
 public class Orbit{
-    public Planet planet;
-    public ArrayList<Vector2> points;
+    private Planet planet;
+    private ArrayList<Vector2> points;
 
     public Orbit(Planet planet){
         this.planet = planet;
@@ -24,5 +24,9 @@ public class Orbit{
 
     public boolean isActive(){
         return planet.getStage()!=null;
+    }
+
+    public ArrayList<Vector2> getPoints() {
+        return points;
     }
 }
