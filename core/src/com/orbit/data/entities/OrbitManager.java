@@ -44,7 +44,7 @@ public class OrbitManager extends Actor{
             if(o.getPoints().size()>=2){
                 for(int i = 0; i < o.getPoints().size()-1; i++){
                     drawLine(batch, o.getPoints().get(i).x,o.getPoints().get(i).y,
-                            o.getPoints().get(i+1).x, o.getPoints().get(i+1).y,0.00004f, lineAtlas);
+                            o.getPoints().get(i+1).x, o.getPoints().get(i+1).y,0.00001f*getCamera().zoom, lineAtlas);
                 }
             }
         }
@@ -83,7 +83,7 @@ public class OrbitManager extends Actor{
     public void addOrbit(Planet p){
         orbits.add(new Orbit(p));
     }
-    
+
     private OrthographicCamera getCamera(){
         return (OrthographicCamera)getStage().getCamera();
     }
