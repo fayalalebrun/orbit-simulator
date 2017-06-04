@@ -15,8 +15,8 @@ public class Orbit{
 
     public Orbit(Planet planet){
         this.planet = planet;
+        this.points = new ArrayList<Vector2>();
     }
-
 
     public void act() {
         points.add(new Vector2((float)planet.xPos, (float)planet.yPos));
