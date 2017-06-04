@@ -9,7 +9,7 @@ import java.util.ArrayList;
 /**
  * Created by Fran on 6/3/2017.
  */
-public class Orbit extends Actor {
+public class Orbit{
     public Planet planet;
     public ArrayList<Vector2> points;
 
@@ -17,8 +17,8 @@ public class Orbit extends Actor {
         this.planet = planet;
     }
 
-    @Override
-    public void act(float delta) {
+
+    public void act() {
         points.add(new Vector2((float)planet.xPos, (float)planet.yPos));
     }
 
