@@ -39,7 +39,7 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
         final VisSlider slider = new VisSlider(0f, 100f,1f,false);
 
-        table.add(slider).width(64f).padRight(3f);
+        table.add(slider).width(48f).padRight(3f);
 
         slider.addListener(new PlanetMagSliderListener(item, slider));
 
@@ -60,7 +60,7 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
         final VisTextButton eraseButton = new VisTextButton("Del");
 
-        table.add(eraseButton).width(20f);
+        table.add(eraseButton).width(23f).padLeft(3f);
 
         eraseButton.addListener(new ChangeListener() {
             @Override

@@ -23,7 +23,7 @@ public class PlanetListWindow extends VisWindow{
         this.gameScreen = gameScreen;
         TableUtils.setSpacingDefaults(this);
         addWidgets();
-        setSize(180,270);
+        setSize(200,270);
     }
 
     public void addWidgets(){
@@ -32,7 +32,7 @@ public class PlanetListWindow extends VisWindow{
         VisScrollPane scrollPane = new VisScrollPane(view.getMainTable());
         scrollPane.setFlickScroll(false);
         scrollPane.setFadeScrollBars(false);
-        add(scrollPane).spaceTop(30).growX().width(200f).height(200f);
+        add(scrollPane).spaceTop(30).growX().width(205f).height(220f);
     }
 
     public void addPlanet(Planet planet){
