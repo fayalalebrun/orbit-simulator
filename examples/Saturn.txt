@@ -1,0 +1,23 @@
+name: Saturn
+radius: 60268.0
+mass: 95.16
+speed: 0.0
+angle: 0.0
+color: r: 0.18039216
+color: g: 0.43137255
+color: b: 0.6392157
+color: a: 1.0
+x: 0.0
+y: 0.0
+
+name: ring
+radius: 10
+mass: 95.16
+speed: 0.0
+angle: 0.0
+color: r: 0.18039216
+color: g: 0.43137255
+color: b: 0.6392157
+color: a: 1.0
+x: 0.0
+y: 0.0

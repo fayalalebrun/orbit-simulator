@@ -1,0 +1,121 @@
+name: Sun
+radius: 695700.0
+mass: 333054.0
+speed: 0.0
+angle: 0.0
+color: r: 0.8901961
+color: g: 0.6509804
+color: b: 0.0
+color: a: 1.0
+x: 0.0
+y: 0.0
+
+name: Mercury
+radius: 2439.7
+mass: 0.0553
+speed: 38.86
+angle: 90.0
+color: r: 0.63529414
+color: g: 0.03529412
+color: b: 0.0
+color: a: 1.0
+x: 0.459
+y: 0.0
+
+name: Venus
+radius: 6051.8
+mass: 0.815
+speed: 34.79
+angle: 90.0
+color: r: 0.6
+color: g: 0.6392157
+color: b: 0.18039216
+color: a: 1.0
+x: 0.716
+y: 0.0
+
+name: Earth
+radius: 6378.1
+mass: 1
+speed: 29.29
+angle: 90.0
+color: r: 0.18039216
+color: g: 0.43137255
+color: b: 0.6392157
+color: a: 1.0
+x: 1.0167257013
+y: 0.0
+
+name: Mars
+radius: 3396.2
+mass: 0.107
+speed: 26.50
+angle: 90.0
+color: r: 0.9372549
+color: g: 0.3137255
+color: b: 0.0
+color: a: 1.0
+x: 1.405
+y: 0.0
+
+name: Jupiter
+radius: 66854.0
+mass: 317.83
+speed: 12.44
+angle: 90.0
+color: r: 0.4
+color: g: 0.3019608
+color: b: 0.10980392
+color: a: 1.0
+x: 5.369
+y: 0.0
+
+name: Saturn
+radius: 60268.0
+mass: 95.16
+speed: 10.18
+angle: 90.0
+color: r: 0.7607843
+color: g: 0.64705884
+color: b: 0.44705883
+color: a: 1.0
+x: 9.195
+y: 0.0
+
+name: Uranus
+radius: 25559.0
+mass: 14.54
+speed: 6.49
+angle: 90.0
+color: r: 0.7137255
+color: g: 0.8901961
+color: b: 0.88235295
+color: a: 1.0
+x: 19.748
+y: 0.0
+
+name: Neptune
+radius: 24341.0
+mass: 17.15
+speed: 5.37
+angle: 90.0
+color: r: 0.07058824
+color: g: 0.7411765
+color: b: 0.7882353
+color: a: 1.0
+x: 30.216
+y: 0.0
+
+name: Moon
+radius: 1738.1
+mass: 0.0123
+speed: 30.366
+angle: 90.0
+color: r: 0.6392157
+color: g: 0.654902
+color: b: 0.65882355
+color: a: 1.0
+x: 1.0191542113
+y: 0.0
+
+

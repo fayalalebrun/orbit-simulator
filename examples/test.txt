@@ -1,0 +1,12 @@
+name: 34
+radius: 34.0
+mass: 43.0
+speed: 34.0
+angle: 43.0
+color: r: 0.6392157
+color: g: 0.654902
+color: b: 0.65882355
+color: a: 1.0
+x: 0.0
+y: 0.0
+
