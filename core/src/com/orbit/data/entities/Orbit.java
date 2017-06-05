@@ -12,21 +12,25 @@ import java.util.ArrayList;
 public class Orbit{
     private Planet planet;
     private ArrayList<Vector2> points;
+    private float timePassed;
 
     public Orbit(Planet planet){
         this.planet = planet;
         this.points = new ArrayList<Vector2>();
     }
 
-    public void act() {
-        points.add(new Vector2((float)planet.xPos, (float)planet.yPos));
-        if(points.size()>300){
-            ArrayList<Vector2> toBeRemoved = new ArrayList<Vector2>();
-            for(int i = 0; i<points.size();i+=2){
-                toBeRemoved.add(points.get(2));
-            }
-            points.removeAll(toBeRemoved);
+    public void act(float delta) {
+        timePassed += delta;
+
+        if(timePassed>1f) {
+            points.add(new Vector2((float) planet.xPos, (float) planet.yPos));
+            timePassed = 0;
         }
+
+    }
+
+    public void clear(){
+        this.points.clear();
     }
 
     public boolean isActive(){

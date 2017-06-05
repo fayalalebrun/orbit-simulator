@@ -31,24 +31,23 @@ public class OrbitManager extends Actor{
 
     @Override
     public void act(float delta) {
-        /*
         removeInactive();
         for(Orbit o : this.orbits){
-            o.act();
-        }*/
+            o.act(delta);
+        }
     }
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        /*TextureAtlas.AtlasRegion lineAtlas = new TextureAtlas.AtlasRegion(lineTexture, 0, 0, 1, 1);
+        TextureAtlas.AtlasRegion lineAtlas = new TextureAtlas.AtlasRegion(lineTexture, 0, 0, 1, 1);
         for(Orbit o : this.orbits){
             if(o.getPoints().size()>=2){
                 for(int i = 0; i < o.getPoints().size()-1; i++){
                     drawLine(batch, o.getPoints().get(i).x,o.getPoints().get(i).y,
-                            o.getPoints().get(i+1).x, o.getPoints().get(i+1).y,0.00001f*getCamera().zoom, lineAtlas);
+                            o.getPoints().get(i+1).x, o.getPoints().get(i+1).y,0.00004f*getCamera().zoom, lineAtlas);
                 }
             }
-        }*/
+        }
     }
 
     private void removeInactive(){
@@ -61,6 +60,12 @@ public class OrbitManager extends Actor{
         }
 
         orbits.removeAll(toBeRemoved);
+    }
+
+    private void clearAll(){
+        for (Orbit o : this.orbits){
+            o.clear();
+        }
     }
 
     public static void drawLine(Batch batch, float x1, float y1, float x2, float y2, float lineWidth, TextureAtlas.AtlasRegion lineTexture) {
