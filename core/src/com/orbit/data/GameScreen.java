@@ -46,6 +46,7 @@ public class GameScreen extends BaseScreen {
     private PlanetListWindow planetWindow;
     private AngleAdjustmentWindow angleAdjustment;
     private SpeedWindow speedWindow;
+    private OrbitTracingWindow orbitWindow;
     private ArrayList<Planet> planetArrayList;
 
     public OrbitManager orbitManager;
@@ -97,6 +98,7 @@ public class GameScreen extends BaseScreen {
         sizeMult = new SizeMultWindow();
         angleAdjustment = new AngleAdjustmentWindow(options);
         speedWindow = new SpeedWindow();
+        orbitWindow = new OrbitTracingWindow(orbitManager);
 
         menuBar = new MenuBar();
 
@@ -104,11 +106,12 @@ public class GameScreen extends BaseScreen {
         setupFileChooser();
 
         toolbar.moveBy(750,0);
-        placement.moveBy(350,0);
-        sizeMult.moveBy(350,56);
+        placement.moveBy(345,0);
+        sizeMult.moveBy(345,185);
         planetWindow.moveBy(0,270);
-        angleAdjustment.moveBy(350,110);
-        speedWindow.moveBy(490, 110);
+        angleAdjustment.moveBy(345,56);
+        speedWindow.moveBy(700, 185);
+        orbitWindow.moveBy(485, 56);
     }
 
     @Override
@@ -131,6 +134,7 @@ public class GameScreen extends BaseScreen {
         uiGroup.addActor(planetWindow);
         uiGroup.addActor(angleAdjustment);
         uiGroup.addActor(speedWindow);
+        uiGroup.addActor(orbitWindow);
 
         createMenus();
     }
@@ -166,6 +170,7 @@ public class GameScreen extends BaseScreen {
         windowMenu.addItem(createWindowToggle("Angle Adjustment", angleAdjustment));
         windowMenu.addItem(createWindowToggle("Simulation Speed", speedWindow));
         windowMenu.addItem(createWindowToggle("Tools", toolbar));
+        windowMenu.addItem(createWindowToggle("Orbit Tracing", orbitWindow));
 
         Menu fileMenu = new Menu("File");
 

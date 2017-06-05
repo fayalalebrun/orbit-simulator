@@ -65,7 +65,7 @@ public class OrbitManager extends Actor{
         orbits.removeAll(toBeRemoved);
     }
 
-    private void clearAll(){
+    public void clearAll(){
         for (Orbit o : this.orbits){
             o.clear();
         }
