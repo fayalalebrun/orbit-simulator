@@ -41,10 +41,10 @@ public class OrbitManager extends Actor{
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        batch.setColor(Color.WHITE.cpy());
         TextureAtlas.AtlasRegion lineAtlas = new TextureAtlas.AtlasRegion(lineTexture, 0, 0, 1, 1);
         for(Orbit o : this.orbits){
             if(o.getPoints().size()>=2){
+                batch.setColor(o.getColor());
                 for(int i = 0; i < o.getPoints().size()-1; i++){
                     drawLine(batch, o.getPoints().get(i).x,o.getPoints().get(i).y,
                             o.getPoints().get(i+1).x, o.getPoints().get(i+1).y,0.000065f*getCamera().zoom, lineAtlas);

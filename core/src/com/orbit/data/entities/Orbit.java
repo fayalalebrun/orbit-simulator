@@ -1,5 +1,6 @@
 package com.orbit.data.entities;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.kotcrab.vis.ui.util.adapter.ArrayListAdapter;
@@ -44,5 +45,9 @@ public class Orbit{
 
     public ArrayList<Vector2> getPoints() {
         return points;
+    }
+
+    public Color getColor(){
+        return planet.getCurrColor().cpy();
     }
 }
