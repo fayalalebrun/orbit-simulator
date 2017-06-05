@@ -19,6 +19,8 @@ import java.util.ArrayList;
 public class OrbitManager extends Actor{
     ArrayList<Orbit> orbits;
     Texture lineTexture;
+    int maxPoints = 60;
+    float interval = 1f;
 
     public OrbitManager(){
         orbits = new ArrayList<Orbit>();
@@ -39,6 +41,7 @@ public class OrbitManager extends Actor{
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
+        batch.setColor(Color.WHITE.cpy());
         TextureAtlas.AtlasRegion lineAtlas = new TextureAtlas.AtlasRegion(lineTexture, 0, 0, 1, 1);
         for(Orbit o : this.orbits){
             if(o.getPoints().size()>=2){
@@ -87,10 +90,26 @@ public class OrbitManager extends Actor{
     }
 
     public void addOrbit(Planet p){
-        orbits.add(new Orbit(p));
+        orbits.add(new Orbit(p,this));
     }
 
     private OrthographicCamera getCamera(){
         return (OrthographicCamera)getStage().getCamera();
+    }
+
+    public int getMaxPoints() {
+        return maxPoints;
+    }
+
+    public void setMaxPoints(int maxPoints) {
+        this.maxPoints = maxPoints;
+    }
+
+    public float getInterval() {
+        return interval;
+    }
+
+    public void setInterval(float interval) {
+        this.interval = interval;
     }
 }
