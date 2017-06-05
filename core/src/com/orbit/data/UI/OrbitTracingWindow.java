@@ -58,5 +58,8 @@ public class OrbitTracingWindow extends VisWindow{
                 orbitManager.setMaxPoints(Integer.parseInt(limitField.getText()));
             }
         });
+        
+        intervalField.setText(orbitManager.getInterval()+"");
+        limitField.setText(orbitManager.getMaxPoints()+"");
     }
 }
