@@ -72,7 +72,7 @@ public class GameScreen extends BaseScreen {
         planetArrayList = new ArrayList<Planet>();
 
         VisUI.load();
-        stage = new Stage(new FitViewport(0.04f,0.03f));
+        stage = new Stage(new ExtendViewport(Gdx.graphics.getWidth()*0.00004f,Gdx.graphics.getHeight()*0.00004f));
         uiStage = new Stage(new ExtendViewport(800,600));
         ui = new VisTable();
         ui.setFillParent(true);
