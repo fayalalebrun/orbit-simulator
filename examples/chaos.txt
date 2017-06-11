@@ -1,0 +1,1752 @@
+name: Black Hole
+radius: 69570000.0
+mass: 3330540.0
+speed: 0.0
+angle: 0.0
+color: r: 0.0
+color: g: 0.0
+color: b: 0.0
+color: a: 1.0
+x: 0.0
+y: 0.0
+
+name: Sun 1
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 90
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 50
+y: 0
+
+name: Sun 2
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 100
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 49.2404
+y: 8.68241
+
+name: Sun 3
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 110
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 46.9846
+y: 17.101
+
+name: Sun 4
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 120
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 43.3013
+y: 25
+
+name: Sun 5
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 130
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 38.3022
+y: 32.1394
+
+name: Sun 6
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 140
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 32.1394
+y: 38.3022
+
+name: Sun 7
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 150
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 25
+y: 43.3013
+
+name: Sun 8
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 160
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 17.101
+y: 46.9846
+
+name: Sun 9
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 170
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 8.68241
+y: 49.2404
+
+name: Sun 10
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 180
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 3.06162e-15
+y: 50
+
+name: Sun 11
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 190
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -8.68241
+y: 49.2404
+
+name: Sun 12
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 200
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -17.101
+y: 46.9846
+
+name: Sun 13
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 210
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -25
+y: 43.3013
+
+name: Sun 14
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 220
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -32.1394
+y: 38.3022
+
+name: Sun 15
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 230
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -38.3022
+y: 32.1394
+
+name: Sun 16
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 240
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -43.3013
+y: 25
+
+name: Sun 17
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 250
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -46.9846
+y: 17.101
+
+name: Sun 18
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 260
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -49.2404
+y: 8.68241
+
+name: Sun 19
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 270
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -50
+y: 6.12323e-15
+
+name: Sun 20
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 280
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -49.2404
+y: -8.68241
+
+name: Sun 21
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 290
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -46.9846
+y: -17.101
+
+name: Sun 22
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 300
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -43.3013
+y: -25
+
+name: Sun 23
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 310
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -38.3022
+y: -32.1394
+
+name: Sun 24
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 320
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -32.1394
+y: -38.3022
+
+name: Sun 25
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 330
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -25
+y: -43.3013
+
+name: Sun 26
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 340
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -17.101
+y: -46.9846
+
+name: Sun 27
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 350
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -8.68241
+y: -49.2404
+
+name: Sun 28
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 360
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -9.18485e-15
+y: -50
+
+name: Sun 29
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 0
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 8.68241
+y: -49.2404
+
+name: Sun 30
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 10
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 17.101
+y: -46.9846
+
+name: Sun 31
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 20
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 25
+y: -43.3013
+
+name: Sun 32
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 30
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 32.1394
+y: -38.3022
+
+name: Sun 33
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 40
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 38.3022
+y: -32.1394
+
+name: Sun 34
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 50
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 43.3013
+y: -25
+
+name: Sun 35
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 60
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 46.9846
+y: -17.101
+
+name: Sun 36
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 70
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 49.2404
+y: -8.68241
+
+name: Sun 37
+radius: 347850000.0
+mass: 333054.0
+speed: 13.3219
+angle: 80
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 50
+y: -1.22465e-14
+
+name: Sun 38
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 90
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 75
+y: 0
+
+name: Sun 39
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 100
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 73.8606
+y: 13.0236
+
+name: Sun 40
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 110
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 70.4769
+y: 25.6515
+
+name: Sun 41
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 120
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 64.9519
+y: 37.5
+
+name: Sun 42
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 130
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 57.4533
+y: 48.2091
+
+name: Sun 43
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 140
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 48.2091
+y: 57.4533
+
+name: Sun 44
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 150
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 37.5
+y: 64.9519
+
+name: Sun 45
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 160
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 25.6515
+y: 70.4769
+
+name: Sun 46
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 170
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 13.0236
+y: 73.8606
+
+name: Sun 47
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 180
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 4.59243e-15
+y: 75
+
+name: Sun 48
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 190
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -13.0236
+y: 73.8606
+
+name: Sun 49
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 200
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -25.6515
+y: 70.4769
+
+name: Sun 50
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 210
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -37.5
+y: 64.9519
+
+name: Sun 51
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 220
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -48.2091
+y: 57.4533
+
+name: Sun 52
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 230
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -57.4533
+y: 48.2091
+
+name: Sun 53
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 240
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -64.9519
+y: 37.5
+
+name: Sun 54
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 250
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -70.4769
+y: 25.6515
+
+name: Sun 55
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 260
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -73.8606
+y: 13.0236
+
+name: Sun 56
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 270
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -75
+y: 9.18485e-15
+
+name: Sun 57
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 280
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -73.8606
+y: -13.0236
+
+name: Sun 58
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 290
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -70.4769
+y: -25.6515
+
+name: Sun 59
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 300
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -64.9519
+y: -37.5
+
+name: Sun 60
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 310
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -57.4533
+y: -48.2091
+
+name: Sun 61
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 320
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -48.2091
+y: -57.4533
+
+name: Sun 62
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 330
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -37.5
+y: -64.9519
+
+name: Sun 63
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 340
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -25.6515
+y: -70.4769
+
+name: Sun 64
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 350
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -13.0236
+y: -73.8606
+
+name: Sun 65
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 360
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -1.37773e-14
+y: -75
+
+name: Sun 66
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 0
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 13.0236
+y: -73.8606
+
+name: Sun 67
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 10
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 25.6515
+y: -70.4769
+
+name: Sun 68
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 20
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 37.5
+y: -64.9519
+
+name: Sun 69
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 30
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 48.2091
+y: -57.4533
+
+name: Sun 70
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 40
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 57.4533
+y: -48.2091
+
+name: Sun 71
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 50
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 64.9519
+y: -37.5
+
+name: Sun 72
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 60
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 70.4769
+y: -25.6515
+
+name: Sun 73
+radius: 347850000.0
+mass: 333054.0
+speed: 10.8773
+angle: 70
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 73.8606
+y: -13.0236
+
+name: Sun 74
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 90
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 100
+y: 0
+
+name: Sun 75
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 100
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 98.4808
+y: 17.3648
+
+name: Sun 76
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 110
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 93.9693
+y: 34.202
+
+name: Sun 77
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 120
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 86.6025
+y: 50
+
+name: Sun 78
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 130
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 76.6044
+y: 64.2788
+
+name: Sun 79
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 140
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 64.2788
+y: 76.6044
+
+name: Sun 80
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 150
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 50
+y: 86.6025
+
+name: Sun 81
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 160
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 34.202
+y: 93.9693
+
+name: Sun 82
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 170
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 17.3648
+y: 98.4808
+
+name: Sun 83
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 180
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 6.12323e-15
+y: 100
+
+name: Sun 84
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 190
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -17.3648
+y: 98.4808
+
+name: Sun 85
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 200
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -34.202
+y: 93.9693
+
+name: Sun 86
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 210
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -50
+y: 86.6025
+
+name: Sun 87
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 220
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -64.2788
+y: 76.6044
+
+name: Sun 88
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 230
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -76.6044
+y: 64.2788
+
+name: Sun 89
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 240
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -86.6025
+y: 50
+
+name: Sun 90
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 250
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -93.9693
+y: 34.202
+
+name: Sun 91
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 260
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -98.4808
+y: 17.3648
+
+name: Sun 92
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 270
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -100
+y: 1.22465e-14
+
+name: Sun 93
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 280
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -98.4808
+y: -17.3648
+
+name: Sun 94
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 290
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -93.9693
+y: -34.202
+
+name: Sun 95
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 300
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -86.6025
+y: -50
+
+name: Sun 96
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 310
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -76.6044
+y: -64.2788
+
+name: Sun 97
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 320
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -64.2788
+y: -76.6044
+
+name: Sun 98
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 330
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -50
+y: -86.6025
+
+name: Sun 99
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 340
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -34.202
+y: -93.9693
+
+name: Sun 100
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 350
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -17.3648
+y: -98.4808
+
+name: Sun 101
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 360
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -1.83697e-14
+y: -100
+
+name: Sun 102
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 0
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 17.3648
+y: -98.4808
+
+name: Sun 103
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 10
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 34.202
+y: -93.9693
+
+name: Sun 104
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 20
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 50
+y: -86.6025
+
+name: Sun 105
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 30
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 64.2788
+y: -76.6044
+
+name: Sun 106
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 40
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 76.6044
+y: -64.2788
+
+name: Sun 107
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 50
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 86.6025
+y: -50
+
+name: Sun 108
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 60
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 93.9693
+y: -34.202
+
+name: Sun 109
+radius: 347850000.0
+mass: 333054.0
+speed: 9.41999
+angle: 70
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 98.4808
+y: -17.3648
+
+name: Sun 110
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 90
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 125
+y: 0
+
+name: Sun 111
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 100
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 123.101
+y: 21.706
+
+name: Sun 112
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 110
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 117.462
+y: 42.7525
+
+name: Sun 113
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 120
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 108.253
+y: 62.5
+
+name: Sun 114
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 130
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 95.7556
+y: 80.3485
+
+name: Sun 115
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 140
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 80.3485
+y: 95.7556
+
+name: Sun 116
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 150
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 62.5
+y: 108.253
+
+name: Sun 117
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 160
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 42.7525
+y: 117.462
+
+name: Sun 118
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 170
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 21.706
+y: 123.101
+
+name: Sun 119
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 180
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 7.65404e-15
+y: 125
+
+name: Sun 120
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 190
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -21.706
+y: 123.101
+
+name: Sun 121
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 200
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -42.7525
+y: 117.462
+
+name: Sun 122
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 210
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -62.5
+y: 108.253
+
+name: Sun 123
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 220
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -80.3485
+y: 95.7556
+
+name: Sun 124
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 230
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -95.7556
+y: 80.3485
+
+name: Sun 125
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 240
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -108.253
+y: 62.5
+
+name: Sun 126
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 250
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -117.462
+y: 42.7525
+
+name: Sun 127
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 260
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -123.101
+y: 21.706
+
+name: Sun 128
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 270
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -125
+y: 1.53081e-14
+
+name: Sun 129
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 280
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -123.101
+y: -21.706
+
+name: Sun 130
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 290
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -117.462
+y: -42.7525
+
+name: Sun 131
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 300
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -108.253
+y: -62.5
+
+name: Sun 132
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 310
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -95.7556
+y: -80.3485
+
+name: Sun 133
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 320
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -80.3485
+y: -95.7556
+
+name: Sun 134
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 330
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -62.5
+y: -108.253
+
+name: Sun 135
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 340
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -42.7525
+y: -117.462
+
+name: Sun 136
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 350
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -21.706
+y: -123.101
+
+name: Sun 137
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 360
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: -2.29621e-14
+y: -125
+
+name: Sun 138
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 0
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 21.706
+y: -123.101
+
+name: Sun 139
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 10
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 42.7525
+y: -117.462
+
+name: Sun 140
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 20
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 62.5
+y: -108.253
+
+name: Sun 141
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 30
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 80.3485
+y: -95.7556
+
+name: Sun 142
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 40
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 95.7556
+y: -80.3485
+
+name: Sun 143
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 50
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 108.253
+y: -62.5
+
+name: Sun 144
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 60
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 117.462
+y: -42.7525
+
+name: Sun 145
+radius: 347850000.0
+mass: 333054.0
+speed: 8.42549
+angle: 70
+color: r: 1.0
+color: g: 1.0
+color: b: 1.0
+color: a: 1.0
+x: 123.101
+y: -21.706
+
