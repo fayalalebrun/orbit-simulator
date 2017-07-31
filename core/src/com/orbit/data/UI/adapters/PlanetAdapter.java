@@ -43,6 +43,8 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
 
         slider.addListener(new PlanetMagSliderListener(item, slider));
 
+        slider.setValue(100);
+
         final VisTextButton goButton = new VisTextButton("Go", "toggle");
 
         table.add(goButton).width(20f);
