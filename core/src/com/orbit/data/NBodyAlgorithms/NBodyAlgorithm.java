@@ -21,10 +21,12 @@ public abstract class NBodyAlgorithm implements Runnable {
     }
 
     public double getDelta(){
-        double currTime = System.nanoTime()/1000000000;
+        double currTime = (double)System.nanoTime()/1000000000.0;
         if(lastTime==0){
             lastTime = currTime;
         }
-        return currTime - lastTime;
+        double temp = currTime - lastTime;
+        lastTime = currTime;
+        return temp;
     }
 }
