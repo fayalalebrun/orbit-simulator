@@ -34,7 +34,7 @@ import java.util.ArrayList;
  */
 public class GameScreen extends BaseScreen {
 
-    public NBodyAlgorithm algorithm;
+    private NBodyAlgorithm algorithm;
 
     Stage stage;
 
