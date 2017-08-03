@@ -10,8 +10,8 @@ import java.util.ArrayList;
  */
 public abstract class NBodyAlgorithm implements Runnable {
 
-    private ArrayList<Planet> planets;
-    private GameScreen gameScreen;
+    protected ArrayList<Planet> planets;
+    protected GameScreen gameScreen;
 
     private double lastTime;
 
@@ -20,7 +20,7 @@ public abstract class NBodyAlgorithm implements Runnable {
         this.planets = gameScreen.getPlanetArrayList();
     }
 
-    public double getDelta(){
+    protected double getDelta(){
         double currTime = (double)System.nanoTime()/1000000000.0;
         if(lastTime==0){
             lastTime = currTime;
