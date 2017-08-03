@@ -21,6 +21,7 @@ import com.kotcrab.vis.ui.widget.*;
 import com.kotcrab.vis.ui.widget.file.FileChooser;
 import com.kotcrab.vis.ui.widget.file.FileTypeFilter;
 import com.kotcrab.vis.ui.widget.file.SingleFileChooserListener;
+import com.orbit.data.NBodyAlgorithms.NBodyAlgorithm;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.OrbitManager;
 import com.orbit.data.entities.Planet;
@@ -32,6 +33,8 @@ import java.util.ArrayList;
  * Created by Fran on 5/22/2017.
  */
 public class GameScreen extends BaseScreen {
+
+    public NBodyAlgorithm algorithm;
 
     Stage stage;
 
