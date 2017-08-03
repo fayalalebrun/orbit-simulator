@@ -13,8 +13,18 @@ public abstract class NBodyAlgorithm implements Runnable {
     private ArrayList<Planet> planets;
     private GameScreen gameScreen;
 
+    private double lastTime;
+
     public NBodyAlgorithm(GameScreen gameScreen) {
         this.gameScreen = gameScreen;
         this.planets = gameScreen.getPlanetArrayList();
+    }
+
+    public double getDelta(){
+        double currTime = System.nanoTime()/1000000000;
+        if(lastTime==0){
+            lastTime = currTime;
+        }
+        return currTime - lastTime;
     }
 }
