@@ -27,15 +27,12 @@ public class Planet extends Actor {
     Texture texture;
     Color color;
     String name;
-    ArrayList<Planet> planetArrayList;
 
     boolean magnify = true;
     public boolean lockCamera;
     float magnificationAmount;
 
-    public Planet(String name, double radius, double mass, double speed, double velocityAngle, Color color, double x, double y,
-                  ArrayList<Planet> planetArrayList) {
-        this.planetArrayList = planetArrayList;
+    public Planet(String name, double radius, double mass, double speed, double velocityAngle, Color color, double x, double y) {
 
         this.name = name;
 

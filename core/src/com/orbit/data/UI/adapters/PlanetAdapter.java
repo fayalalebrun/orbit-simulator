@@ -14,6 +14,7 @@ import com.orbit.data.UI.PlanetMagSliderListener;
 import com.orbit.data.entities.Planet;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * Created by Fran on 5/26/2017.
@@ -67,7 +68,7 @@ public class PlanetAdapter extends ArrayListAdapter<Planet, VisTable>{
         eraseButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                ArrayList<Planet> pList = new ArrayList<Planet>();
+                Vector<Planet> pList = new Vector<Planet>();
                 pList.add(item);
                 gameScreen.removePlanets(pList);
             }

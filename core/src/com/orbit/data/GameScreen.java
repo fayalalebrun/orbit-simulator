@@ -25,6 +25,7 @@ import com.orbit.data.entities.OrbitManager;
 import com.orbit.data.entities.Planet;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * Created by Fran on 5/22/2017.
@@ -47,7 +48,7 @@ public class GameScreen extends BaseScreen {
     private AngleAdjustmentWindow angleAdjustment;
     private SpeedWindow speedWindow;
     private OrbitTracingWindow orbitWindow;
-    private ArrayList<Planet> planetArrayList;
+    private Vector<Planet> planetArrayList;
 
     public OrbitManager orbitManager;
 
@@ -69,7 +70,7 @@ public class GameScreen extends BaseScreen {
     public GameScreen(Boot boot) {
         super(boot);
 
-        planetArrayList = new ArrayList<Planet>();
+        planetArrayList = new Vector<Planet>();
 
         VisUI.load();
         stage = new Stage(new ExtendViewport(Gdx.graphics.getWidth()*0.00004f,Gdx.graphics.getHeight()*0.00004f));
@@ -278,7 +279,7 @@ public class GameScreen extends BaseScreen {
         Actor actor = stage.hit(x,y,true);
         if(actor==null&&!gameListener.isDisabled()){
             Planet p = new Planet(getName(),getRadius(),getMass(),getSpeed(),getAngle(),getColor(),
-                    x, y, planetArrayList);
+                    x, y);
             addPlanet(p);
             return true;
         }
@@ -286,10 +287,12 @@ public class GameScreen extends BaseScreen {
     }
 
     public void addPlanet(Planet p){
-        stage.addActor(p);
-        planetWindow.addPlanet(p);
-        planetArrayList.add(p);
-        orbitManager.addOrbit(p);
+        synchronized (planetArrayList) {
+            stage.addActor(p);
+            planetWindow.addPlanet(p);
+            planetArrayList.add(p);
+            orbitManager.addOrbit(p);
+        }
     }
 
     private String getName(){
@@ -316,16 +319,18 @@ public class GameScreen extends BaseScreen {
         return options.getPickerImage().getColor().cpy();
     }
 
-    public void removePlanets(ArrayList<Planet> planets){
-        for(Planet p: planets){
-            p.remove();
-            planetWindow.removePlanet(p);
-        }
+    public void removePlanets(Vector<Planet> planets){
+        synchronized (planets) {
+            for (Planet p : planets) {
+                p.remove();
+                planetWindow.removePlanet(p);
+            }
 
-        this.planetArrayList.removeAll(planets);
+            this.planetArrayList.removeAll(planets);
+        }
     }
 
-    public ArrayList<Planet> getPlanetArrayList() {
+    public Vector<Planet> getPlanetArrayList() {
         return planetArrayList;
     }
 

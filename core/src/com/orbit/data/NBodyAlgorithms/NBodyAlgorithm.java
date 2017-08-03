@@ -4,13 +4,14 @@ import com.orbit.data.GameScreen;
 import com.orbit.data.entities.Planet;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * Created by Fran on 8/2/2017.
  */
 public abstract class NBodyAlgorithm implements Runnable {
 
-    protected ArrayList<Planet> planets;
+    protected Vector<Planet> planets;
     protected GameScreen gameScreen;
 
     private double lastTime;

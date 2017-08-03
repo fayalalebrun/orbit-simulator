@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * Created by fraayala19 on 5/31/17.
@@ -62,7 +63,7 @@ public class SaveFileManager {
                 y = Double.parseDouble(part[i].substring(3));
                 i++;
 
-                Planet p = new Planet(name, radius, mass, speed, angle, c, x, y, gameScreen.getPlanetArrayList());
+                Planet p = new Planet(name, radius, mass, speed, angle, c, x, y);
 
                 gameScreen.addPlanet(p);
             } else{
@@ -75,30 +76,32 @@ public class SaveFileManager {
         file.delete();
 
         Writer writer = file.writer(false);
-        ArrayList<Planet> planetList = gameScreen.getPlanetArrayList();
-        
-        for(Planet p: planetList){
+        Vector<Planet> planetList = gameScreen.getPlanetArrayList();
+
+        synchronized (planetList) {
+            for (Planet p : planetList) {
+                try {
+                    writer.write("name: " + p.getName() +
+                            "\nradius: " + p.getOrigRadius() +
+                            "\nmass: " + p.getOrigMass() +
+                            "\nspeed: " + p.getSpeed() +
+                            "\nangle: " + p.getAngle() +
+                            "\ncolor: r: " + p.getCurrColor().r +
+                            "\ncolor: g: " + p.getCurrColor().g +
+                            "\ncolor: b: " + p.getCurrColor().b +
+                            "\ncolor: a: " + p.getCurrColor().a +
+                            "\nx: " + p.getxPos() +
+                            "\ny: " + p.getyPos() + "\n\n");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
             try {
-                writer.write("name: "+p.getName()+
-                        "\nradius: "+p.getOrigRadius()+
-                        "\nmass: "+p.getOrigMass()+
-                        "\nspeed: "+p.getSpeed()+
-                        "\nangle: "+p.getAngle()+
-                        "\ncolor: r: "+p.getCurrColor().r+
-                        "\ncolor: g: "+p.getCurrColor().g+
-                        "\ncolor: b: "+p.getCurrColor().b+
-                        "\ncolor: a: "+p.getCurrColor().a+
-                        "\nx: "+p.getxPos()+
-                        "\ny: "+p.getyPos()+"\n\n");
+                writer.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-
-        try {
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
