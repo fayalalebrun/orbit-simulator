@@ -76,6 +76,12 @@ public class Planet extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
+        setPosition((float) (xPos - getAURadius()), (float) (yPos - getAURadius()));
+
+        if (lockCamera) {
+            centerCamera();
+        }
+
         batch.setColor(color.cpy());
 
 
