@@ -19,8 +19,8 @@ public class BruteForce extends NBodyAlgorithm{
 
     @Override
     public void run() {
-        double delta = getDelta();
         while(!terminate){
+            double delta = getDelta();
             for(Planet p1 : this.planets){
                 delta *= GameScreen.simSpeed;
 
