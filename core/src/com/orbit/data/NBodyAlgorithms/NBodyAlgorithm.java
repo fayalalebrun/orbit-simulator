@@ -1,4 +1,4 @@
-package com.orbit.data;
+package com.orbit.data.NBodyAlgorithms;
 
 import com.orbit.data.entities.Planet;
 
