@@ -1,5 +1,6 @@
 package com.orbit.data.nBodyAlgorithms;
 
+import com.orbit.data.GameScreen;
 import com.orbit.data.entities.Planet;
 
 import java.util.ArrayList;
@@ -10,8 +11,10 @@ import java.util.ArrayList;
 public abstract class NBodyAlgorithm implements Runnable {
 
     private ArrayList<Planet> planets;
+    private GameScreen gameScreen;
 
-    public NBodyAlgorithm(ArrayList<Planet> planets) {
-        this.planets = planets;
+    public NBodyAlgorithm(GameScreen gameScreen) {
+        this.gameScreen = gameScreen;
+        this.planets = gameScreen.getPlanetArrayList();
     }
 }

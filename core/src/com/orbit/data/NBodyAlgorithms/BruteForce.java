@@ -1,5 +1,6 @@
 package com.orbit.data.nBodyAlgorithms;
 
+import com.orbit.data.GameScreen;
 import com.orbit.data.entities.Planet;
 
 import java.util.ArrayList;
@@ -9,8 +10,8 @@ import java.util.ArrayList;
  */
 public class BruteForce extends NBodyAlgorithm{
 
-    public BruteForce(ArrayList<Planet> planets) {
-        super(planets);
+    public BruteForce(GameScreen gameScreen) {
+        super(gameScreen);
     }
 
     @Override
