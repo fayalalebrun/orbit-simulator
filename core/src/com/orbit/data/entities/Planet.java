@@ -22,7 +22,7 @@ import static com.badlogic.gdx.scenes.scene2d.ui.Table.Debug.actor;
  */
 public class Planet extends Actor {
     double radius, mass, speed, angle;
-    volatile double  xPos, yPos,  vX, vY;
+    public volatile double  xPos, yPos,  vX, vY;
     double AURadius;
     Texture texture;
     Color color;
@@ -30,7 +30,7 @@ public class Planet extends Actor {
     ArrayList<Planet> planetArrayList;
 
     boolean magnify = true;
-    boolean lockCamera;
+    public boolean lockCamera;
     float magnificationAmount;
 
     public Planet(String name, double radius, double mass, double speed, double velocityAngle, Color color, double x, double y,
@@ -74,43 +74,7 @@ public class Planet extends Actor {
 
     @Override
     public void act(float delta) {
-        delta *= GameScreen.simSpeed;
 
-        double x = Units.AUToM(getxPos());
-        double y = Units.AUToM(getyPos());
-
-        double fX = 0;
-        double fY = 0;
-        for(Planet p: planetArrayList){
-            if(!p.equalsP(this)){
-                double thatX = Units.AUToM(p.getxPos());
-                double thatY = Units.AUToM(p.getyPos());
-
-                double dist = Math.sqrt(Math.pow(thatX-x, 2)+Math.pow(thatY-y,2));
-                double ang = Math.atan2(thatY-y, thatX-x);
-
-                double f = Units.GRAV*((this.getMass()*p.getMass())/Math.pow(dist,2));
-
-                fX+=f*Math.cos(ang);
-                fY+=f*Math.sin(ang);
-            }
-        }
-
-        x = 0.5*(fX/this.mass)*Math.pow(delta,2)+vX*delta+x;
-
-        y = 0.5*(fY/this.mass)*Math.pow(delta,2)+vY*delta+y;
-
-        xPos = Units.mToAU(x);
-        yPos = Units.mToAU(y);
-
-        setPosition((float)(xPos - AURadius), (float)(yPos - AURadius));
-
-        vX = (fX * delta + this.mass * vX)/this.mass;
-        vY = (fY * delta + this.mass * vY)/this.mass;
-
-        if(lockCamera){
-            centerCamera();
-        }
     }
 
     @Override
@@ -186,6 +150,10 @@ public class Planet extends Actor {
 
     public Color getCurrColor(){
         return this.color;
+    }
+
+    public double getAURadius(){
+        return  AURadius;
     }
 
     public void zoomCamera(){
