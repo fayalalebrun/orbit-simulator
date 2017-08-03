@@ -62,7 +62,7 @@ public class GameScreen extends BaseScreen {
 
     public static Tool currentTool;
     public static double sizeMultVar = 0.0;
-    public static double simSpeed = 1.0f;
+    public volatile static double simSpeed = 1.0f;
 
 
     FPSLogger logger =new FPSLogger();
