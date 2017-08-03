@@ -18,6 +18,7 @@ import com.kotcrab.vis.ui.widget.*;
 import com.kotcrab.vis.ui.widget.file.FileChooser;
 import com.kotcrab.vis.ui.widget.file.FileTypeFilter;
 import com.kotcrab.vis.ui.widget.file.SingleFileChooserListener;
+import com.orbit.data.nBodyAlgorithms.BruteForce;
 import com.orbit.data.nBodyAlgorithms.NBodyAlgorithm;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.OrbitManager;
@@ -104,6 +105,8 @@ public class GameScreen extends BaseScreen {
         fileChooser = new FileChooser(FileChooser.Mode.OPEN);
         setupFileChooser();
 
+        algorithm = new BruteForce(this);
+
         toolbar.moveBy(750,0);
         placement.moveBy(345,0);
         sizeMult.moveBy(345,185);
@@ -136,6 +139,8 @@ public class GameScreen extends BaseScreen {
         uiGroup.addActor(orbitWindow);
 
         createMenus();
+
+        (new Thread(algorithm)).start();
     }
 
     private void setupFileChooser(){
