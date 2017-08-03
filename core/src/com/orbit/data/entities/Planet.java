@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.orbit.data.GameScreen;
+import com.orbit.data.helpers.Units;
 
 import java.util.ArrayList;
 import java.util.Vector;
@@ -40,7 +41,7 @@ public class Planet extends Actor {
 
         this.radius = radius; //km
         this.radius*=1000;//Convert to m
-        this.AURadius = mToAU(this.radius);
+        this.AURadius = Units.mToAU(this.radius);
 
         this.mass = mass; //Earth masses
         this.mass*=5.9723 * Math.pow(10,24); //Convert to kg
@@ -75,20 +76,20 @@ public class Planet extends Actor {
     public void act(float delta) {
         delta *= GameScreen.simSpeed;
 
-        double x = AUToM(getxPos());
-        double y = AUToM(getyPos());
+        double x = Units.AUToM(getxPos());
+        double y = Units.AUToM(getyPos());
 
         double fX = 0;
         double fY = 0;
         for(Planet p: planetArrayList){
             if(!p.equalsP(this)){
-                double thatX = AUToM(p.getxPos());
-                double thatY = AUToM(p.getyPos());
+                double thatX = Units.AUToM(p.getxPos());
+                double thatY = Units.AUToM(p.getyPos());
 
                 double dist = Math.sqrt(Math.pow(thatX-x, 2)+Math.pow(thatY-y,2));
                 double ang = Math.atan2(thatY-y, thatX-x);
 
-                double f = GameScreen.GRAV*((this.getMass()*p.getMass())/Math.pow(dist,2));
+                double f = Units.GRAV*((this.getMass()*p.getMass())/Math.pow(dist,2));
 
                 fX+=f*Math.cos(ang);
                 fY+=f*Math.sin(ang);
@@ -99,8 +100,8 @@ public class Planet extends Actor {
 
         y = 0.5*(fY/this.mass)*Math.pow(delta,2)+vY*delta+y;
 
-        xPos = mToAU(x);
-        yPos = mToAU(y);
+        xPos = Units.mToAU(x);
+        yPos = Units.mToAU(y);
 
         setPosition((float)(xPos - AURadius), (float)(yPos - AURadius));
 
@@ -127,13 +128,7 @@ public class Planet extends Actor {
         batch.draw(texture, (float)(xPos-AURadius), (float)(yPos - AURadius), getWidth(),getHeight());
     }
 
-    public double mToAU(double meters){
-        return meters/149597870691.0;
-    }
 
-    public double AUToM(double au){
-        return au*149597870691.0;
-    }
 
     private double getMultiplier(){
         return 0.01*GameScreen.sizeMultVar * magnificationAmount;

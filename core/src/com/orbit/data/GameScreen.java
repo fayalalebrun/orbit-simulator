@@ -65,7 +65,7 @@ public class GameScreen extends BaseScreen {
     public static Tool currentTool;
     public static double sizeMultVar = 0.0;
     public static double simSpeed = 1.0f;
-    public static final double GRAV = 6.67408 * Math.pow(10,-11);
+
 
     FPSLogger logger =new FPSLogger();
 
