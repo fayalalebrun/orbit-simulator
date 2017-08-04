@@ -51,8 +51,10 @@ public class BruteForce extends NBodyAlgorithm{
 
                         y = 0.5 * (fY / p1.getMass()) * Math.pow(delta, 2) + p1.vY * delta + y;
 
-                        p1.xPos = Units.mToAU(x);
-                        p1.yPos = Units.mToAU(y);
+                        synchronized (p1) {
+                            p1.xPos = Units.mToAU(x);
+                            p1.yPos = Units.mToAU(y);
+                        }
 
                         p1.vX = (fX * delta + p1.getMass() * p1.vX) / p1.getMass();
                         p1.vY = (fY * delta + p1.getMass() * p1.vY) / p1.getMass();

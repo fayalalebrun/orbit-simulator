@@ -76,23 +76,24 @@ public class Planet extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        setPosition((float) (xPos - getAURadius()), (float) (yPos - getAURadius()));
+        synchronized (this) {
+            setPosition((float) (xPos - getAURadius()), (float) (yPos - getAURadius()));
 
-        if (lockCamera) {
-            centerCamera();
+
+
+            batch.setColor(color.cpy());
+
+
+            if (magnify) {
+                batch.draw(texture, (float) (xPos - AURadius - getMultiplier() * 0.5), (float) (yPos - AURadius - getMultiplier() * 0.5),
+                        getWidth() + (float) getMultiplier(), getHeight() + (float) getMultiplier());
+            } else {
+                batch.draw(texture, (float) (xPos - AURadius), (float) (yPos - AURadius), getWidth(), getHeight());
+            }
+            if (lockCamera) {
+                centerCamera();
+            }
         }
-
-        batch.setColor(color.cpy());
-
-
-        if(magnify){
-            batch.draw(texture, (float)(xPos-AURadius-getMultiplier()*0.5), (float)(yPos - AURadius - getMultiplier()*0.5),
-                    getWidth() +(float)getMultiplier() ,getHeight()+(float)getMultiplier());
-            return;
-        }
-
-
-        batch.draw(texture, (float)(xPos-AURadius), (float)(yPos - AURadius), getWidth(),getHeight());
     }
 
 
@@ -164,7 +165,7 @@ public class Planet extends Actor {
         camera.zoom = (float)(AURadius*2/camera.viewportHeight);
     }
 
-    public void centerCamera(){
+    public synchronized  void centerCamera(){
         OrthographicCamera camera = (OrthographicCamera) this.getStage().getCamera();
         camera.translate(-1*camera.position.x,-1*camera.position.y);
         camera.translate((float)xPos, (float)yPos);
