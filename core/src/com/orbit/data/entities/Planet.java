@@ -124,7 +124,7 @@ public class Planet extends Actor {
     }
 
     public boolean equalsP(Planet p){
-        if(xPos==p.getxPos()&&yPos==p.getyPos()){
+        if(xPos==p.getxPos()&&yPos==p.getyPos()&&zPos==p.zPos){
             return true;
         }
         return  false;
