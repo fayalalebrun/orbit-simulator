@@ -14,6 +14,8 @@ public abstract class NBodyAlgorithm implements Runnable {
     protected Vector<Planet> planets;
     protected GameScreen gameScreen;
 
+    public boolean terminate;
+
     private double lastTime;
 
     public NBodyAlgorithm(GameScreen gameScreen) {
