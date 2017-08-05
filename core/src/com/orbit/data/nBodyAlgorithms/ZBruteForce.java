@@ -39,7 +39,7 @@ public class ZBruteForce extends NBodyAlgorithm{
                             double angA = Math.atan2(thatY-y, thatX - x);
                             double angB = Math.asin((thatZ-z)/dist);
 
-                            double f = Units.GRAV *((p1.getMass()*p2.getMass())/dist);
+                            double f = Units.GRAV * ((p1.getMass() * p2.getMass()) / Math.pow(dist, 2));
                             double k = f * Math.cos(angB);
 
                             fX+=k*Math.sin(angA);
