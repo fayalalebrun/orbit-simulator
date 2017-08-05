@@ -11,8 +11,6 @@ import java.util.ArrayList;
  */
 public class BruteForce extends NBodyAlgorithm{
 
-    private double time;
-
     public BruteForce(GameScreen gameScreen) {
         super(gameScreen);
     }
