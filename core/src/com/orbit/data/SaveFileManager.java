@@ -73,8 +73,58 @@ public class SaveFileManager {
                     i++;
                 }
             }
-        } else if (part[0]=="v2"){
+        } else if (part[0].contains("v2")){
+            String name;
+            double radius;
+            double mass;
+            double vX;
+            double vY;
+            double vZ;
+            float r,g,b,a;
+            double x;
+            double y;
+            double z;
 
+            int i = 2;
+
+            while(i<part.length-2){
+                if(part[i].contains("name")){
+                    name = part[i].substring(part[i].indexOf(':')+2);
+                    i++;
+                    radius = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    mass = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    vX = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    vY = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    vZ = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    r = Float.parseFloat(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    g = Float.parseFloat(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    b = Float.parseFloat(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    a = Float.parseFloat(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    x = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    y = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+                    z = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
+                    i++;
+
+                    Color c = new Color(r,g,b,a);
+
+                    Planet p = new Planet(name, radius, mass, vX, vY, vZ, c, x, y, z);
+
+                    gameScreen.addPlanet(p);
+                } else {
+                    i++;
+                }
+            }
         }
     }
 
