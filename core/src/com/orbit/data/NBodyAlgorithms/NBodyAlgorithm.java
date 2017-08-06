@@ -23,6 +23,15 @@ public abstract class NBodyAlgorithm implements Runnable {
         this.planets = gameScreen.getPlanetArrayList();
     }
 
+    @Override
+    public void run() {
+        while (!terminate){
+            runAlgorithm();
+        }
+    }
+
+    protected abstract void runAlgorithm();
+
     protected double getDelta(){
         double currTime = (double)System.nanoTime()/1000000000.0;
         if(lastTime==0){
