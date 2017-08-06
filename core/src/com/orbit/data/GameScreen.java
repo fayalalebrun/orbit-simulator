@@ -23,6 +23,7 @@ import com.orbit.data.nBodyAlgorithms.NBodyAlgorithm;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.OrbitManager;
 import com.orbit.data.entities.Planet;
+import com.orbit.data.nBodyAlgorithms.ZBruteForce;
 
 import java.util.ArrayList;
 import java.util.Vector;
@@ -106,7 +107,7 @@ public class GameScreen extends BaseScreen {
         fileChooser = new FileChooser(FileChooser.Mode.OPEN);
         setupFileChooser();
 
-        algorithm = new BruteForce(this);
+        algorithm = new ZBruteForce(this);
 
         toolbar.moveBy(750,0);
         placement.moveBy(345,0);
