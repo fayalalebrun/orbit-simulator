@@ -1,3 +1,5 @@
+v1
+
 name: Sun_1
 radius: 695700.0
 mass: 333054.0
