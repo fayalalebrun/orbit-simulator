@@ -73,6 +73,8 @@ public class SaveFileManager {
                     i++;
                 }
             }
+        } else if (part[0]=="v2"){
+
         }
     }
 
@@ -82,20 +84,30 @@ public class SaveFileManager {
         Writer writer = file.writer(false);
         Vector<Planet> planetList = gameScreen.getPlanetArrayList();
 
+        try {
+            writer.write("v2\n\n");
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
         synchronized (planetList) {
             for (Planet p : planetList) {
                 try {
                     writer.write("name: " + p.getName() +
                             "\nradius: " + p.getOrigRadius() +
                             "\nmass: " + p.getOrigMass() +
-                            "\nspeed: " + p.getSpeed() +
-                            "\nangle: " + p.getAngle() +
-                            "\ncolor: r: " + p.getCurrColor().r +
-                            "\ncolor: g: " + p.getCurrColor().g +
-                            "\ncolor: b: " + p.getCurrColor().b +
-                            "\ncolor: a: " + p.getCurrColor().a +
+                            "\nvX: " + p.vX +
+                            "\nvY: " + p.vY +
+                            "\nvZ: " + p.vZ +
+                            "\ncolor-r: " + p.getCurrColor().r +
+                            "\ncolor-g: " + p.getCurrColor().g +
+                            "\ncolor-b: " + p.getCurrColor().b +
+                            "\ncolor-a: " + p.getCurrColor().a +
                             "\nx: " + p.getxPos() +
-                            "\ny: " + p.getyPos() + "\n\n");
+                            "\ny: " + p.getyPos() +
+                            "\nz: " + p.zPos +
+                            "\n\n"
+                    );
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
