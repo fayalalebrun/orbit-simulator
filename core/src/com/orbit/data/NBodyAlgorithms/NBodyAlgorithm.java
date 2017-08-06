@@ -25,7 +25,7 @@ public abstract class NBodyAlgorithm implements Runnable {
     private boolean analysisStarted;
     private double lastCoord, completionCoord, minVel = Double.MAX_VALUE, maxVel = Double.MIN_VALUE, minDist, maxDist;
     private BigDecimal totalTime;
-    private int coordCrossings;
+    private int coordCrossings = -1;
 
 
     protected Vector<Planet> planets;
