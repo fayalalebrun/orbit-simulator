@@ -69,6 +69,14 @@ public class Planet extends Actor {
         pixmap.dispose();
     }
 
+    public Planet(String name, double radius, double mass, double vX, double vY, double vZ, Color color, double x, double y, double z){
+        this(name, radius, mass, 0, 0, color, x, y);
+        this.vX = vX;
+        this.vY = vY;
+        this.vZ = vZ;
+        this.zPos = z;
+    }
+
     @Override
     public void act(float delta) {
 
