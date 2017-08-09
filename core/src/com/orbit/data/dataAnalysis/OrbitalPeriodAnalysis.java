@@ -24,8 +24,8 @@ public class OrbitalPeriodAnalysis extends DataAnalysis {
     private BigDecimal totalTime;
     private int coordCrossings = 0;
 
-    public OrbitalPeriodAnalysis(Vector<Planet> planetList) {
-        super(planetList);
+    public OrbitalPeriodAnalysis(GameScreen gameScreen) {
+        super(gameScreen);
 
         this.totalTime = new BigDecimal(0);
     }
