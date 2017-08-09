@@ -17,5 +17,5 @@ public abstract class DataAnalysis {
         this.planetList = planetList;
     }
 
-    public abstract void run();
+    public abstract void run(double delta);
 }
