@@ -31,7 +31,7 @@ public abstract class NBodyAlgorithm implements Runnable {
         this.gameScreen = gameScreen;
         this.planets = gameScreen.getPlanetArrayList();
 
-        this.analysis = new OrbitalPeriodAnalysis(planets);
+        this.analysis = new OrbitalPeriodAnalysis(gameScreen);
         DataAnalysis.ANALYSISACTIVE = true; //Whether the analysis should be run
     }
 
