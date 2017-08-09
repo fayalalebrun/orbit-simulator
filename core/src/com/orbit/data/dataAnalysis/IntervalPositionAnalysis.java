@@ -44,11 +44,13 @@ public class IntervalPositionAnalysis extends DataAnalysis{
     }
 
     private void setupAnalysis(){
-        for (Planet p: planetList){
-            if(p.getName().equals(CHECK)){
-                analysisStarted=true;
-                GameScreen.simSpeed=TIMESTEP;
-                System.out.println("Starting analysis");
+        synchronized (planetList) {
+            for (Planet p : planetList) {
+                if (p.getName().equals(CHECK)) {
+                    analysisStarted = true;
+                    GameScreen.simSpeed = TIMESTEP;
+                    System.out.println("Starting analysis");
+                }
             }
         }
     }
