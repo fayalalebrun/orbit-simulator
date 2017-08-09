@@ -1,5 +1,6 @@
 package com.orbit.data.dataAnalysis;
 
+import com.orbit.data.GameScreen;
 import com.orbit.data.entities.Planet;
 
 import java.util.ArrayList;
@@ -11,10 +12,12 @@ import java.util.Vector;
 public abstract class DataAnalysis {
 
     protected Vector<Planet> planetList;
+    protected GameScreen gameScreen;
     public static boolean ANALYSISACTIVE;
 
-    public DataAnalysis(Vector<Planet> planetList) {
-        this.planetList = planetList;
+    public DataAnalysis(GameScreen gameScreen) {
+        this.gameScreen = gameScreen;
+        this.planetList = gameScreen.getPlanetArrayList();
     }
 
     public abstract void run(double delta);
