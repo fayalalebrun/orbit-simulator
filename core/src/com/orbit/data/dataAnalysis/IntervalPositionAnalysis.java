@@ -13,8 +13,8 @@ import java.util.Vector;
  * Created by Fran on 8/8/2017.
  */
 public class IntervalPositionAnalysis extends DataAnalysis{
-    private static final double TIMESTEP = 1000000; //The timestep that will be used while running the simulation
-    private static final BigDecimal INTERVAL = new BigDecimal(10000000); //How often the positions of each planet will be saved in simulation seconds
+    private static final double TIMESTEP = 10000000; //The timestep that will be used while running the simulation
+    private static final BigDecimal INTERVAL = new BigDecimal(100000000); //How often the positions of each planet will be saved in simulation seconds
     private static final BigDecimal DURATION = new BigDecimal(100000000); //How long the analysis will last in simulation seconds
     private static final String CHECK = "Sun"; //When this object is found in the simulation, the analysis will start
     private static final String PATH = "Analysis.txt"; //Location where analysis file will be saved
@@ -23,6 +23,7 @@ public class IntervalPositionAnalysis extends DataAnalysis{
     private BigDecimal runningTimer;
 
     private boolean analysisStarted;
+    private boolean analysisComplete;
 
     private int completedIntervals;
 
@@ -35,7 +36,7 @@ public class IntervalPositionAnalysis extends DataAnalysis{
 
     @Override
     public void run(double delta) {
-        if(!analysisStarted&&ANALYSISACTIVE){
+        if(!analysisStarted&&ANALYSISACTIVE&&!analysisComplete){
             setupAnalysis();
         } else if(analysisStarted){
             runAnalysis(delta);
@@ -77,6 +78,7 @@ public class IntervalPositionAnalysis extends DataAnalysis{
 
         if(totalTime.compareTo(DURATION)==1){
             analysisStarted=false;
+            analysisComplete=true;
             System.out.println("Analysis complete!");
         }
 
