@@ -1,8 +1,10 @@
 package com.orbit.data.nBodyAlgorithms;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.orbit.data.GameScreen;
 import com.orbit.data.dataAnalysis.DataAnalysis;
+import com.orbit.data.dataAnalysis.IntervalPositionAnalysis;
 import com.orbit.data.dataAnalysis.OrbitalPeriodAnalysis;
 import com.orbit.data.entities.Planet;
 
@@ -31,14 +33,14 @@ public abstract class NBodyAlgorithm implements Runnable {
         this.gameScreen = gameScreen;
         this.planets = gameScreen.getPlanetArrayList();
 
-        this.analysis = new OrbitalPeriodAnalysis(gameScreen);
+        this.analysis = new IntervalPositionAnalysis(gameScreen);
         DataAnalysis.ANALYSISACTIVE = true; //Whether the analysis should be run
     }
 
     @Override
     public void run() {
         while (!terminate){
-            analysis.run(lastDelta);
+            analysis.run(lastDelta* GameScreen.simSpeed);
 
             runAlgorithm();
         }

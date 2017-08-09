@@ -72,7 +72,7 @@ public class OrbitalPeriodAnalysis extends DataAnalysis {
     }
 
     private void runAnalysis(double delta){
-        totalTime = totalTime.add(new BigDecimal(delta * GameScreen.simSpeed));
+        totalTime = totalTime.add(new BigDecimal(delta));
         double currCoord = 0, localLast;
 
         double currVel = Math.sqrt(Math.pow(target.vX,2)+Math.pow(target.vY,2)+Math.pow(target.vZ,2));
