@@ -11,6 +11,7 @@ import java.util.Vector;
 public abstract class DataAnalysis {
 
     protected Vector<Planet> planetList;
+    public static boolean ANALYSISACTIVE;
 
     public DataAnalysis(Vector<Planet> planetList) {
         this.planetList = planetList;
