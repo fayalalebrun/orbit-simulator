@@ -22,7 +22,7 @@ public class OrbitalPeriodAnalysis extends DataAnalysis {
     private boolean analysisStarted;
     private double lastCoord, completionCoord, minVel = Double.MAX_VALUE, maxVel = Double.MIN_VALUE, minDist, maxDist;
     private BigDecimal totalTime;
-    private int coordCrossings = -1;
+    private int coordCrossings = 0;
 
     public OrbitalPeriodAnalysis(Vector<Planet> planetList) {
         super(planetList);
@@ -32,12 +32,11 @@ public class OrbitalPeriodAnalysis extends DataAnalysis {
 
     @Override
     public void run(double delta) {
-        totalTime = totalTime.add(new BigDecimal(delta * GameScreen.simSpeed));
 
         if(ANALYSISACTIVE&&!analysisStarted) {
             setupAnalysis();
         } else if(analysisStarted){
-            runAnalysis();
+            runAnalysis(delta);
         }
     }
 
@@ -68,11 +67,12 @@ public class OrbitalPeriodAnalysis extends DataAnalysis {
                     completionCoord = target.zPos;
                     break;
             }
+            lastCoord = completionCoord;
         }
     }
 
-    private void runAnalysis(){
-
+    private void runAnalysis(double delta){
+        totalTime = totalTime.add(new BigDecimal(delta * GameScreen.simSpeed));
         double currCoord = 0, localLast;
 
         double currVel = Math.sqrt(Math.pow(target.vX,2)+Math.pow(target.vY,2)+Math.pow(target.vZ,2));
@@ -93,7 +93,7 @@ public class OrbitalPeriodAnalysis extends DataAnalysis {
         localLast = lastCoord;
         lastCoord = currCoord;
 
-        if((localLast>completionCoord&&currCoord<completionCoord)||(localLast<completionCoord&&currCoord>=completionCoord)){
+        if((localLast>completionCoord&&currCoord<completionCoord)||(localLast<completionCoord&&currCoord>completionCoord)){
             coordCrossings++;
 
             if (coordCrossings%2==0){
