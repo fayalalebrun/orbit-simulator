@@ -30,6 +30,7 @@ public class IntervalPositionAnalysis extends DataAnalysis{
         super(gameScreen);
 
         totalTime = new BigDecimal(0);
+        runningTimer = new BigDecimal(0);
     }
 
     @Override
