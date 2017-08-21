@@ -108,7 +108,7 @@ public class GameListener extends InputListener implements Disableable{
 
     @Override
     public boolean scrolled(InputEvent event, float x, float y, int amount) {
-        return zoom(amount);
+        return zoom(amount*5);
     }
 
     private boolean zoom(int amount){
