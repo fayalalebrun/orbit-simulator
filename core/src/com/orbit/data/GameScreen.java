@@ -1,6 +1,7 @@
 package com.orbit.data;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -12,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.StringBuilder;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
+import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.*;
@@ -74,8 +76,8 @@ public class GameScreen extends BaseScreen {
         planetArrayList = new Vector<Planet>();
 
         VisUI.load();
-        stage = new Stage(new ExtendViewport(Gdx.graphics.getWidth()*0.00004f,Gdx.graphics.getHeight()*0.00004f));
-        uiStage = new Stage(new ExtendViewport(800,600));
+        stage = new Stage(new FitViewport(Gdx.graphics.getWidth()*0.00004f,Gdx.graphics.getHeight()*0.00004f));
+        uiStage = new Stage(new FitViewport(Gdx.graphics.getWidth(),Gdx.graphics.getHeight()));
         ui = new VisTable();
         ui.setFillParent(true);
         TableUtils.setSpacingDefaults(ui);
