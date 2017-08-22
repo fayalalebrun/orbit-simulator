@@ -257,15 +257,13 @@ public class GameScreen extends BaseScreen {
             return;
         }
         stage.getViewport().update(width,height,false);
-        uiStage.getViewport().update(width,height, false);
-        System.out.println(uiStage.getWidth()+" "+ uiStage.getHeight());
+        uiStage.getViewport().update(width,height, true);
 
         ui.remove();
         ui = new VisTable();
         uiStage.addActor(ui);
         ui.setFillParent(true);
         ui.left().top();
-        ui.setDebug(true);
 
 
 
