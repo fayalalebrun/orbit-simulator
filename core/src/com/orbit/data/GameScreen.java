@@ -14,6 +14,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.StringBuilder;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.*;
@@ -76,8 +77,8 @@ public class GameScreen extends BaseScreen {
         planetArrayList = new Vector<Planet>();
 
         VisUI.load();
-        stage = new Stage(new FitViewport(Gdx.graphics.getWidth()*0.00004f,Gdx.graphics.getHeight()*0.00004f));
-        uiStage = new Stage(new FitViewport(Gdx.graphics.getWidth(),Gdx.graphics.getHeight()));
+        stage = new Stage(new ScreenViewport());
+        uiStage = new Stage(new ScreenViewport());
         ui = new VisTable();
         ui.setFillParent(true);
         TableUtils.setSpacingDefaults(ui);
