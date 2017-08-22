@@ -103,7 +103,7 @@ public class GameListener extends InputListener implements Disableable{
                 return true;
             case Input.Keys.F:
                 gameScreen.toggleFullscreen();
-                return true;ff
+                return true;
         }
 
         return false;
