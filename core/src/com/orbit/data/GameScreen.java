@@ -352,4 +352,12 @@ public class GameScreen extends BaseScreen {
     public void hideUI(){
         uiGroup.setVisible(!uiGroup.isVisible());
     }
+
+    public void toggleFullscreen(){
+        if(!Gdx.graphics.isFullscreen()){
+            Gdx.graphics.setFullscreenMode(Gdx.graphics.getDisplayMode());
+        } else {
+            Gdx.graphics.setWindowedMode(800,600);
+        }
+    }
 }
