@@ -130,9 +130,9 @@ public class GameScreen extends BaseScreen {
 
         uiStage.addActor(ui);
         uiStage.addActor(uiGroup);
-
-        ui.add(menuBar.getTable()).expandX().fillX().row();
-        ui.add().expand().fill();
+        ui.left().top();
+        ui.add(menuBar.getTable()).fillX().expandX().row();
+        ui.setDebug(true);
 
         uiGroup.addActor(options);
         uiGroup.addActor(toolbar);
@@ -249,7 +249,6 @@ public class GameScreen extends BaseScreen {
         logger.log();
         stage.draw();
         uiStage.draw();
-
     }
 
     @Override
@@ -257,7 +256,20 @@ public class GameScreen extends BaseScreen {
         if(width==0&&height==0){
             return;
         }
-        stage.getViewport().update(width,height,true);
+        stage.getViewport().update(width,height,false);
+        uiStage.getViewport().update(width,height, false);
+        System.out.println(uiStage.getWidth()+" "+ uiStage.getHeight());
+
+        ui.remove();
+        ui = new VisTable();
+        uiStage.addActor(ui);
+        ui.setFillParent(true);
+        ui.left().top();
+        ui.setDebug(true);
+
+
+
+        ui.add(menuBar.getTable()).fillX().expandX().row();
     }
 
     @Override
