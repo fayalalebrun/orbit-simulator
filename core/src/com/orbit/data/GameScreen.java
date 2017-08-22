@@ -132,7 +132,6 @@ public class GameScreen extends BaseScreen {
         uiStage.addActor(uiGroup);
         ui.left().top();
         ui.add(menuBar.getTable()).fillX().expandX().row();
-        ui.setDebug(true);
 
         uiGroup.addActor(options);
         uiGroup.addActor(toolbar);
@@ -259,11 +258,7 @@ public class GameScreen extends BaseScreen {
         stage.getViewport().update(width,height,false);
         uiStage.getViewport().update(width,height, true);
 
-        ui.remove();
-        ui = new VisTable();
-        uiStage.addActor(ui);
-        ui.setFillParent(true);
-        ui.left().top();
+        ui.clearChildren();
 
 
 
