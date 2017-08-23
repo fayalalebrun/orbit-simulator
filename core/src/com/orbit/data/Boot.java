@@ -5,9 +5,12 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+import java.io.File;
 
 public class Boot extends Game {
 
@@ -21,6 +24,13 @@ public class Boot extends Game {
 		Gdx.graphics.setVSync(true);
 
 		manager = new AssetManager();
+
+		FileHandle dirHandle = Gdx.files.internal("./Planet Textures/");
+
+		for(FileHandle f : dirHandle.list()){
+			manager.load(f.file().getPath(), Texture.class);
+		}
+
 
 		manager.load("pointer.png", Texture.class);
 		manager.load("move.png", Texture.class);
