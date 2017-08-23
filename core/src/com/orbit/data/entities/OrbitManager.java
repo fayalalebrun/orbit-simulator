@@ -47,7 +47,7 @@ public class OrbitManager extends Actor{
                 batch.setColor(o.getColor());
                 for(int i = 0; i < o.getPoints().size()-1; i++){
                     drawLine(batch, o.getPoints().get(i).x,o.getPoints().get(i).y,
-                            o.getPoints().get(i+1).x, o.getPoints().get(i+1).y,0.00003f*getCamera().zoom, lineAtlas);
+                            o.getPoints().get(i+1).x, o.getPoints().get(i+1).y,getCamera().zoom, lineAtlas);
                 }
             }
         }

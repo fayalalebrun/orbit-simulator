@@ -1,6 +1,7 @@
 package com.orbit.data;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -12,6 +13,8 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.StringBuilder;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
+import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.*;
@@ -74,8 +77,8 @@ public class GameScreen extends BaseScreen {
         planetArrayList = new Vector<Planet>();
 
         VisUI.load();
-        stage = new Stage(new ExtendViewport(Gdx.graphics.getWidth()*0.00004f,Gdx.graphics.getHeight()*0.00004f));
-        uiStage = new Stage(new ExtendViewport(800,600));
+        stage = new Stage(new ScreenViewport());
+        uiStage = new Stage(new ScreenViewport());
         ui = new VisTable();
         ui.setFillParent(true);
         TableUtils.setSpacingDefaults(ui);
@@ -127,9 +130,8 @@ public class GameScreen extends BaseScreen {
 
         uiStage.addActor(ui);
         uiStage.addActor(uiGroup);
-
-        ui.add(menuBar.getTable()).expandX().fillX().row();
-        ui.add().expand().fill();
+        ui.left().top();
+        ui.add(menuBar.getTable()).fillX().expandX().row();
 
         uiGroup.addActor(options);
         uiGroup.addActor(toolbar);
@@ -246,7 +248,6 @@ public class GameScreen extends BaseScreen {
         logger.log();
         stage.draw();
         uiStage.draw();
-
     }
 
     @Override
@@ -254,7 +255,14 @@ public class GameScreen extends BaseScreen {
         if(width==0&&height==0){
             return;
         }
-        stage.getViewport().update(width,height,true);
+        stage.getViewport().update(width,height,false);
+        uiStage.getViewport().update(width,height, true);
+
+        ui.clearChildren();
+
+
+
+        ui.add(menuBar.getTable()).fillX().expandX().row();
     }
 
     @Override
@@ -343,5 +351,13 @@ public class GameScreen extends BaseScreen {
 
     public void hideUI(){
         uiGroup.setVisible(!uiGroup.isVisible());
+    }
+
+    public void toggleFullscreen(){
+        if(!Gdx.graphics.isFullscreen()){
+            Gdx.graphics.setFullscreenMode(Gdx.graphics.getDisplayMode());
+        } else {
+            Gdx.graphics.setWindowedMode(800,600);
+        }
     }
 }

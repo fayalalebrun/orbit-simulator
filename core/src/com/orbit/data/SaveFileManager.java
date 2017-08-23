@@ -3,6 +3,7 @@ package com.orbit.data;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.orbit.data.entities.Planet;
 import net.dermetfan.utils.StringUtils;
 
@@ -74,16 +75,21 @@ public class SaveFileManager {
                 }
             }
         } else if (part[0].contains("v2")){
+            boolean useColor = false, useTexture = false;
+
             String name;
             double radius;
             double mass;
             double vX;
             double vY;
             double vZ;
-            float r,g,b,a;
+            float r=0,g=0,b=0,a=0;
+            Texture texture = null;
             double x;
             double y;
             double z;
+
+            Planet p = null;
 
             int i = 2;
 
@@ -101,14 +107,21 @@ public class SaveFileManager {
                     i++;
                     vZ = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
                     i++;
-                    r = Float.parseFloat(part[i].substring(part[i].indexOf(':')+2));
-                    i++;
-                    g = Float.parseFloat(part[i].substring(part[i].indexOf(':')+2));
-                    i++;
-                    b = Float.parseFloat(part[i].substring(part[i].indexOf(':')+2));
-                    i++;
-                    a = Float.parseFloat(part[i].substring(part[i].indexOf(':')+2));
-                    i++;
+                    if(part[i].contains("color")) {
+                        useColor = true;
+                        r = Float.parseFloat(part[i].substring(part[i].indexOf(':') + 2));
+                        i++;
+                        g = Float.parseFloat(part[i].substring(part[i].indexOf(':') + 2));
+                        i++;
+                        b = Float.parseFloat(part[i].substring(part[i].indexOf(':') + 2));
+                        i++;
+                        a = Float.parseFloat(part[i].substring(part[i].indexOf(':') + 2));
+                        i++;
+                    } else {
+                        useTexture = true;
+                        texture = Boot.getManager().get(part[i].substring(part[i].indexOf(':')+2));
+                        i++;
+                    }
                     x = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
                     i++;
                     y = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
@@ -116,9 +129,13 @@ public class SaveFileManager {
                     z = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
                     i++;
 
-                    Color c = new Color(r,g,b,a);
+                    if(useColor) {
+                        Color c = new Color(r, g, b, a);
 
-                    Planet p = new Planet(name, radius, mass, vX, vY, vZ, c, x, y, z);
+                        p = new Planet(name, radius, mass, vX, vY, vZ, c, x, y, z);
+                    } else if (useTexture){
+                        p = new Planet(name, radius, mass, vX, vY, vZ, texture, x, y, z);
+                    }
 
                     gameScreen.addPlanet(p);
                 } else {

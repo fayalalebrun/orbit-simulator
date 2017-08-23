@@ -72,7 +72,7 @@ public class GameListener extends InputListener implements Disableable{
         if(moveInProgress){
             x = Gdx.input.getDeltaX();
             y = Gdx.input.getDeltaY();
-            camera.translate(-x*0.00005f*camera.zoom,y*0.00005f*camera.zoom);
+            camera.translate(-x*camera.zoom,y*camera.zoom);
         }
 
     }
@@ -87,19 +87,22 @@ public class GameListener extends InputListener implements Disableable{
 
         switch(keycode){
             case Input.Keys.LEFT:
-                camera.translate(-0.002f*camera.zoom,0f);
+                camera.translate(-camera.zoom*20,0f);
                 return  true;
             case Input.Keys.RIGHT:
-                camera.translate(0.002f*camera.zoom,0f);
+                camera.translate(camera.zoom*20,0f);
                 return true;
             case Input.Keys.UP:
-                camera.translate(0f, 0.002f*camera.zoom);
+                camera.translate(0f, camera.zoom*20);
                 return true;
             case Input.Keys.DOWN:
-                camera.translate(0f, -0.002f*camera.zoom);
+                camera.translate(0f, -camera.zoom*20);
                 return true;
             case Input.Keys.H:
                 gameScreen.hideUI();
+                return true;
+            case Input.Keys.F:
+                gameScreen.toggleFullscreen();
                 return true;
         }
 
@@ -108,7 +111,7 @@ public class GameListener extends InputListener implements Disableable{
 
     @Override
     public boolean scrolled(InputEvent event, float x, float y, int amount) {
-        return zoom(amount);
+        return zoom(amount*5);
     }
 
     private boolean zoom(int amount){

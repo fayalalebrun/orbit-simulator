@@ -32,8 +32,7 @@ public class Planet extends Actor {
     public boolean lockCamera;
     float magnificationAmount;
 
-    public Planet(String name, double radius, double mass, double speed, double velocityAngle, Color color, double x, double y) {
-
+    public Planet(String name, double radius, double mass, double speed, double velocityAngle, Texture texture, double x, double y){
         this.name = name;
 
         this.radius = radius; //km
@@ -47,7 +46,6 @@ public class Planet extends Actor {
         this.speed *= 1000;//convert to m/s
 
         this.angle = velocityAngle; //degrees
-        this.color = color.cpy();
 
         this.vX = this.speed*Math.cos(Math.toRadians(this.angle));
         this.vY = this.speed*Math.sin(Math.toRadians(this.angle));
@@ -62,12 +60,28 @@ public class Planet extends Actor {
         this.setWidth((float)diameter);
         this.setHeight((float)diameter);
 
+        this.texture = texture;
+
+        this.color =Color.WHITE.cpy();
+    }
+
+    public Planet(String name, double radius, double mass, double speed, double velocityAngle, Color color, double x, double y) {
+        this(name, radius, mass, speed, velocityAngle, (Texture)null, x, y);
+
+
         Pixmap pixmap = new Pixmap(512, 512, Pixmap.Format.RGBA8888);
         pixmap.setColor(Color.WHITE.cpy());
         pixmap.fillCircle(256,256,256);
-        texture = new Texture(pixmap);
+        Texture genTexture = new Texture(pixmap);
         pixmap.dispose();
+
+        texture = genTexture;
+
+        this.color = color.cpy();
+
     }
+
+
 
     public Planet(String name, double radius, double mass, double vX, double vY, double vZ, Color color, double x, double y, double z){
         this(name, radius, mass, 0, 0, color, x, y);
@@ -75,6 +89,12 @@ public class Planet extends Actor {
         this.vY = vY;
         this.vZ = vZ;
         this.zPos = z;
+    }
+
+    public Planet(String name, double radius, double mass, double vX, double vY, double vZ, Texture texture, double x, double y, double z){
+        this(name, radius, mass, vX, vY, vZ, Color.WHITE.cpy(), x, y, z);
+
+        this.texture = texture;
     }
 
     @Override
@@ -174,9 +194,13 @@ public class Planet extends Actor {
     }
 
     public synchronized  void centerCamera(){
+        centerCamera((float)xPos, (float)yPos);
+    }
+
+    public synchronized void centerCamera(float x, float y){
         OrthographicCamera camera = (OrthographicCamera) this.getStage().getCamera();
         camera.translate(-1*camera.position.x,-1*camera.position.y);
-        camera.translate((float)xPos, (float)yPos);
+        camera.translate((float)x, (float)y);
     }
 
     public boolean getLockCamera(){

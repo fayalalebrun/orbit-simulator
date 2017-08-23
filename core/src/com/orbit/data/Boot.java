@@ -5,22 +5,32 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import java.io.File;
+
 public class Boot extends Game {
 
-	AssetManager manager;
+	private static AssetManager manager;
 
 	@Override
 	public void create () {
-		Gdx.graphics.setResizable(false);
+		Gdx.graphics.setResizable(true);
 		Gdx.graphics.setWindowedMode(800,600);
 		Gdx.graphics.setTitle("Orbit Simulator");
 		Gdx.graphics.setVSync(true);
 
 		manager = new AssetManager();
+
+		FileHandle dirHandle = Gdx.files.internal("./Planet Textures/");
+
+		for(FileHandle f : dirHandle.list()){
+			manager.load(f.file().getPath(), Texture.class);
+		}
+
 
 		manager.load("pointer.png", Texture.class);
 		manager.load("move.png", Texture.class);
@@ -32,7 +42,7 @@ public class Boot extends Game {
 		setScreen(new GameScreen(this));
 	}
 
-	public AssetManager getManager(){
+	public static AssetManager getManager(){
 		return manager;
 	}
 
