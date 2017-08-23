@@ -174,9 +174,13 @@ public class Planet extends Actor {
     }
 
     public synchronized  void centerCamera(){
+        centerCamera((float)xPos, (float)yPos);
+    }
+
+    public synchronized void centerCamera(float x, float y){
         OrthographicCamera camera = (OrthographicCamera) this.getStage().getCamera();
         camera.translate(-1*camera.position.x,-1*camera.position.y);
-        camera.translate((float)xPos, (float)yPos);
+        camera.translate((float)x, (float)y);
     }
 
     public boolean getLockCamera(){
