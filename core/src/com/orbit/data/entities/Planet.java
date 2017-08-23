@@ -91,6 +91,12 @@ public class Planet extends Actor {
         this.zPos = z;
     }
 
+    public Planet(String name, double radius, double mass, double vX, double vY, double vZ, Texture texture, double x, double y, double z){
+        this(name, radius, mass, vX, vY, vZ, Color.WHITE.cpy(), x, y, z);
+
+        this.texture = texture;
+    }
+
     @Override
     public void act(float delta) {
 
