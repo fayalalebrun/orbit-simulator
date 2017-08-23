@@ -121,6 +121,14 @@ public class SaveFileManager {
                         useTexture = true;
                         texture = Boot.getManager().get(part[i].substring(part[i].indexOf(':')+2));
                         i++;
+                        r = Float.parseFloat(part[i].substring(part[i].indexOf(':') + 2));
+                        i++;
+                        g = Float.parseFloat(part[i].substring(part[i].indexOf(':') + 2));
+                        i++;
+                        b = Float.parseFloat(part[i].substring(part[i].indexOf(':') + 2));
+                        i++;
+                        a = Float.parseFloat(part[i].substring(part[i].indexOf(':') + 2));
+                        i++;
                     }
                     x = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
                     i++;
@@ -128,13 +136,12 @@ public class SaveFileManager {
                     i++;
                     z = Double.parseDouble(part[i].substring(part[i].indexOf(':')+2));
                     i++;
+                    Color c = new Color(r, g, b, a);
 
                     if(useColor) {
-                        Color c = new Color(r, g, b, a);
-
                         p = new Planet(name, radius, mass, vX, vY, vZ, c, x, y, z);
                     } else if (useTexture){
-                        p = new Planet(name, radius, mass, vX, vY, vZ, texture, x, y, z);
+                        p = new Planet(name, radius, mass, vX, vY, vZ, texture, c, x, y, z);
                     }
 
                     gameScreen.addPlanet(p);
