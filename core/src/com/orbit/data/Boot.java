@@ -28,7 +28,10 @@ public class Boot extends Game {
 		FileHandle dirHandle = Gdx.files.internal("./Planet Textures/");
 
 		for(FileHandle f : dirHandle.list()){
-			manager.load(f.file().getPath(), Texture.class);
+			System.out.println(f.extension());
+			if(f.extension().equals("jpg")||f.extension().equals("png")) {
+				manager.load(f.file().getPath(), Texture.class);
+			}
 		}
 
 
