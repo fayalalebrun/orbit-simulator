@@ -38,6 +38,7 @@ public class Boot extends Game {
 		manager.load("move.png", Texture.class);
 		manager.load("zoom-in.png", Texture.class);
 		manager.load("zoom-out.png", Texture.class);
+		manager.load("stars_milky_way.jpg", Texture.class);
 
 		manager.finishLoading();
 
