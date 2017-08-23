@@ -32,7 +32,9 @@ public class Planet extends Actor {
     public boolean lockCamera;
     float magnificationAmount;
 
-    public Planet(String name, double radius, double mass, double speed, double velocityAngle, Texture texture, double x, double y){
+    private boolean useColor;
+
+    public Planet(String name, double radius, double mass, double speed, double velocityAngle, Texture texture, Color color, double x, double y){
         this.name = name;
 
         this.radius = radius; //km
@@ -62,11 +64,13 @@ public class Planet extends Actor {
 
         this.texture = texture;
 
-        this.color =Color.WHITE.cpy();
+        this.color = color.cpy();
+
+        useColor = false;
     }
 
     public Planet(String name, double radius, double mass, double speed, double velocityAngle, Color color, double x, double y) {
-        this(name, radius, mass, speed, velocityAngle, (Texture)null, x, y);
+        this(name, radius, mass, speed, velocityAngle, (Texture)null, color, x, y);
 
 
         Pixmap pixmap = new Pixmap(512, 512, Pixmap.Format.RGBA8888);
@@ -79,6 +83,7 @@ public class Planet extends Actor {
 
         this.color = color.cpy();
 
+        useColor = true;
     }
 
 
@@ -89,13 +94,16 @@ public class Planet extends Actor {
         this.vY = vY;
         this.vZ = vZ;
         this.zPos = z;
+
+        useColor = true;
     }
 
-    public Planet(String name, double radius, double mass, double vX, double vY, double vZ, Texture texture, double x, double y, double z){
-        this(name, radius, mass, vX, vY, vZ, Color.WHITE.cpy(), x, y, z);
+    public Planet(String name, double radius, double mass, double vX, double vY, double vZ, Texture texture, Color color, double x, double y, double z){
+        this(name, radius, mass, vX, vY, vZ, color, x, y, z);
 
         this.texture = texture;
-        color = Color.WHITE.cpy();
+
+        useColor = false;
     }
 
     @Override
@@ -109,9 +117,11 @@ public class Planet extends Actor {
             setPosition((float) (xPos - getAURadius()), (float) (yPos - getAURadius()));
 
 
-
-            batch.setColor(color.cpy());
-
+            if(useColor) {
+                batch.setColor(color.cpy());
+            } else {
+                batch.setColor(Color.WHITE.cpy());
+            }
 
             if (magnify) {
                 batch.draw(texture, (float) (xPos - AURadius - getMultiplier() * 0.5), (float) (yPos - AURadius - getMultiplier() * 0.5),
