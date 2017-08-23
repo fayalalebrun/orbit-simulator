@@ -7,9 +7,12 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.StringBuilder;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
@@ -38,9 +41,11 @@ public class GameScreen extends BaseScreen {
 
     private NBodyAlgorithm algorithm;
 
-    Stage stage;
+    private Stage stage;
 
     private Stage uiStage;
+
+    private Stage backgroundStage;
 
     private MenuBar menuBar;
 
@@ -68,6 +73,7 @@ public class GameScreen extends BaseScreen {
     public static double sizeMultVar = 0.0;
     public volatile static double simSpeed = 1.0f;
 
+    Sprite background;
 
     FPSLogger logger =new FPSLogger();
 
@@ -79,6 +85,7 @@ public class GameScreen extends BaseScreen {
         VisUI.load();
         stage = new Stage(new ScreenViewport());
         uiStage = new Stage(new ScreenViewport());
+        backgroundStage = new Stage(new ScreenViewport());
         ui = new VisTable();
         ui.setFillParent(true);
         TableUtils.setSpacingDefaults(ui);
@@ -112,6 +119,11 @@ public class GameScreen extends BaseScreen {
 
         algorithm = new ZBruteForce(this);
 
+        Image backgroundImage = new Image(Boot.getManager().get("stars_milky_way.jpg", Texture.class));
+        backgroundImage.setSize(Gdx.graphics.getDisplayMode().width,Gdx.graphics.getDisplayMode().height);
+
+        backgroundStage.addActor(backgroundImage);
+
         toolbar.moveBy(750,0);
         placement.moveBy(345,0);
         sizeMult.moveBy(345,185);
@@ -125,6 +137,7 @@ public class GameScreen extends BaseScreen {
     public void show() {
         stage.addListener(gameListener);
         ui.addListener(uiListener);
+
 
         stage.addActor(orbitManager);
 
@@ -243,9 +256,11 @@ public class GameScreen extends BaseScreen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 30f));
         uiStage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 30f));
+        backgroundStage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 30f));
 
 
         logger.log();
+        backgroundStage.draw();
         stage.draw();
         uiStage.draw();
     }
@@ -257,6 +272,7 @@ public class GameScreen extends BaseScreen {
         }
         stage.getViewport().update(width,height,false);
         uiStage.getViewport().update(width,height, true);
+        backgroundStage.getViewport().update(width,height,true);
 
         ui.clearChildren();
 
