@@ -95,6 +95,7 @@ public class Planet extends Actor {
         this(name, radius, mass, vX, vY, vZ, Color.WHITE.cpy(), x, y, z);
 
         this.texture = texture;
+        color = Color.WHITE.cpy();
     }
 
     @Override

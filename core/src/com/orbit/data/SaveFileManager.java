@@ -138,6 +138,9 @@ public class SaveFileManager {
                     }
 
                     gameScreen.addPlanet(p);
+
+                    useColor = false;
+                    useTexture = false;
                 } else {
                     i++;
                 }
