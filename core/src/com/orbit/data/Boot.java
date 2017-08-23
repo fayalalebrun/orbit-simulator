@@ -14,7 +14,7 @@ import java.io.File;
 
 public class Boot extends Game {
 
-	AssetManager manager;
+	private static AssetManager manager;
 
 	@Override
 	public void create () {
@@ -42,7 +42,7 @@ public class Boot extends Game {
 		setScreen(new GameScreen(this));
 	}
 
-	public AssetManager getManager(){
+	public static AssetManager getManager(){
 		return manager;
 	}
 
