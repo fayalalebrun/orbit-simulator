@@ -57,6 +57,8 @@ public class GameScreen extends BaseScreen {
     private AngleAdjustmentWindow angleAdjustment;
     private SpeedWindow speedWindow;
     private OrbitTracingWindow orbitWindow;
+    private CreditsWindow creditsWindow;
+
     private Vector<Planet> planetArrayList;
 
     public OrbitManager orbitManager;
@@ -111,6 +113,7 @@ public class GameScreen extends BaseScreen {
         angleAdjustment = new AngleAdjustmentWindow(options);
         speedWindow = new SpeedWindow();
         orbitWindow = new OrbitTracingWindow(orbitManager);
+        creditsWindow = new CreditsWindow();
 
         menuBar = new MenuBar();
 
@@ -131,6 +134,7 @@ public class GameScreen extends BaseScreen {
         angleAdjustment.moveBy(345,56);
         speedWindow.moveBy(700, 185);
         orbitWindow.moveBy(485, 56);
+        creditsWindow.moveBy(300,400);
     }
 
     @Override
@@ -154,6 +158,7 @@ public class GameScreen extends BaseScreen {
         uiGroup.addActor(angleAdjustment);
         uiGroup.addActor(speedWindow);
         uiGroup.addActor(orbitWindow);
+        uiGroup.addActor(creditsWindow);
 
         createMenus();
 
@@ -197,8 +202,13 @@ public class GameScreen extends BaseScreen {
 
         createFileMenuItems(fileMenu);
 
+        Menu aboutMenu = new Menu("About");
+
+        createAboutMenuItems(aboutMenu);
+
         menuBar.addMenu(fileMenu);
         menuBar.addMenu(windowMenu);
+        menuBar.addMenu(aboutMenu);
     }
 
     private MenuItem createWindowToggle(String name, final VisWindow window){
@@ -248,6 +258,19 @@ public class GameScreen extends BaseScreen {
 
         fileMenu.addItem(load);
         fileMenu.addItem(save);
+    }
+
+    private void createAboutMenuItems(Menu aboutMenu){
+        MenuItem credits = new MenuItem("Credits");
+
+        credits.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                creditsWindow.setVisible(true);
+            }
+        });
+
+        aboutMenu.addItem(credits);
     }
 
     @Override
