@@ -19,6 +19,8 @@ public class CreditsWindow extends VisWindow{
         TableUtils.setSpacingDefaults(this);
         addWidgets();
         pack();
+
+        setVisible(false);
     }
 
     private void addWidgets(){
