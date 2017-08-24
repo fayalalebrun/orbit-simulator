@@ -101,11 +101,18 @@ public class GameListener extends InputListener implements Disableable{
             case Input.Keys.H:
                 gameScreen.hideUI();
                 return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public boolean keyUp(InputEvent event, int keycode) {
+        switch (keycode){
             case Input.Keys.F:
                 gameScreen.toggleFullscreen();
                 return true;
         }
-
         return false;
     }
 
