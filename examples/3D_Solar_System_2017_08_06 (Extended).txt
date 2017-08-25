@@ -141,7 +141,7 @@ mass: 2.238617805E-22
 vX: 5286.0376526139871203
 vY: 536.87507943175910441
 vZ: -1608.554050460009876
-texture: ./Planet Textures/Mercury_texture.png
+texture: ./Planet Textures/Pluto_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -211,3 +211,19 @@ color-a: 1.0
 x: 86.5209715570666
 y: 36.7635606138652
 z: -20.3476622716779
+
+name: Moon
+radius: 1737.4
+mass: 0.0123053687
+vX: 21995.3287
+vY: 20815.2216561
+vZ: -79.2339529593
+texture: ./Planet Textures/Moon_texture.png
+color-r: 0.63529414
+color-g: 0.03529412
+color-b: 0.0
+color-a: 1.0
+x: 0.701792876985452
+y: -0.732878854392562
+z: 0.0000126102513352932
+
