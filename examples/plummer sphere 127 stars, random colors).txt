@@ -1,0 +1,1922 @@
+v2
+
+name: Sun0
+radius: 6957.0
+mass: 0.0078125
+vX: -0.106656
+vY: -0.119243
+vZ: 0.286915
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.561583
+y: -0.0653953
+z: -0.54142
+
+name: Sun1
+radius: 6957.0
+mass: 0.0078125
+vX: 0.388497
+vY: 0.20792
+vZ: 0.120547
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 4.85715
+y: -0.32989
+z: -1.61621
+
+name: Sun2
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0567244
+vY: -0.0189743
+vZ: -0.391682
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.593217
+y: 0.235838
+z: -0.0272317
+
+name: Sun3
+radius: 6957.0
+mass: 0.0078125
+vX: -0.76996
+vY: 0.739456
+vZ: -0.169181
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.425112
+y: -0.0570265
+z: -0.102289
+
+name: Sun4
+radius: 6957.0
+mass: 0.0078125
+vX: 0.128044
+vY: 0.160373
+vZ: 0.206437
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0244972
+y: 0.862396
+z: -0.000555732
+
+name: Sun5
+radius: 6957.0
+mass: 0.0078125
+vX: 0.349379
+vY: 0.347551
+vZ: -0.0848735
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.513309
+y: -0.167869
+z: 1.09716
+
+name: Sun6
+radius: 6957.0
+mass: 0.0078125
+vX: 0.639579
+vY: -0.373554
+vZ: -0.226712
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.264388
+y: -0.746426
+z: -0.542277
+
+name: Sun7
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0583432
+vY: -0.00363399
+vZ: -0.245571
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.417573
+y: 0.310909
+z: 0.59141
+
+name: Sun8
+radius: 6957.0
+mass: 0.0078125
+vX: -0.787805
+vY: 0.105596
+vZ: -0.438093
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.154153
+y: 0.41177
+z: -0.10071
+
+name: Sun9
+radius: 6957.0
+mass: 0.0078125
+vX: -0.139234
+vY: -0.143949
+vZ: -0.154247
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -4.6044
+y: 1.10861
+z: 0.33756
+
+name: Sun10
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0727336
+vY: 0.334968
+vZ: 0.383024
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.706602
+y: -0.0472532
+z: 0.748726
+
+name: Sun11
+radius: 6957.0
+mass: 0.0078125
+vX: -0.901189
+vY: -0.475339
+vZ: -0.539601
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.192172
+y: -0.337933
+z: 0.213683
+
+name: Sun12
+radius: 6957.0
+mass: 0.0078125
+vX: 0.223589
+vY: -0.0170284
+vZ: -0.186268
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.179866
+y: -0.268977
+z: -0.0605338
+
+name: Sun13
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0559445
+vY: 0.257364
+vZ: -0.209946
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 2.96078
+y: -1.41116
+z: -1.33619
+
+name: Sun14
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0956968
+vY: 0.253246
+vZ: -0.88766
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.172295
+y: 0.207404
+z: -0.133516
+
+name: Sun15
+radius: 6957.0
+mass: 0.0078125
+vX: 0.208169
+vY: 0.789467
+vZ: 0.788264
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.514109
+y: 0.144286
+z: -0.0704705
+
+name: Sun16
+radius: 6957.0
+mass: 0.0078125
+vX: 0.312979
+vY: 0.106783
+vZ: -0.673485
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.177585
+y: 1.20233
+z: -0.677041
+
+name: Sun17
+radius: 6957.0
+mass: 0.0078125
+vX: 0.214575
+vY: -0.474873
+vZ: -0.165383
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.448221
+y: 0.578203
+z: 0.141096
+
+name: Sun18
+radius: 6957.0
+mass: 0.0078125
+vX: 0.146503
+vY: 0.150967
+vZ: 0.0838864
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0329403
+y: 2.75999
+z: -0.5621
+
+name: Sun19
+radius: 6957.0
+mass: 0.0078125
+vX: -0.140107
+vY: -0.237034
+vZ: 0.896022
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.0113743
+y: 0.139806
+z: 0.256194
+
+name: Sun20
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0682482
+vY: 0.395516
+vZ: 0.193018
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.143066
+y: 0.451225
+z: 0.347718
+
+name: Sun21
+radius: 6957.0
+mass: 0.0078125
+vX: -0.283089
+vY: -0.0587602
+vZ: -0.013165
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.772185
+y: 0.292455
+z: 0.255409
+
+name: Sun22
+radius: 6957.0
+mass: 0.0078125
+vX: 0.00541864
+vY: -0.303779
+vZ: 0.542291
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.0261782
+y: 0.18092
+z: -1.06157
+
+name: Sun23
+radius: 6957.0
+mass: 0.0078125
+vX: -0.101559
+vY: -0.639916
+vZ: 0.464835
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.357691
+y: -0.326914
+z: 1.05071
+
+name: Sun24
+radius: 6957.0
+mass: 0.0078125
+vX: 0.391073
+vY: 0.214316
+vZ: 0.0434986
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.941137
+y: -0.113388
+z: -0.0571181
+
+name: Sun25
+radius: 6957.0
+mass: 0.0078125
+vX: -0.636147
+vY: -0.506036
+vZ: -0.00934656
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.206825
+y: -0.429225
+z: 0.329095
+
+name: Sun26
+radius: 6957.0
+mass: 0.0078125
+vX: 0.110573
+vY: -0.205025
+vZ: -0.213378
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.281783
+y: 0.357202
+z: 0.593003
+
+name: Sun27
+radius: 6957.0
+mass: 0.0078125
+vX: 0.227999
+vY: -0.00231039
+vZ: -0.690504
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.14681
+y: -0.0808604
+z: 0.366173
+
+name: Sun28
+radius: 6957.0
+mass: 0.0078125
+vX: 0.309578
+vY: -0.454582
+vZ: 0.0793015
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.00283323
+y: 0.497696
+z: -0.370414
+
+name: Sun29
+radius: 6957.0
+mass: 0.0078125
+vX: -0.441061
+vY: -0.0287642
+vZ: 0.44691
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.364943
+y: 0.0668188
+z: 0.524401
+
+name: Sun30
+radius: 6957.0
+mass: 0.0078125
+vX: 0.449883
+vY: 0.156787
+vZ: 0.759861
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.593893
+y: -0.457863
+z: 0.250611
+
+name: Sun31
+radius: 6957.0
+mass: 0.0078125
+vX: 0.417303
+vY: 0.261432
+vZ: 0.255582
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.721056
+y: 0.708421
+z: -0.0803228
+
+name: Sun32
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0788148
+vY: -0.11228
+vZ: -0.0911524
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 2.79888
+y: -3.81444
+z: 5.72763
+
+name: Sun33
+radius: 6957.0
+mass: 0.0078125
+vX: 0.204712
+vY: 0.501081
+vZ: 0.60662
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.264817
+y: 0.580976
+z: 0.324753
+
+name: Sun34
+radius: 6957.0
+mass: 0.0078125
+vX: 0.248306
+vY: 0.127007
+vZ: -0.335696
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.159077
+y: -0.194931
+z: 3.03607
+
+name: Sun35
+radius: 6957.0
+mass: 0.0078125
+vX: -0.591088
+vY: 0.138479
+vZ: 0.175385
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.384243
+y: -0.474148
+z: 0.117701
+
+name: Sun36
+radius: 6957.0
+mass: 0.0078125
+vX: 0.369926
+vY: 0.0436471
+vZ: 0.356356
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.891879
+y: -0.981796
+z: 0.68726
+
+name: Sun37
+radius: 6957.0
+mass: 0.0078125
+vX: -0.683381
+vY: -0.537409
+vZ: 0.120988
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.23801
+y: -0.340323
+z: -0.42139
+
+name: Sun38
+radius: 6957.0
+mass: 0.0078125
+vX: -0.358726
+vY: 0.405047
+vZ: -0.594486
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.54539
+y: 0.331053
+z: -0.338651
+
+name: Sun39
+radius: 6957.0
+mass: 0.0078125
+vX: -0.904883
+vY: 0.196906
+vZ: -0.39708
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.329465
+y: -0.0716469
+z: 0.148638
+
+name: Sun40
+radius: 6957.0
+mass: 0.0078125
+vX: -0.948876
+vY: -0.0264139
+vZ: -0.285205
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.245302
+y: 0.0406106
+z: -0.0246707
+
+name: Sun41
+radius: 6957.0
+mass: 0.0078125
+vX: 0.373441
+vY: 0.48664
+vZ: -0.739805
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0547374
+y: -0.214788
+z: 0.548032
+
+name: Sun42
+radius: 6957.0
+mass: 0.0078125
+vX: -0.130457
+vY: -0.260229
+vZ: 0.137378
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.808209
+y: -0.785836
+z: -0.487431
+
+name: Sun43
+radius: 6957.0
+mass: 0.0078125
+vX: 0.72646
+vY: 0.0983734
+vZ: -0.768273
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.130226
+y: 0.251818
+z: -0.27214
+
+name: Sun44
+radius: 6957.0
+mass: 0.0078125
+vX: 0.201578
+vY: -0.0997548
+vZ: 0.0533556
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.816609
+y: 0.638435
+z: -0.602271
+
+name: Sun45
+radius: 6957.0
+mass: 0.0078125
+vX: -0.458248
+vY: -0.328877
+vZ: -0.231626
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.0335484
+y: 0.160705
+z: -0.604803
+
+name: Sun46
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0590116
+vY: -0.146066
+vZ: -0.260767
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.289742
+y: 0.0851022
+z: 0.296247
+
+name: Sun47
+radius: 6957.0
+mass: 0.0078125
+vX: -0.182219
+vY: -0.204981
+vZ: 0.274746
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.803008
+y: 0.235945
+z: 1.32902
+
+name: Sun48
+radius: 6957.0
+mass: 0.0078125
+vX: 0.422542
+vY: -0.281747
+vZ: 0.117922
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.11325
+y: 0.0231081
+z: 0.692128
+
+name: Sun49
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0761422
+vY: -0.195154
+vZ: -0.120698
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.839393
+y: -0.790337
+z: 0.371333
+
+name: Sun50
+radius: 6957.0
+mass: 0.0078125
+vX: 0.378496
+vY: -0.0721329
+vZ: 0.818237
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.376874
+y: 0.196914
+z: -0.427419
+
+name: Sun51
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0371911
+vY: 0.124373
+vZ: 0.443528
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0851764
+y: -0.633248
+z: -0.728609
+
+name: Sun52
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0656925
+vY: -0.31456
+vZ: 0.200808
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 1.26564
+y: -0.693253
+z: 0.124148
+
+name: Sun53
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0695378
+vY: 0.267221
+vZ: -0.0535934
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.540138
+y: 0.838819
+z: 0.594402
+
+name: Sun54
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0328011
+vY: 0.624732
+vZ: -0.622752
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.718664
+y: -0.866464
+z: 0.43578
+
+name: Sun55
+radius: 6957.0
+mass: 0.0078125
+vX: -0.541128
+vY: -0.273111
+vZ: 0.259376
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.0709217
+y: 0.289103
+z: -1.18601
+
+name: Sun56
+radius: 6957.0
+mass: 0.0078125
+vX: -0.302709
+vY: 0.206246
+vZ: -0.421021
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.165375
+y: 0.253924
+z: 0.308721
+
+name: Sun57
+radius: 6957.0
+mass: 0.0078125
+vX: -0.675552
+vY: -0.309687
+vZ: -0.195789
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.30295
+y: 0.45103
+z: -1.18285
+
+name: Sun58
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0572668
+vY: -0.167331
+vZ: -0.0485191
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 1.91037
+y: 1.48552
+z: 1.6489
+
+name: Sun59
+radius: 6957.0
+mass: 0.0078125
+vX: 0.370893
+vY: -0.154465
+vZ: -0.229943
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.203928
+y: 2.21686
+z: 0.365465
+
+name: Sun60
+radius: 6957.0
+mass: 0.0078125
+vX: -0.324136
+vY: 1.06391
+vZ: -0.252832
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.141565
+y: 0.121267
+z: -0.190342
+
+name: Sun61
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0106645
+vY: -0.0603032
+vZ: 0.28376
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.882969
+y: 0.318097
+z: -1.22108
+
+name: Sun62
+radius: 6957.0
+mass: 0.0078125
+vX: -0.112403
+vY: -0.0539148
+vZ: 0.155832
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 1.68156
+y: -0.970704
+z: 0.955315
+
+name: Sun63
+radius: 6957.0
+mass: 0.0078125
+vX: 0.151948
+vY: 0.0359666
+vZ: 0.0193931
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 1.29341
+y: -0.0844446
+z: 3.79333
+
+name: Sun64
+radius: 6957.0
+mass: 0.0078125
+vX: 0.484397
+vY: 0.00628293
+vZ: 0.460706
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.291916
+y: -0.66188
+z: -0.572157
+
+name: Sun65
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0883908
+vY: 0.167971
+vZ: 0.195311
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -1.71339
+y: 0.0747937
+z: -0.45653
+
+name: Sun66
+radius: 6957.0
+mass: 0.0078125
+vX: 0.800165
+vY: 0.147079
+vZ: 0.0321938
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.565081
+y: 0.567638
+z: -0.0358912
+
+name: Sun67
+radius: 6957.0
+mass: 0.0078125
+vX: 0.424151
+vY: 0.598671
+vZ: 0.590271
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0303471
+y: -0.111797
+z: 0.112722
+
+name: Sun68
+radius: 6957.0
+mass: 0.0078125
+vX: -0.786376
+vY: -0.700514
+vZ: -0.0612197
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0155903
+y: 0.643337
+z: 0.613217
+
+name: Sun69
+radius: 6957.0
+mass: 0.0078125
+vX: 0.374293
+vY: -0.114633
+vZ: 0.671602
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.588343
+y: 0.0779538
+z: -0.0846362
+
+name: Sun70
+radius: 6957.0
+mass: 0.0078125
+vX: 0.824373
+vY: 0.192267
+vZ: 0.255344
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.355267
+y: 0.525516
+z: 0.161555
+
+name: Sun71
+radius: 6957.0
+mass: 0.0078125
+vX: -1.21444
+vY: -0.161621
+vZ: 0.269907
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.198203
+y: -0.0887213
+z: -0.0108636
+
+name: Sun72
+radius: 6957.0
+mass: 0.0078125
+vX: 0.387634
+vY: 0.0924198
+vZ: -0.251584
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.740972
+y: 0.0310601
+z: -0.0423134
+
+name: Sun73
+radius: 6957.0
+mass: 0.0078125
+vX: -0.144403
+vY: 0.290308
+vZ: 0.570586
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.569375
+y: -0.262927
+z: 0.311267
+
+name: Sun74
+radius: 6957.0
+mass: 0.0078125
+vX: 0.617527
+vY: -0.611949
+vZ: -0.69053
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.360238
+y: 0.275522
+z: 0.170519
+
+name: Sun75
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0160654
+vY: 0.323666
+vZ: 0.357143
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0064339
+y: 0.0887533
+z: -0.0978778
+
+name: Sun76
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0734387
+vY: 0.062987
+vZ: 0.294745
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -1.79199
+y: 0.537769
+z: 0.210823
+
+name: Sun77
+radius: 6957.0
+mass: 0.0078125
+vX: 0.531833
+vY: -0.105745
+vZ: 0.0137902
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.387556
+y: 0.057369
+z: -0.242046
+
+name: Sun78
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0169497
+vY: 0.664175
+vZ: -0.415118
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.10987
+y: 0.0479845
+z: -0.218173
+
+name: Sun79
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0282852
+vY: -0.0869342
+vZ: -0.167453
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.106214
+y: -0.722274
+z: -0.365652
+
+name: Sun80
+radius: 6957.0
+mass: 0.0078125
+vX: -0.102149
+vY: -0.623591
+vZ: -0.130544
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.342844
+y: -0.542864
+z: 0.726504
+
+name: Sun81
+radius: 6957.0
+mass: 0.0078125
+vX: 0.334304
+vY: -0.515125
+vZ: -0.0301856
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.725277
+y: -0.447739
+z: 0.0147589
+
+name: Sun82
+radius: 6957.0
+mass: 0.0078125
+vX: -0.383845
+vY: -0.242729
+vZ: 0.294695
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.969074
+y: 0.310329
+z: 0.759039
+
+name: Sun83
+radius: 6957.0
+mass: 0.0078125
+vX: -0.386223
+vY: -0.814792
+vZ: -0.160994
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.232385
+y: 0.0059024
+z: -0.2828
+
+name: Sun84
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0163862
+vY: -0.119574
+vZ: 0.551395
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0367583
+y: -0.334258
+z: 0.496887
+
+name: Sun85
+radius: 6957.0
+mass: 0.0078125
+vX: 0.378456
+vY: 0.0762455
+vZ: 0.10637
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 1.80821
+y: -2.26263
+z: 0.369196
+
+name: Sun86
+radius: 6957.0
+mass: 0.0078125
+vX: 0.380069
+vY: 0.33213
+vZ: 0.19809
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.22541
+y: 0.634131
+z: 0.4466
+
+name: Sun87
+radius: 6957.0
+mass: 0.0078125
+vX: 0.368528
+vY: -0.245958
+vZ: -0.299205
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.0552975
+y: 0.094628
+z: 0.187535
+
+name: Sun88
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0659155
+vY: 0.575576
+vZ: -0.02493
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.179737
+y: -0.28451
+z: -0.195189
+
+name: Sun89
+radius: 6957.0
+mass: 0.0078125
+vX: -0.66282
+vY: -0.61283
+vZ: 0.237689
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.441753
+y: -0.187676
+z: 0.2657
+
+name: Sun90
+radius: 6957.0
+mass: 0.0078125
+vX: 0.162732
+vY: -0.0782579
+vZ: -0.289376
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -1.0584
+y: 1.07063
+z: 0.0816655
+
+name: Sun91
+radius: 6957.0
+mass: 0.0078125
+vX: -0.415535
+vY: -0.272224
+vZ: 0.466389
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.230667
+y: 0.562123
+z: 0.422895
+
+name: Sun92
+radius: 6957.0
+mass: 0.0078125
+vX: -0.428963
+vY: 0.124475
+vZ: 0.548398
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.431271
+y: 0.941882
+z: 0.470262
+
+name: Sun93
+radius: 6957.0
+mass: 0.0078125
+vX: -0.65604
+vY: -0.471803
+vZ: -0.0829079
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.90623
+y: 0.0540758
+z: 0.705174
+
+name: Sun94
+radius: 6957.0
+mass: 0.0078125
+vX: -0.37221
+vY: 0.120181
+vZ: -0.671326
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.283421
+y: 0.0618804
+z: 0.00101862
+
+name: Sun95
+radius: 6957.0
+mass: 0.0078125
+vX: 0.151032
+vY: 0.290279
+vZ: 0.0015099
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.355921
+y: -0.902373
+z: -1.88237
+
+name: Sun96
+radius: 6957.0
+mass: 0.0078125
+vX: 0.640861
+vY: 0.337243
+vZ: -0.666231
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.325479
+y: 0.195602
+z: 0.561911
+
+name: Sun97
+radius: 6957.0
+mass: 0.0078125
+vX: 0.180773
+vY: -0.684755
+vZ: 0.280759
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.632459
+y: -0.804121
+z: 0.891581
+
+name: Sun98
+radius: 6957.0
+mass: 0.0078125
+vX: -0.287444
+vY: 0.570525
+vZ: -0.375597
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.223916
+y: -0.204337
+z: 0.297543
+
+name: Sun99
+radius: 6957.0
+mass: 0.0078125
+vX: 0.132051
+vY: -0.284014
+vZ: 0.30882
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.584846
+y: -0.911429
+z: -1.65126
+
+name: Sun100
+radius: 6957.0
+mass: 0.0078125
+vX: -0.15094
+vY: -0.000502812
+vZ: 0.0806111
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.842329
+y: -1.01827
+z: -2.70198
+
+name: Sun101
+radius: 6957.0
+mass: 0.0078125
+vX: 0.111709
+vY: -0.804081
+vZ: 0.0606155
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -2.09965
+y: 0.802379
+z: 0.603029
+
+name: Sun102
+radius: 6957.0
+mass: 0.0078125
+vX: -0.337486
+vY: -0.720821
+vZ: 0.0795549
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.118922
+y: -0.588657
+z: 0.0372491
+
+name: Sun103
+radius: 6957.0
+mass: 0.0078125
+vX: 0.234431
+vY: 0.285525
+vZ: 0.584854
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.191582
+y: -0.275471
+z: 0.117875
+
+name: Sun104
+radius: 6957.0
+mass: 0.0078125
+vX: -0.595578
+vY: 0.0244533
+vZ: -0.0750755
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.0107175
+y: 0.324655
+z: 0.392256
+
+name: Sun105
+radius: 6957.0
+mass: 0.0078125
+vX: -0.708116
+vY: 0.726939
+vZ: 0.181972
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.197357
+y: -0.500572
+z: 0.189353
+
+name: Sun106
+radius: 6957.0
+mass: 0.0078125
+vX: 0.613535
+vY: 0.583002
+vZ: -0.524635
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.213168
+y: -0.232943
+z: 0.525649
+
+name: Sun107
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0746607
+vY: 0.74576
+vZ: 0.381188
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.016383
+y: 0.643089
+z: 0.118701
+
+name: Sun108
+radius: 6957.0
+mass: 0.0078125
+vX: -0.201238
+vY: -0.063544
+vZ: -0.210165
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -2.02546
+y: 2.33873
+z: -6.56685
+
+name: Sun109
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0937159
+vY: 0.726463
+vZ: 0.34983
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -1.37384
+y: -0.345245
+z: -0.448207
+
+name: Sun110
+radius: 6957.0
+mass: 0.0078125
+vX: 0.438337
+vY: 0.321718
+vZ: 0.497497
+texture: ./Planet Textures/Star_texture_4.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.53505
+y: 0.194187
+z: 0.138623
+
+name: Sun111
+radius: 6957.0
+mass: 0.0078125
+vX: -0.232077
+vY: 0.673534
+vZ: 0.199969
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.393129
+y: 0.396318
+z: 0.202799
+
+name: Sun112
+radius: 6957.0
+mass: 0.0078125
+vX: 0.12452
+vY: -0.0738437
+vZ: -0.20314
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 1.65585
+y: 1.51472
+z: 0.754924
+
+name: Sun113
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0118441
+vY: -0.275304
+vZ: 0.517822
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.050741
+y: -0.176364
+z: 0.0845731
+
+name: Sun114
+radius: 6957.0
+mass: 0.0078125
+vX: -0.124871
+vY: -0.0726118
+vZ: -0.48678
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.69282
+y: -0.315554
+z: 0.336758
+
+name: Sun115
+radius: 6957.0
+mass: 0.0078125
+vX: 0.0428135
+vY: -0.368193
+vZ: -0.202662
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -4.49378
+y: 0.158931
+z: -1.67364
+
+name: Sun116
+radius: 6957.0
+mass: 0.0078125
+vX: 0.286413
+vY: 0.547764
+vZ: -0.624027
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.151977
+y: -0.12238
+z: -0.232372
+
+name: Sun117
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0888675
+vY: -0.0692045
+vZ: -0.0961761
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.151974
+y: -0.456876
+z: -1.01505
+
+name: Sun118
+radius: 6957.0
+mass: 0.0078125
+vX: 0.213424
+vY: -0.394811
+vZ: 0.283268
+texture: ./Planet Textures/Star_texture_6.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.0172932
+y: 0.450232
+z: 0.127097
+
+name: Sun119
+radius: 6957.0
+mass: 0.0078125
+vX: -0.312324
+vY: -0.884635
+vZ: -0.47024
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.258719
+y: -0.221393
+z: -0.687557
+
+name: Sun120
+radius: 6957.0
+mass: 0.0078125
+vX: 0.335346
+vY: -0.189319
+vZ: -0.562923
+texture: ./Planet Textures/Star_texture_5.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.336438
+y: -0.0474728
+z: -0.0363989
+
+name: Sun121
+radius: 6957.0
+mass: 0.0078125
+vX: 0.710945
+vY: 0.430098
+vZ: 0.427973
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -0.000520494
+y: -0.0606313
+z: 0.0370563
+
+name: Sun122
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0101308
+vY: -0.750426
+vZ: -0.212414
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.554218
+y: -0.381913
+z: -0.291806
+
+name: Sun123
+radius: 6957.0
+mass: 0.0078125
+vX: -0.0454595
+vY: 0.846733
+vZ: -0.225464
+texture: ./Planet Textures/Star_texture_7.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.202166
+y: 0.0601055
+z: 0.246007
+
+name: Sun124
+radius: 6957.0
+mass: 0.0078125
+vX: 0.366862
+vY: -0.183597
+vZ: 0.203534
+texture: ./Planet Textures/Star_texture_1.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.320666
+y: 0.208203
+z: -0.248511
+
+name: Sun125
+radius: 6957.0
+mass: 0.0078125
+vX: 0.469524
+vY: -0.378442
+vZ: -0.644366
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 0.046223
+y: -0.839237
+z: 0.541238
+
+name: Sun126
+radius: 6957.0
+mass: 0.0078125
+vX: 0.00824341
+vY: -0.178253
+vZ: -0.151392
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: -1.59413
+y: -0.316486
+z: -2.43866
+
+name: Sun127
+radius: 6957.0
+mass: 0.0078125
+vX: 0.220359
+vY: 0.130017
+vZ: -0.173491
+texture: ./Planet Textures/Star_texture_8.png
+color-r: 1.0
+color-g: 1.0
+color-b: 1.0
+color-a: 1.0
+x: 3.07216
+y: -2.60047
+z: -3.83296
+
