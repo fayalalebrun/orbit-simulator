@@ -6,6 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.VisLabel;
+import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import com.kotcrab.vis.ui.widget.VisWindow;
 
@@ -24,8 +25,23 @@ public class CreditsWindow extends VisWindow{
     }
 
     private void addWidgets(){
-        VisLabel label = new VisLabel("Textures  - ");
-        add(label).row();
+        VisTable table1 = new VisTable();
+        VisTable table2 = new VisTable();
+        VisLabel label = new VisLabel(""+
+                "Textures -\n"+
+                "Programming -");
+
+        VisLabel label2 = new VisLabel("\nwww.solarsystemscope.com\n"+
+        "Francisco Ayala\n"+
+        "David Rockenzahn");
+
+        table1.add(label);
+        table2.add(label2);
+
+        add(table1).padRight(3f);
+        add(table2);
+
+        row();
         VisTextButton closeButton = new VisTextButton("Close");
         final CreditsWindow window = this;
         closeButton.addListener(new ChangeListener() {
