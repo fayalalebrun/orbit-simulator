@@ -211,3 +211,63 @@ color-a: 1.0
 x: 86.5209715570666
 y: 36.7635606138652
 z: -20.3476622716779
+
+name: Deimos
+radius: 6.2
+mass: 0.000000000247179
+vX: 18977.3936331
+vY: -13932.301873
+vZ: 507.789206743
+texture: ./Planet Textures/Eris_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: -1.02085230948394
+y: 1.29443804803662
+z: 0.0520428100077876
+
+name: Phobos
+radius: 11.1
+mass: 0.000000001807228915663
+vX: -19716.8656375
+vY: -11918.5070965
+vZ: 1032.24592188
+texture: ./Planet Textures/Eris_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: -1.02072793811035
+y: 1.29438080372826
+z: 0.0519778222537401
+
+name: Ganymede
+radius: 2634
+mass: 0.0248150176
+vX: 14600.0019638
+vY: -4597.60459141
+vZ: 275.624072746
+texture: ./Planet Textures/Eris_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: -4.8438570695294
+y: -2.48125436823001
+z: 0.118540166265043
+
+name: Callisto
+radius: 2403
+mass: 0.0180168414
+vX: -2079.79499773
+vY: -13287.8003225
+vZ: -260.775389973
+texture: ./Planet Textures/Eris_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: -4.851647158336
+y: -2.46341101295977
+z: 0.119037352473515
