@@ -218,7 +218,7 @@ mass: 0.000000000247179
 vX: 18977.3936331
 vY: -13932.301873
 vZ: 507.789206743
-texture: null
+texture: ./Planet Textures/Deimos_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -233,7 +233,7 @@ mass: 0.000000001807228915663
 vX: -19716.8656375
 vY: -11918.5070965
 vZ: 1032.24592188
-texture: null
+texture: ./Planet Textures/Phobos_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -248,7 +248,7 @@ mass: 0.0248150176
 vX: 14600.0019638
 vY: -4597.60459141
 vZ: 275.624072746
-texture: null
+texture: ./Planet Textures/Ganymede_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -263,7 +263,7 @@ mass: 0.0180168414
 vX: -2079.79499773
 vY: -13287.8003225
 vZ: -260.775389973
-texture: null
+texture: ./Planet Textures/Callisto_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -278,7 +278,7 @@ mass: 0.0149576621
 vX: 16855.7950486
 vY: -24317.7709602
 vZ: -400.922994767
-texture: null
+texture: ./Planet Textures/Io_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -293,7 +293,7 @@ mass: 0.0225299262
 vX: 6374.78828168
 vY: -4779.38665059
 vZ: 2006.3032922
-texture: null
+texture: ./Planet Textures/Titan_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -308,7 +308,7 @@ mass: 0.000386625342
 vX: 4740.49159443
 vY: 5885.50359306
 vZ: -3386.07953864
-texture: null
+texture: ./Planet Textures/Rhea_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -323,7 +323,7 @@ mass: 0.000302384887
 vX: 11153.6598185
 vY: -3167.24893856
 vZ: -200.541988779
-texture: null
+texture: ./Planet Textures/Iapetus_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -338,7 +338,7 @@ mass: 0.000590570628
 vX: -4009.99336222
 vY: 6536.27767905
 vZ: 3485.8520845
-texture: null
+texture: ./Planet Textures/Titania_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -353,7 +353,7 @@ mass: 0.00050467249
 vX: -89.3143988005
 vY: 5059.80744905
 vZ: -939.398422882
-texture: null
+texture: ./Planet Textures/Oberon_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -368,7 +368,7 @@ mass: 0.000196242919
 vX: -763.43665466
 vY: 4797.72812304
 vZ: -3909.5052748
-texture: null
+texture: ./Planet Textures/Umbriel_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -383,7 +383,7 @@ mass: 0.00359499614
 vX: -1675.21440733
 vY: 2299.53666024
 vZ: -256.117565065
-texture: null
+texture: ./Planet Textures/Triton_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -398,7 +398,7 @@ mass: 0.00000736748161
 vX: 4581.59593456
 vY: 12111.2392856
 vZ: 1135.21221159
-texture: null
+texture: ./Planet Textures/Proteus_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -413,7 +413,7 @@ mass: 0.0000051739814
 vX: 1225.17629663
 vY: 5434.8301291
 vZ: -151.31058534
-texture: null
+texture: ./Planet Textures/Nereid_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -428,7 +428,7 @@ mass: 0.000256187429
 vX: 5263.54023221
 vY: 636.24358063
 vZ: -1410.08982946
-texture: null
+texture: ./Planet Textures/Charon_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
