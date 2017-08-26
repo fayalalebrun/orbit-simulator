@@ -29,11 +29,15 @@ public class CreditsWindow extends VisWindow{
         VisTable table2 = new VisTable();
         VisLabel label = new VisLabel(""+
                 "Textures -\n"+
+                "\n"+
+                "\n"+
                 "Programming -");
 
         VisLabel label2 = new VisLabel("\nwww.solarsystemscope.com\n"+
-        "Francisco Ayala\n"+
-        "David Rockenzahn");
+                "John van Vliet\n"+
+                "TonnyBGood\n"+
+                "Francisco Ayala\n"+
+                "David Rockenzahn");
 
         table1.add(label);
         table2.add(label2);
