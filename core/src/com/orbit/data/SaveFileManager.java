@@ -77,6 +77,8 @@ public class SaveFileManager {
         } else if (part[0].contains("v2")){
             boolean useColor = false, useTexture = false;
 
+            Vector<Planet> planetList = new Vector<Planet>();
+
             String name;
             double radius;
             double mass;
@@ -139,19 +141,19 @@ public class SaveFileManager {
                     Color c = new Color(r, g, b, a);
 
                     if(useColor) {
-                        p = new Planet(name, radius, mass, vX, vY, vZ, c, x, y, z);
+                        planetList.add(new Planet(name, radius, mass, vX, vY, vZ, c, x, y, z));
                     } else if (useTexture){
-                        p = new Planet(name, radius, mass, vX, vY, vZ, texture, c, x, y, z);
+                        planetList.add(new Planet(name, radius, mass, vX, vY, vZ, texture, c, x, y, z));
                     }
-
-                    gameScreen.addPlanet(p);
 
                     useColor = false;
                     useTexture = false;
                 } else {
                     i++;
                 }
+
             }
+            gameScreen.addPlanet(planetList);
         }
     }
 
