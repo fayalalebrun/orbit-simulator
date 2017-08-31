@@ -337,11 +337,19 @@ public class GameScreen extends BaseScreen {
     }
 
     public void addPlanet(Planet p){
-        synchronized (planetArrayList) {
-            stage.addActor(p);
-            planetWindow.addPlanet(p);
-            planetArrayList.add(p);
-            orbitManager.addOrbit(p);
+        Vector<Planet> list = new Vector<Planet>();
+        list.add(p);
+        addPlanet(list);
+    }
+
+    public void addPlanet(Vector<Planet> planetList){
+        synchronized (planetArrayList){
+            for(Planet p : planetList){
+                stage.addActor(p);
+                planetWindow.addPlanet(p);
+                planetArrayList.add(p);
+                orbitManager.addOrbit(p);
+            }
         }
     }
 
