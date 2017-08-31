@@ -141,7 +141,7 @@ mass: 2.238617805E-22
 vX: 5286.0376526139871203
 vY: 536.87507943175910441
 vZ: -1608.554050460009876
-texture: ./Planet Textures/Mercury_texture.png
+texture: ./Planet Textures/Pluto_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -165,7 +165,6 @@ x: 0.0557127545343246
 y: 2.66808987980851
 z: 0.0738975231660624
 
-
 name: Haumea
 radius: 869.5
 mass: 0.00067146684
@@ -180,7 +179,6 @@ color-a: 1.0
 x: -40.8634927799354
 y: -17.9911573880339
 z: 23.7013665353493
-
 
 name: Makemake
 radius: 711
@@ -212,13 +210,28 @@ x: 86.5209715570666
 y: 36.7635606138652
 z: -20.3476622716779
 
+name: Moon
+radius: 1737.4
+mass: 0.0123053687
+vX: 21995.3287
+vY: 20815.2216561
+vZ: -79.2339529593
+texture: ./Planet Textures/Moon_texture.png
+color-r: 0.63529414
+color-g: 0.03529412
+color-b: 0.0
+color-a: 1.0
+x: 0.701792876985452
+y: -0.732878854392562
+z: 0.0000126102513352932
+
 name: Deimos
 radius: 6.2
 mass: 0.000000000247179
 vX: 18977.3936331
 vY: -13932.301873
 vZ: 507.789206743
-texture: ./Planet Textures/Eris_texture.png
+texture: ./Planet Textures/Deimos_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -233,7 +246,7 @@ mass: 0.000000001807228915663
 vX: -19716.8656375
 vY: -11918.5070965
 vZ: 1032.24592188
-texture: ./Planet Textures/Eris_texture.png
+texture: ./Planet Textures/Phobos_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -248,7 +261,7 @@ mass: 0.0248150176
 vX: 14600.0019638
 vY: -4597.60459141
 vZ: 275.624072746
-texture: ./Planet Textures/Eris_texture.png
+texture: ./Planet Textures/Ganymede_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -263,7 +276,7 @@ mass: 0.0180168414
 vX: -2079.79499773
 vY: -13287.8003225
 vZ: -260.775389973
-texture: ./Planet Textures/Eris_texture.png
+texture: ./Planet Textures/Callisto_texture.png
 color-r: 0.6392157
 color-g: 0.654902
 color-b: 0.65882355
@@ -271,3 +284,168 @@ color-a: 1.0
 x: -4.851647158336
 y: -2.46341101295977
 z: 0.119037352473515
+
+name: Io
+radius: 1821.3
+mass: 0.0149576621
+vX: 16855.7950486
+vY: -24317.7709602
+vZ: -400.922994767
+texture: ./Planet Textures/Io_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: -4.850237168807
+y: -2.47728314154391
+z: 0.118607847893455
+
+name: Titan
+radius: 2575.5
+mass: 0.0225299262
+vX: 6374.78828168
+vY: -4779.38665059
+vZ: 2006.3032922
+texture: ./Planet Textures/Titan_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: -0.738994061982007
+y: -10.0222492505769
+z: 0.20209849121994
+
+name: Rhea
+radius: 764.5
+mass: 0.000386625342
+vX: 4740.49159443
+vY: 5885.50359306
+vZ: -3386.07953864
+texture: ./Planet Textures/Rhea_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: -0.728744548168073
+y: -10.0247678116357
+z: 0.202397343094377
+
+name: Iapetus
+radius: 734.5
+mass: 0.000302384887
+vX: 11153.6598185
+vY: -3167.24893856
+vZ: -200.541988779
+texture: ./Planet Textures/Iapetus_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: -0.750026594691321
+y: -10.0407945245828
+z: 0.2105038925949
+
+name: Titania
+radius: 788.9
+mass: 0.000590570628
+vX: -4009.99336222
+vY: 6536.27767905
+vZ: 3485.8520845
+texture: ./Planet Textures/Titania_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: 17.9825273396229
+y: 8.56868317133792
+z: -0.202093177114203
+
+name: Oberon
+radius: 761.4
+mass: 0.00050467249
+vX: -89.3143988005
+vY: 5059.80744905
+vZ: -939.398422882
+texture: ./Planet Textures/Oberon_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: 17.9865735581384
+y: 8.56844606856157
+z: -0.197518874480251
+
+name: Umbriel
+radius: 584.7
+mass: 0.000196242919
+vX: -763.43665466
+vY: 4797.72812304
+vZ: -3909.5052748
+texture: ./Planet Textures/Umbriel_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: 17.9867779258577
+y: 8.56800420602599
+z: -0.200282239599978
+
+name: Triton
+radius: 1352.6
+mass: 0.00359499614
+vX: -1675.21440733
+vY: 2299.53666024
+vZ: -256.117565065
+texture: ./Planet Textures/Triton_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: 28.5489751255052
+y: -9.03951151007688
+z: -0.473617875603459
+
+name: Proteus
+radius: 210
+mass: 0.00000736748161
+vX: 4581.59593456
+vY: 12111.2392856
+vZ: 1135.21221159
+texture: ./Planet Textures/Proteus_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: 28.5486047916992
+y: -9.03863707787028
+z: -0.47214476488443
+
+name: Nereid
+radius: 170
+mass: 0.0000051739814
+vX: 1225.17629663
+vY: 5434.8301291
+vZ: -151.31058534
+texture: ./Planet Textures/Nereid_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: 28.5674855792841
+y: -8.97790561832515
+z: -0.466596739078884
+
+name: Charon
+radius: 605
+mass: 0.000256187429
+vX: 5263.54023221
+vY: 636.24358063
+vZ: -1410.08982946
+texture: ./Planet Textures/Charon_texture.png
+color-r: 0.6392157
+color-g: 0.654902
+color-b: 0.65882355
+color-a: 1.0
+x: 10.3274600006948
+y: -31.736074058752
+z: 0.408637213621288

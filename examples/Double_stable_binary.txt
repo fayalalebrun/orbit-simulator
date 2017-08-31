@@ -1,0 +1,32 @@
+v2
+
+name: Sun_1
+radius: 695700.0
+mass: 333054.0
+vX: -0.02814718330840523
+vY: 17000.999999999958
+vZ: 0.0
+texture: ./Planet Textures/Star_texture_2.png
+color-r: 0.96862745
+color-g: 0.9882353
+color-b: 1.0
+color-a: 1.0
+x: 0.9999999999999976
+y: 1.8902826842526928E-6
+z: 0.0
+
+name: Sun_2
+radius: 695700.0
+mass: 333054.0
+vX: 0.02814718330658277
+vY: -17000.999999999958
+vZ: 0.0
+texture: ./Planet Textures/Star_texture_3.png
+color-r: 0.96862745
+color-g: 0.9882353
+color-b: 1.0
+color-a: 1.0
+x: -0.9999999999999976
+y: -1.8896615104091104E-6
+z: 0.0
+
