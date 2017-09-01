@@ -75,7 +75,7 @@ public class GameScreen extends BaseScreen {
     public static double sizeMultVar = 0.0;
     public volatile static double simSpeed = 1.0f;
 
-    Sprite background;
+    Thread algorithmThread;
 
     FPSLogger logger =new FPSLogger();
 
@@ -162,7 +162,8 @@ public class GameScreen extends BaseScreen {
 
         createMenus();
 
-        (new Thread(algorithm)).start();
+        algorithmThread = new Thread(algorithm);
+        algorithmThread.start();
     }
 
     private void setupFileChooser(){
@@ -322,7 +323,10 @@ public class GameScreen extends BaseScreen {
     @Override
     public void dispose() {
         stage.dispose();
+        uiStage.dispose();
         VisUI.dispose();
+        algorithmThread.interrupt();
+
     }
 
     public boolean placePlanet(float x, float y){
