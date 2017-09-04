@@ -20,6 +20,8 @@ import java.util.Vector;
  */
 public abstract class NBodyAlgorithm implements Runnable {
 
+    private static final boolean PRINT_CALC_PER_SEC = true;
+
     protected Vector<Planet> planets;
     protected GameScreen gameScreen;
 
@@ -28,6 +30,9 @@ public abstract class NBodyAlgorithm implements Runnable {
     private double lastTime, lastDelta;
 
     DataAnalysis analysis;
+
+    private int calcSec;
+    private double timeSinceCalcSec;
 
     public NBodyAlgorithm(GameScreen gameScreen) {
         this.gameScreen = gameScreen;
@@ -43,6 +48,17 @@ public abstract class NBodyAlgorithm implements Runnable {
             analysis.run(lastDelta* GameScreen.simSpeed);
 
             runAlgorithm();
+
+            if(PRINT_CALC_PER_SEC) {
+                calcSec++;
+                timeSinceCalcSec += lastDelta;
+                if (timeSinceCalcSec >= 1) {
+                    timeSinceCalcSec = 0;
+                    System.out.println(calcSec);
+                    calcSec = 0;
+                }
+            }
+
         }
     }
 
