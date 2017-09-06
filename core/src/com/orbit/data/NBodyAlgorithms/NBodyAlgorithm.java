@@ -75,5 +75,12 @@ public abstract class NBodyAlgorithm implements Runnable {
         return temp;
     }
 
+    protected double cb(double x){
+        return x*x*x;
+    }
+
+    protected double sq(double x){
+        return x*x;
+    }
 
 }
