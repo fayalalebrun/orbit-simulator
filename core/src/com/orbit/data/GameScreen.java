@@ -1,22 +1,18 @@
 package com.orbit.data;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.StringBuilder;
-import com.badlogic.gdx.utils.viewport.ExtendViewport;
-import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.TableUtils;
@@ -24,14 +20,12 @@ import com.kotcrab.vis.ui.widget.*;
 import com.kotcrab.vis.ui.widget.file.FileChooser;
 import com.kotcrab.vis.ui.widget.file.FileTypeFilter;
 import com.kotcrab.vis.ui.widget.file.SingleFileChooserListener;
-import com.orbit.data.nBodyAlgorithms.BruteForce;
 import com.orbit.data.nBodyAlgorithms.NBodyAlgorithm;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.OrbitManager;
 import com.orbit.data.entities.Planet;
-import com.orbit.data.nBodyAlgorithms.ZBruteForce;
+import com.orbit.data.nBodyAlgorithms.VelocityVerlet;
 
-import java.util.ArrayList;
 import java.util.Vector;
 
 /**
@@ -120,7 +114,7 @@ public class GameScreen extends BaseScreen {
         fileChooser = new FileChooser(FileChooser.Mode.OPEN);
         setupFileChooser();
 
-        algorithm = new ZBruteForce(this);
+        algorithm = new VelocityVerlet(this);
 
         Image backgroundImage = new Image(Boot.getManager().get("stars_milky_way.jpg", Texture.class));
         backgroundImage.setSize(Gdx.graphics.getDisplayMode().width,Gdx.graphics.getDisplayMode().height);
