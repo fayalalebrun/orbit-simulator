@@ -22,7 +22,7 @@ import static com.badlogic.gdx.scenes.scene2d.ui.Table.Debug.actor;
  */
 public class Planet extends Actor {
     double radius, mass, speed, angle;
-    public volatile double  xPos, yPos, zPos,  vX, vY, vZ, currAccelX=Double.NaN, currAccelY = Double.NaN, currAccelZ = Double.NaN;
+    public volatile double  xPos, yPos, zPos,  vX, vY, vZ, lastAccelX=Double.NaN, lastAccelY = Double.NaN, lastAccelZ = Double.NaN;
     public boolean accelInit = false;
     double AURadius;
     Texture texture;
