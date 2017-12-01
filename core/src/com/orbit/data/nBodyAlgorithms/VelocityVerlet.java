@@ -43,26 +43,26 @@ public class VelocityVerlet extends NBodyAlgorithm {
                     ay *= Units.GRAV;
                     az *= Units.GRAV;
 
-                    p.lastAccelX = ax;
-                    p.lastAccelY = ay;
-                    p.lastAccelZ = az;
+                    p.currAccelX = ax;
+                    p.currAccelY = ay;
+                    p.currAccelZ = az;
 
                     p.accelInit = true;
                 }
 
-                ax = 0;
-                ay = 0;
-                az = 0;
-
-                synchronized (p) {
-                    pX = pX + p.vX * delta + 0.5 * p.lastAccelX * sq(delta);
-                    pY = pY + p.vY * delta + 0.5 * p.lastAccelY * sq(delta);
-                    pZ = pZ + p.vZ * delta + 0.5 * p.lastAccelZ * sq(delta);
+                synchronized (p){
+                    pX = pX + (p.vX * delta) + (0.5*p.currAccelX*sq(delta));
+                    pY = pY + (p.vY * delta) + (0.5*p.currAccelY*sq(delta));
+                    pZ = pZ + (p.vZ * delta) + (0.5*p.currAccelZ*sq(delta));
 
                     p.xPos = Units.mToAU(pX);
                     p.yPos = Units.mToAU(pY);
                     p.zPos = Units.mToAU(pZ);
                 }
+
+                ax = 0;
+                ay = 0;
+                az = 0;
 
                 for (int i = 0; i < this.planets.indexOf(p); i++) {
                     parseAcceleration(planets.get(i), pX, pY, pZ);
@@ -74,13 +74,13 @@ public class VelocityVerlet extends NBodyAlgorithm {
                 ay *= Units.GRAV;
                 az *= Units.GRAV;
 
-                p.vX = p.vX + ((ax+p.lastAccelX)/2)*delta;
-                p.vY = p.vY + ((ax+p.lastAccelY)/2)*delta;
-                p.vZ = p.vZ + ((ax+p.lastAccelZ)/2)*delta;
+                p.vX = p.vX + (((p.currAccelX+ax)/2)*delta);
+                p.vY = p.vY + (((p.currAccelY+ay)/2)*delta);
+                p.vZ = p.vZ + (((p.currAccelZ+az)/2)*delta);
 
-                p.lastAccelX = ax;
-                p.lastAccelY = ay;
-                p.lastAccelZ = az;
+                p.currAccelX = ax;
+                p.currAccelY = ay;
+                p.currAccelZ = az;
             }
         }
     }

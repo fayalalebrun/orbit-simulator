@@ -25,7 +25,6 @@ import com.orbit.data.UI.*;
 import com.orbit.data.entities.OrbitManager;
 import com.orbit.data.entities.Planet;
 import com.orbit.data.nBodyAlgorithms.VelocityVerlet;
-import com.orbit.data.nBodyAlgorithms.VelocityVerletTest;
 
 import java.util.Vector;
 
@@ -115,7 +114,7 @@ public class GameScreen extends BaseScreen {
         fileChooser = new FileChooser(FileChooser.Mode.OPEN);
         setupFileChooser();
 
-        algorithm = new VelocityVerletTest(this);
+        algorithm = new VelocityVerlet(this);
 
         Image backgroundImage = new Image(Boot.getManager().get("stars_milky_way.jpg", Texture.class));
         backgroundImage.setSize(Gdx.graphics.getDisplayMode().width,Gdx.graphics.getDisplayMode().height);
