@@ -22,11 +22,11 @@ public class Page1 extends TutorialPage {
 
     @Override
     protected void build() {
-        VisLabel body = new VisLabel("aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa ");
+        VisLabel body = new VisLabel("a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a");
         body.setWrap(true);
-        add(body).size(100);
+        add(body).width(175);
         row();
-        add(previousButton).padRight(3f);
+        add(previousButton);
         add(nextButton);
     }
 }
