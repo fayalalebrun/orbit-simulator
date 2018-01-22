@@ -20,7 +20,7 @@ public class TutorialWindow extends VisWindow{
 
 
 
-    private void changeStep(){
+    public void changePage(TutorialPage page){
 
     }
 
