@@ -3,6 +3,7 @@ package com.orbit.data.UI.tutorial;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 
 /**
@@ -62,7 +63,7 @@ public abstract class TutorialPage extends Table {
             });
         }else{
             nextButton = new VisTextButton("next");
-            nextButton.setDisabled(false);
+            nextButton.setDisabled(true);
         }
     }
 
