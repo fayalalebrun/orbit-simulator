@@ -14,7 +14,7 @@ import java.io.File;
 
 public class Boot extends Game {
 
-	private static AssetManager manager;
+	public static AssetManager manager;
 
 	@Override
 	public void create () {
