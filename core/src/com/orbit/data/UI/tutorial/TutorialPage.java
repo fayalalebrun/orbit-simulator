@@ -1,6 +1,7 @@
 package com.orbit.data.UI.tutorial;
 
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.kotcrab.vis.ui.widget.VisTable;
@@ -65,6 +66,10 @@ public abstract class TutorialPage extends Table {
             nextButton = new VisTextButton("next");
             nextButton.setDisabled(true);
         }
+    }
+
+    protected static float calcImageHeight(float width, Image image){
+        return (image.getHeight()/image.getWidth())*width;
     }
 
     protected abstract void assignPages();
