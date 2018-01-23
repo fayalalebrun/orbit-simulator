@@ -42,6 +42,7 @@ public class Boot extends Game {
 		manager.load("tutorial/tutFile.png", Texture.class);
 		manager.load("tutorial/tutLoad.png", Texture.class);
 		manager.load("tutorial/tutSelect.png", Texture.class);
+		manager.load("tutorial/tutOpen.png", Texture.class);
 
 		manager.finishLoading();
 
