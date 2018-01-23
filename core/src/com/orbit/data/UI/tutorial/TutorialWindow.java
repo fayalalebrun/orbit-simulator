@@ -11,12 +11,12 @@ import com.orbit.data.UI.tutorial.pages.Page1;
  */
 public class TutorialWindow extends VisWindow{
 
-
+    static float WIDTH = 250f;
 
     public TutorialWindow() {
         super("Tutorial");
         TableUtils.setSpacingDefaults(this);
-        changePage(new Page1(this));
+        changePage(new Page1(this,WIDTH-50));
         pack();
 
         setVisible(false);
@@ -29,7 +29,7 @@ public class TutorialWindow extends VisWindow{
         VisScrollPane scrollPane = new VisScrollPane(page);
         scrollPane.setFlickScroll(false);
         scrollPane.setFadeScrollBars(false);
-        add(scrollPane).spaceTop(30).growX().width(205f).height(220f);
+        add(scrollPane).spaceTop(30).growX().width(WIDTH).height(300f);
     }
 
 }

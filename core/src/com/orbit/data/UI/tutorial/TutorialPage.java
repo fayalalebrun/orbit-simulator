@@ -17,13 +17,13 @@ public abstract class TutorialPage extends Table {
     protected VisTextButton previousButton;
     protected TutorialWindow tutorialWindow;
 
-    public TutorialPage(TutorialWindow tutorialWindow) {
+    public TutorialPage(TutorialWindow tutorialWindow, float width) {
         super();
         this.tutorialWindow = tutorialWindow;
 
         assignPages();
         setUpButtons();
-        build();
+        build(width);
     }
 
     public TutorialPage getPreviousPage() {
@@ -69,5 +69,5 @@ public abstract class TutorialPage extends Table {
 
     protected abstract void assignPages();
 
-    protected abstract void build();
+    protected abstract void build(float width);
 }
