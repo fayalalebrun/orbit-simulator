@@ -11,7 +11,7 @@ import com.orbit.data.UI.tutorial.pages.Page1;
  */
 public class TutorialWindow extends VisWindow{
 
-    static float WIDTH = 250f;
+    static float WIDTH = 400f;
 
     public TutorialWindow() {
         super("Tutorial");
