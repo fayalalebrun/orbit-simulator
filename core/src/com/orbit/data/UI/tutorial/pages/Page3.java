@@ -15,6 +15,7 @@ public class Page3 extends TutorialPage {
     @Override
     public void assignPages(float width) {
         previousPage = TutorialWindow.TWO;
+        nextPage = TutorialWindow.FOUR;
     }
 
     @Override
