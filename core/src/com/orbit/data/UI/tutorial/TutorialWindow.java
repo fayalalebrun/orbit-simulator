@@ -13,7 +13,7 @@ public class TutorialWindow extends VisWindow{
 
     private static float WIDTH = 400f;
 
-    public static TutorialPage ONE, TWO, THREE, FOUR, FIVE;
+    public static TutorialPage ONE, TWO, THREE, FOUR, FIVE, SIX;
 
     public TutorialWindow() {
         super("Tutorial");
@@ -23,6 +23,7 @@ public class TutorialWindow extends VisWindow{
         THREE = new Page3(this,WIDTH-50);
         FOUR = new Page4(this,WIDTH-50);
         FIVE = new Page5(this, WIDTH-50);
+        SIX = new Page6(this,WIDTH-50);
 
         TableUtils.setSpacingDefaults(this);
         changePage(ONE);
