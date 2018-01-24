@@ -5,18 +5,25 @@ import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.VisScrollPane;
 import com.kotcrab.vis.ui.widget.VisWindow;
 import com.orbit.data.UI.tutorial.pages.Page1;
+import com.orbit.data.UI.tutorial.pages.Page2;
 
 /**
  * Created by fraayala19 on 1/19/18.
  */
 public class TutorialWindow extends VisWindow{
 
-    static float WIDTH = 400f;
+    private static float WIDTH = 400f;
+
+    public static TutorialPage ONE, TWO;
 
     public TutorialWindow() {
         super("Tutorial");
+
+        ONE = new Page1(this, WIDTH-50);
+        TWO = new Page2(this, WIDTH-50);
+
         TableUtils.setSpacingDefaults(this);
-        changePage(new Page1(this,WIDTH-50));
+        changePage(ONE);
         pack();
 
         setVisible(false);
@@ -25,6 +32,11 @@ public class TutorialWindow extends VisWindow{
 
 
     public void changePage(TutorialPage page){
+        page.assignPages(WIDTH-50);
+        page.setUpButtons();
+        page.build(WIDTH-50);
+
+
         clearChildren();
         VisScrollPane scrollPane = new VisScrollPane(page);
         scrollPane.setFlickScroll(false);

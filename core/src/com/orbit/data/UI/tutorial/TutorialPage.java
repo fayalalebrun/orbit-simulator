@@ -26,9 +26,7 @@ public abstract class TutorialPage extends Table {
         super();
         this.tutorialWindow = tutorialWindow;
 
-        assignPages();
-        setUpButtons();
-        build(width);
+
     }
 
     public TutorialPage getPreviousPage() {
@@ -39,7 +37,7 @@ public abstract class TutorialPage extends Table {
         return nextPage;
     }
 
-    private void setUpButtons(){
+    public void setUpButtons(){
         final TutorialWindow tempTut = tutorialWindow;
         final TutorialPage tempPrev = previousPage;
         final TutorialPage tempNext = nextPage;
@@ -99,7 +97,7 @@ public abstract class TutorialPage extends Table {
         add(table).left();
     }
 
-    protected abstract void assignPages();
+    public abstract void assignPages(float width);
 
-    protected abstract void build(float width);
+    public abstract void build(float width);
 }

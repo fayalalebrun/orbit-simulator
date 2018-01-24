@@ -20,12 +20,14 @@ public class Page1 extends TutorialPage {
     }
 
     @Override
-    protected void assignPages() {
-
+    public void assignPages(float width) {
+        nextPage = TutorialWindow.TWO;
     }
 
     @Override
-    protected void build(float width) {
+    public void build(float width) {
+        clear();
+
         addText("To get started, click on the File Button at the top left of the screen.", width);
         row();
 
