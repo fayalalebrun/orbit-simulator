@@ -6,6 +6,7 @@ import com.kotcrab.vis.ui.widget.VisScrollPane;
 import com.kotcrab.vis.ui.widget.VisWindow;
 import com.orbit.data.UI.tutorial.pages.Page1;
 import com.orbit.data.UI.tutorial.pages.Page2;
+import com.orbit.data.UI.tutorial.pages.Page3;
 
 /**
  * Created by fraayala19 on 1/19/18.
@@ -14,13 +15,14 @@ public class TutorialWindow extends VisWindow{
 
     private static float WIDTH = 400f;
 
-    public static TutorialPage ONE, TWO;
+    public static TutorialPage ONE, TWO, THREE;
 
     public TutorialWindow() {
         super("Tutorial");
 
         ONE = new Page1(this, WIDTH-50);
         TWO = new Page2(this, WIDTH-50);
+        THREE = new Page3(this,WIDTH-50);
 
         TableUtils.setSpacingDefaults(this);
         changePage(ONE);
