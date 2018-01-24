@@ -4,10 +4,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.VisScrollPane;
 import com.kotcrab.vis.ui.widget.VisWindow;
-import com.orbit.data.UI.tutorial.pages.Page1;
-import com.orbit.data.UI.tutorial.pages.Page2;
-import com.orbit.data.UI.tutorial.pages.Page3;
-import com.orbit.data.UI.tutorial.pages.Page4;
+import com.orbit.data.UI.tutorial.pages.*;
 
 /**
  * Created by fraayala19 on 1/19/18.
@@ -16,7 +13,7 @@ public class TutorialWindow extends VisWindow{
 
     private static float WIDTH = 400f;
 
-    public static TutorialPage ONE, TWO, THREE, FOUR;
+    public static TutorialPage ONE, TWO, THREE, FOUR, FIVE;
 
     public TutorialWindow() {
         super("Tutorial");
@@ -25,6 +22,7 @@ public class TutorialWindow extends VisWindow{
         TWO = new Page2(this, WIDTH-50);
         THREE = new Page3(this,WIDTH-50);
         FOUR = new Page4(this,WIDTH-50);
+        FIVE = new Page5(this, WIDTH-50);
 
         TableUtils.setSpacingDefaults(this);
         changePage(ONE);
