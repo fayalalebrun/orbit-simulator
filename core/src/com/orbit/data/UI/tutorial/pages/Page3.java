@@ -56,8 +56,17 @@ public class Page3 extends TutorialPage {
 
         row();
 
+        addText("To be more specific about this magnification factor, you can change the factor of each planet " +
+                "in the planet list with each planet's respective slider. Try changing the size of venus.", width);
+
+        row();
+
+        addImage("tutorial/tutVenus.png",width);
+
+        row();
+
         addText("Now that we can see the planets, let us see how we can get this simulation running a bit faster " +
-                "than real time/",width);
+                "than real time.",width);
 
         row();
 
