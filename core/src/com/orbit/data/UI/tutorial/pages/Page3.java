@@ -32,8 +32,8 @@ public class Page3 extends TutorialPage {
 
         row();
 
-        addText("You may notice that the sun starts looking smaller than a pea, but yet we cannot see any " +
-                "planets. Let's resolve this issue.", width);
+        addText("Zoom out until the sun looks about as small as a pinhead. You will notice that we can't see" +
+                " any planets, even from here. Let's resolve this issue.", width);
 
         row();
 
@@ -42,7 +42,7 @@ public class Page3 extends TutorialPage {
         row();
 
         addText("Have a look at the \"Global Magnification\" window. With it, you can change the viewable size" +
-                "of the planets to be multiple times their real size. Try increasing the size of the planets!", width);
+                " of the planets to be multiple times their real size. Try using the slider to increase the size of the planets!", width);
 
         row();
 
