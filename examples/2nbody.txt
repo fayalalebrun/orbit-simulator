@@ -1,0 +1,30 @@
+v2
+
+name: Sun_1
+radius: 1
+mass: 1
+vX: 0
+vY: 1.41421356237
+vZ: 0.0
+color-r: 0.96862745
+color-g: 0.9882353
+color-b: 1.0
+color-a: 1.0
+x: 0.5
+y: 0
+z: 0.0
+
+name: Sun_2
+radius: 1
+mass: 1
+vX: 0
+vY: -1.41421356237
+vZ: 0.0
+color-r: 0.96862745
+color-g: 0.9882353
+color-b: 1.0
+color-a: 1.0
+x: -0.5
+y: 0
+z: 0.0
+

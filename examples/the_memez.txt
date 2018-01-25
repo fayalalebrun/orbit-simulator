@@ -1,0 +1,76 @@
+v2
+
+name: Our lord and saviour
+radius: 695700.0
+mass: 333054.0
+vX: -8.0950519636734785678
+vY: 10.079420705729289054
+vZ: 0.18130337691409920131
+texture: ./Planet Textures/Lord_Gaben.png
+color-r: 0.8901961
+color-g: 0.6509804
+color-b: 0.0
+color-a: 1.0
+x: 2.578904369581140E-03
+y: 5.322460861326624E-03
+z: -1.383592844831597E-04
+
+name: know da wae?
+radius: 2439.7
+mass: 0.055299999999999995
+vX: 38860.952977950393688
+vY: -178.28023168389700004
+vZ: -3581.0647928682246857 
+texture: ./Planet Textures/knuckles.png
+color-r: 0.63529414
+color-g: 0.03529412
+color-b: 0.0
+color-a: 1.0
+x: -2.294193886792292E-02
+y: -4.576430835315436E-01
+z: -3.562714602320661E-02 
+
+name: link not zelda
+radius: 6051.8
+mass: 0.8150000000000001
+vX: -21360.57611190922762
+vY: 27702.363418852470204
+vZ: 1612.2111967186428956
+texture: ./Planet Textures/majora_moon.png
+color-r: 0.6
+color-g: 0.6392157
+color-b: 0.18039216
+color-a: 1.0
+x: 5.774688480417693E-01
+y: 4.439834426915584E-01
+z: -2.729604317587249E-02 
+
+name: earth-chan 
+radius: 6378.1
+mass: 1.0
+vX: 21105.314172210237302
+vY: 20398.187809185699734
+vZ: 2.087430514166044E-04 
+texture: ./Planet Textures/earth_chan.png
+color-r: 0.18039216
+color-g: 0.43137255
+color-b: 0.6392157
+color-a: 1.0
+x: 7.007270903076284E-01
+y: -7.304289193702254E-01
+z: -1.124195383196437E-04 
+
+name: Praise Harambe
+radius: 3396.2
+mass: 0.107
+vX: -18068.97772879097829
+vY: -12990.350045170871454
+vZ: 170.99588564446040095 
+texture: ./Planet Textures/Harambe.png
+color-r: 0.9372549
+color-g: 0.3137255
+color-b: 0.0
+color-a: 1.0
+x: -1.020756883921064
+y: 1.294326415046266
+z: 5.198786022558093E-02
