@@ -31,8 +31,8 @@ public class Page2 extends TutorialPage{
 
         row();
 
-        addText("We have a problem now. The camera is locked to the object and we can not move it. Please repeat what you " +
-                "have just done, and click the Sun's \"Go\" button again.",width);
+        addText("We have a problem now. The camera is locked to the object and we can not move it. Toggle the Sun's \"Go\" " +
+                "button off to allow the camera to move freely about.",width);
 
         row();
 
