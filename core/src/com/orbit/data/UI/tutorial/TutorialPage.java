@@ -93,7 +93,20 @@ public abstract class TutorialPage extends Table {
         table.left();
         table.add(previousButton).padRight(3f);
         table.left();
-        table.add(nextButton);
+        table.add(nextButton).padRight(3f);
+
+        VisTextButton close = new VisTextButton("close");
+
+        close.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                tutorialWindow.setVisible(false);
+            }
+        });
+
+        table.left();
+        table.add(close);
+
         add(table).left();
     }
 
