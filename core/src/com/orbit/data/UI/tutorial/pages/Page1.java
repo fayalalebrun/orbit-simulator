@@ -5,6 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.kotcrab.vis.ui.widget.VisImage;
 import com.kotcrab.vis.ui.widget.VisLabel;
+import com.kotcrab.vis.ui.widget.VisTextButton;
 import com.orbit.data.Boot;
 import com.orbit.data.UI.tutorial.TutorialPage;
 import com.orbit.data.UI.tutorial.TutorialWindow;
@@ -15,8 +16,8 @@ import com.orbit.data.UI.tutorial.TutorialWindow;
  */
 public class Page1 extends TutorialPage {
 
-    public Page1(TutorialWindow tutorialWindow, float width) {
-        super(tutorialWindow, width);
+    public Page1(TutorialWindow tutorialWindow, float width, VisTextButton previousButton, VisTextButton nextButton) {
+        super(tutorialWindow, width, previousButton, nextButton);
     }
 
     @Override
@@ -63,7 +64,10 @@ public class Page1 extends TutorialPage {
 
         row();
 
-        addButtons();
+    }
 
+    @Override
+    public String getPageNumber() {
+        return "1";
     }
 }

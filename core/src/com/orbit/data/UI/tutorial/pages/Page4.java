@@ -1,5 +1,6 @@
 package com.orbit.data.UI.tutorial.pages;
 
+import com.kotcrab.vis.ui.widget.VisTextButton;
 import com.orbit.data.UI.tutorial.TutorialPage;
 import com.orbit.data.UI.tutorial.TutorialWindow;
 
@@ -8,8 +9,8 @@ import com.orbit.data.UI.tutorial.TutorialWindow;
  */
 public class Page4 extends TutorialPage{
 
-    public Page4(TutorialWindow tutorialWindow, float width) {
-        super(tutorialWindow, width);
+    public Page4(TutorialWindow tutorialWindow, float width, VisTextButton previousButton, VisTextButton nextButton) {
+        super(tutorialWindow, width, previousButton, nextButton);
     }
 
     @Override
@@ -81,6 +82,10 @@ public class Page4 extends TutorialPage{
 
         row();
 
-        addButtons();
+    }
+
+    @Override
+    public String getPageNumber() {
+        return "4";
     }
 }
