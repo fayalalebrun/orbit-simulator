@@ -22,50 +22,29 @@ public abstract class TutorialPage extends Table {
     protected VisTextButton previousButton;
     protected TutorialWindow tutorialWindow;
 
-    public TutorialPage(TutorialWindow tutorialWindow, float width) {
+    public TutorialPage(TutorialWindow tutorialWindow, float width, VisTextButton previousButton, VisTextButton nextButton) {
         super();
         this.tutorialWindow = tutorialWindow;
 
+        this.previousButton = previousButton;
+        this.nextButton = nextButton;
+
 
     }
 
-    public TutorialPage getPreviousPage() {
-        return previousPage;
-    }
-
-    public TutorialPage getNextPage() {
-        return nextPage;
-    }
 
     public void setUpButtons(){
-        final TutorialWindow tempTut = tutorialWindow;
-        final TutorialPage tempPrev = previousPage;
-        final TutorialPage tempNext = nextPage;
-
-
         if(previousPage!=null){
-            previousButton = new VisTextButton("previous");
-            previousButton.addListener(new ChangeListener() {
-                @Override
-                public void changed(ChangeEvent event, Actor actor) {
-                    tempTut.changePage(tempPrev);
-                }
-            });
+            previousButton.setDisabled(false);
+
         } else {
-            previousButton = new VisTextButton("previous");
             previousButton.setDisabled(true);
         }
 
         if(nextPage!=null){
-            nextButton = new VisTextButton("next");
-            nextButton.addListener(new ChangeListener() {
-                @Override
-                public void changed(ChangeEvent event, Actor actor) {
-                    tempTut.changePage(tempNext);
-                }
-            });
+            nextButton.setDisabled(false);
+
         }else{
-            nextButton = new VisTextButton("next");
             nextButton.setDisabled(true);
         }
     }
@@ -88,29 +67,18 @@ public abstract class TutorialPage extends Table {
 
     }
 
-    protected void addButtons(){
-        Table table = new Table();
-        table.left();
-        table.add(previousButton).padRight(3f);
-        table.left();
-        table.add(nextButton).padRight(3f);
-
-        VisTextButton close = new VisTextButton("close");
-
-        close.addListener(new ChangeListener() {
-            @Override
-            public void changed(ChangeEvent event, Actor actor) {
-                tutorialWindow.setVisible(false);
-            }
-        });
-
-        table.left();
-        table.add(close);
-
-        add(table).left();
-    }
 
     public abstract void assignPages(float width);
 
     public abstract void build(float width);
+
+    public abstract String getPageNumber();
+
+    public TutorialPage getPreviousPage(){
+        return previousPage;
+    }
+
+    public TutorialPage getNextPage(){
+        return nextPage;
+    }
 }

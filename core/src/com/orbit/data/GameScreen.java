@@ -17,9 +17,13 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.util.TableUtils;
 import com.kotcrab.vis.ui.widget.*;
+import com.kotcrab.vis.ui.widget.Menu;
+import com.kotcrab.vis.ui.widget.MenuBar;
+import com.kotcrab.vis.ui.widget.MenuItem;
 import com.kotcrab.vis.ui.widget.file.FileChooser;
 import com.kotcrab.vis.ui.widget.file.FileTypeFilter;
 import com.kotcrab.vis.ui.widget.file.SingleFileChooserListener;
+import com.orbit.data.UI.tutorial.HelpWindow;
 import com.orbit.data.UI.tutorial.TutorialWindow;
 import com.orbit.data.nBodyAlgorithms.NBodyAlgorithm;
 import com.orbit.data.UI.*;
@@ -27,6 +31,8 @@ import com.orbit.data.entities.OrbitManager;
 import com.orbit.data.entities.Planet;
 import com.orbit.data.nBodyAlgorithms.VelocityVerlet;
 
+import java.awt.*;
+import java.net.URI;
 import java.util.Vector;
 
 /**
@@ -53,6 +59,8 @@ public class GameScreen extends BaseScreen {
     private SpeedWindow speedWindow;
     private OrbitTracingWindow orbitWindow;
     private CreditsWindow creditsWindow;
+    private HelpWindow helpWindow;
+
     private TutorialWindow tutorialWindow;
 
     private Vector<Planet> planetArrayList;
@@ -110,7 +118,9 @@ public class GameScreen extends BaseScreen {
         speedWindow = new SpeedWindow();
         orbitWindow = new OrbitTracingWindow(orbitManager);
         creditsWindow = new CreditsWindow();
+        helpWindow = new HelpWindow();
         tutorialWindow = new TutorialWindow();
+
 
         menuBar = new MenuBar();
 
@@ -132,6 +142,7 @@ public class GameScreen extends BaseScreen {
         speedWindow.moveBy(700, 185);
         orbitWindow.moveBy(485, 56);
         creditsWindow.moveBy(300,400);
+        helpWindow.moveBy(300, 400);
     }
 
     @Override
@@ -157,6 +168,7 @@ public class GameScreen extends BaseScreen {
         uiGroup.addActor(orbitWindow);
         uiGroup.addActor(creditsWindow);
         uiGroup.addActor(tutorialWindow);
+        uiGroup.addActor(helpWindow);
 
         createMenus();
 
@@ -202,12 +214,16 @@ public class GameScreen extends BaseScreen {
         createFileMenuItems(fileMenu);
 
         Menu aboutMenu = new Menu("About");
+        Menu tutorialMenu = new Menu("Tutorials");
 
         createAboutMenuItems(aboutMenu);
+        createTutorialMenuItems(tutorialMenu);
 
         menuBar.addMenu(fileMenu);
         menuBar.addMenu(windowMenu);
+        menuBar.addMenu(tutorialMenu);
         menuBar.addMenu(aboutMenu);
+
     }
 
     private MenuItem createWindowToggle(String name, final VisWindow window){
@@ -232,6 +248,50 @@ public class GameScreen extends BaseScreen {
         });
 
         return  item;
+    }
+
+    private void createTutorialMenuItems(Menu tutorialMenu){
+        MenuItem tutorial = new MenuItem("Tutorial");
+        MenuItem help = new MenuItem("Help");
+        MenuItem videoTutorial = new MenuItem("Video guide");
+
+        videoTutorial.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+
+                if (Gdx.graphics.isFullscreen()){
+                    toggleFullscreen();
+                }
+
+                try {
+                    Desktop desktop = java.awt.Desktop.getDesktop();
+                    URI oURL = new URI("https://rickrolled.fr/");
+                    desktop.browse(oURL);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+        help.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                helpWindow.setVisible(true);
+            }
+        });
+
+        tutorial.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                tutorialWindow.setVisible(true);
+            }
+        });
+
+        tutorialMenu.addItem(tutorial);
+        tutorialMenu.addItem(videoTutorial);
+        tutorialMenu.addItem(help);
+
     }
 
     private void createFileMenuItems(Menu fileMenu){
@@ -260,8 +320,9 @@ public class GameScreen extends BaseScreen {
     }
 
     private void createAboutMenuItems(Menu aboutMenu){
+
         MenuItem credits = new MenuItem("Credits");
-        MenuItem tutorial = new MenuItem("Tutorial");
+
 
         credits.addListener(new ChangeListener() {
             @Override
@@ -269,15 +330,11 @@ public class GameScreen extends BaseScreen {
                 creditsWindow.setVisible(true);
             }
         });
-        tutorial.addListener(new ChangeListener() {
-            @Override
-            public void changed(ChangeEvent event, Actor actor) {
-                tutorialWindow.setVisible(true);
-            }
-        });
+
+
 
         aboutMenu.addItem(credits);
-        aboutMenu.addItem(tutorial);
+
     }
 
     @Override
