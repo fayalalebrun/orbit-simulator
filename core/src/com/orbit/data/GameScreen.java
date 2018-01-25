@@ -20,6 +20,7 @@ import com.kotcrab.vis.ui.widget.*;
 import com.kotcrab.vis.ui.widget.file.FileChooser;
 import com.kotcrab.vis.ui.widget.file.FileTypeFilter;
 import com.kotcrab.vis.ui.widget.file.SingleFileChooserListener;
+import com.orbit.data.UI.tutorial.TutorialWindow;
 import com.orbit.data.nBodyAlgorithms.NBodyAlgorithm;
 import com.orbit.data.UI.*;
 import com.orbit.data.entities.OrbitManager;
@@ -52,6 +53,7 @@ public class GameScreen extends BaseScreen {
     private SpeedWindow speedWindow;
     private OrbitTracingWindow orbitWindow;
     private CreditsWindow creditsWindow;
+    private TutorialWindow tutorialWindow;
 
     private Vector<Planet> planetArrayList;
 
@@ -108,6 +110,7 @@ public class GameScreen extends BaseScreen {
         speedWindow = new SpeedWindow();
         orbitWindow = new OrbitTracingWindow(orbitManager);
         creditsWindow = new CreditsWindow();
+        tutorialWindow = new TutorialWindow();
 
         menuBar = new MenuBar();
 
@@ -153,6 +156,7 @@ public class GameScreen extends BaseScreen {
         uiGroup.addActor(speedWindow);
         uiGroup.addActor(orbitWindow);
         uiGroup.addActor(creditsWindow);
+        uiGroup.addActor(tutorialWindow);
 
         createMenus();
 
@@ -257,6 +261,7 @@ public class GameScreen extends BaseScreen {
 
     private void createAboutMenuItems(Menu aboutMenu){
         MenuItem credits = new MenuItem("Credits");
+        MenuItem tutorial = new MenuItem("Tutorial");
 
         credits.addListener(new ChangeListener() {
             @Override
@@ -264,8 +269,15 @@ public class GameScreen extends BaseScreen {
                 creditsWindow.setVisible(true);
             }
         });
+        tutorial.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                tutorialWindow.setVisible(true);
+            }
+        });
 
         aboutMenu.addItem(credits);
+        aboutMenu.addItem(tutorial);
     }
 
     @Override

@@ -14,7 +14,7 @@ import java.io.File;
 
 public class Boot extends Game {
 
-	private static AssetManager manager;
+	public static AssetManager manager;
 
 	@Override
 	public void create () {
@@ -39,6 +39,35 @@ public class Boot extends Game {
 		manager.load("zoom-in.png", Texture.class);
 		manager.load("zoom-out.png", Texture.class);
 		manager.load("stars_milky_way.jpg", Texture.class);
+		manager.load("tutorial/tutFile.png", Texture.class);
+		manager.load("tutorial/tutLoad.png", Texture.class);
+		manager.load("tutorial/tutSelect.png", Texture.class);
+		manager.load("tutorial/tutOpen.png", Texture.class);
+		manager.load("tutorial/tutList.png", Texture.class);
+		manager.load("tutorial/tutTools.png", Texture.class);
+		manager.load("tutorial/tutMag.png", Texture.class);
+		manager.load("tutorial/tutSun.png", Texture.class);
+		manager.load("tutorial/tutGlobMag.png", Texture.class);
+		manager.load("tutorial/tutView.png", Texture.class);
+		manager.load("tutorial/tutVenus.png", Texture.class);
+		manager.load("tutorial/tutSim.png", Texture.class);
+		manager.load("tutorial/tutOrb.png", Texture.class);
+		manager.load("tutorial/tutTrace.png", Texture.class);
+		manager.load("tutorial/tutTrace1.png", Texture.class);
+		manager.load("tutorial/tutOrb1.png", Texture.class);
+		manager.load("tutorial/tutPlanOpt.png", Texture.class);
+		manager.load("tutorial/tutPlanOpt1.png", Texture.class);
+		manager.load("tutorial/tutAdjust.png", Texture.class);
+		manager.load("tutorial/tutAdjust1.png", Texture.class);
+		manager.load("tutorial/tutPlanOpt2.png", Texture.class);
+		manager.load("tutorial/tutColor.png", Texture.class);
+		manager.load("tutorial/tutPlanOpt3.png", Texture.class);
+		manager.load("tutorial/tutPointer.png", Texture.class);
+		manager.load("tutorial/tutHole.png", Texture.class);
+		manager.load("tutorial/tutSpec.png", Texture.class);
+		manager.load("tutorial/tutDel.png", Texture.class);
+		manager.load("tutorial/tutSave.png", Texture.class);
+		manager.load("tutorial/tutSaveSel.png", Texture.class);
 
 		manager.finishLoading();
 
