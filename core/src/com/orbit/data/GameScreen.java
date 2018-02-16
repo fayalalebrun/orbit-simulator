@@ -266,7 +266,7 @@ public class GameScreen extends BaseScreen {
                 try {
                     Desktop desktop = java.awt.Desktop.getDesktop();
                     URI oURL = new URI("https://rickrolled.fr/");
-                    desktop.browse(oURL);
+                    //desktop.browse(oURL);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
